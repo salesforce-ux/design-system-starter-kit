@@ -1,0 +1,17 @@
+
+// Token overrides here
+// e.g.:
+// $height-input: 2rem;
+
+
+// Import the design system
+@import '@salesforce-ux/design-system/scss/index';
+
+// Import the app's partials
+@import 'header';
+
+// Or add styles here
+
+.app-main {
+    padding-top: $spacing-large;
+}

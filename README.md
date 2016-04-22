@@ -1,15 +1,14 @@
-# SLDS Starter Kit
+# SLDS Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/slds-starter-kit.svg?style=svg)](https://circleci.com/gh/salesforce-ux/slds-starter-kit)
 
 Rapid prototyping environment using the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/).
 
 ## Quick Start
 
 1. Fork & clone this repository, then `cd` into the newly created directory
-2. `npm install gulp -g`
-3. `npm install`
-4. `gulp`
+2. `npm install`
+3. `npm start`
 
-That's it, you can start coding!
+That's it! Edit the `app/index.html` file and build awesome prototypes.
 
 ## What's inside?
 

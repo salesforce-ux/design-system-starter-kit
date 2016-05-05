@@ -8,6 +8,10 @@
     "test": "gulp styles",
     "start": "gulp"
   },
+  "engines": {
+    "node": ">=4.2",
+    "npm": ">=2.7.0"
+  },
   "keywords": [
     "lightning",
     "design",

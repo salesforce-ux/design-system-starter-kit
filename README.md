@@ -1,4 +1,4 @@
-# SLDS Starter Kit
+# SLDS Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/slds-starter-kit.svg?style=svg)](https://circleci.com/gh/salesforce-ux/slds-starter-kit)
 
 Rapid prototyping environment using the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/).
 

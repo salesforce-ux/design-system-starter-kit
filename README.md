@@ -5,9 +5,10 @@ Rapid prototyping environment using the [Salesforce Lightning Design System](htt
 ## Quick Start
 
 1. `git clone git@github.com:salesforce-ux/slds-starter-kit.git && cd slds-starter-kit`
-2. `npm install`
-3. `npm start`
-4. Open <http://localhost:3000>
+2. `cd slds-starter-kit`
+3. `npm install`
+4. `npm start`
+5. Open <http://localhost:3000>
 
 That's it! Edit the `app/index.html` file and build awesome prototypes.
 

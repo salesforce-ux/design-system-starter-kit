@@ -22,7 +22,7 @@ That's it! Edit the `app/index.html` file and build awesome prototypes.
 
 ## License
 
-Copyright (c) 2016, Kaelig Deloumeau-Prigent
+Copyright (c) 2016, Salesforce.com
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 

@@ -41,7 +41,7 @@ gulp.task('serve', ['styles'], () => {
     server: [
       '.tmp',
       'app',
-      'node_modules/@salesforce-ux/design-system/assets'
+      'node_modules/@salesforce-ux/design-system'
     ]
   });
 

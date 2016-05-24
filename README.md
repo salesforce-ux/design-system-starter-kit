@@ -4,6 +4,8 @@ Rapid prototyping environment using the [Salesforce Lightning Design System](htt
 
 ## Quick Start
 
+Prerequisites: a stable version of [Node.js](https://nodejs.org/en/).
+
 1. `git clone git@github.com:salesforce-ux/design-system-starter-kit.git && cd design-system-starter-kit`
 2. `npm install`
 3. `npm start`
@@ -13,12 +15,11 @@ That's it! Edit the `app/index.html` file and build awesome prototypes.
 
 ## What's inside?
 
-- SLDS Components and CSS (using Sass)
-- [SLDS Icons](https://www.lightningdesignsystem.com/resources/icons/) (displaying in all browsers thanks to the [SVG4Everybody](https://github.com/jonathantneal/svg4everybody) polyfill)
-- SLDS Web Font
-- Live reload: automatic browser reloading on file change, useful to design in the browser
-- Sourcemaps support (allows in-browser Sass coding)
-- Autoprefixer (automatic cross-browser support)
+- SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)
+- [SVG4Everybody](https://github.com/jonathantneal/svg4everybody), a polyfill that helps browsers display SVG icons
+- [Live reload using BrowserSync](https://www.browsersync.io/): automatic browser reloading on file changes, and cross-device testing
+- Sourcemaps support ([for live in-browser Sass development](https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0))
+- [Autoprefixer](https://github.com/postcss/autoprefixer) (adds vendor prefixes to CSS rules)
 
 ## License
 

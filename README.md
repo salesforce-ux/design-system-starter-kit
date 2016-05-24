@@ -1,10 +1,10 @@
-# SLDS Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/slds-starter-kit.svg?style=svg&circle-token=6c0b617673fd9c9e4eb4fb9defe953a92fc1797c)](https://circleci.com/gh/salesforce-ux/slds-starter-kit)
+# Lightning Design System Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/design-system-starter-kit.svg?style=svg&circle-token=6c0b617673fd9c9e4eb4fb9defe953a92fc1797c)](https://circleci.com/gh/salesforce-ux/design-system-starter-kit)
 
 Rapid prototyping environment using the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/).
 
 ## Quick Start
 
-1. `git clone git@github.com:salesforce-ux/slds-starter-kit.git && cd slds-starter-kit`
+1. `git clone git@github.com:salesforce-ux/design-system-starter-kit.git && cd design-system-starter-kit`
 2. `npm install`
 3. `npm start`
 4. Open <http://localhost:3000>

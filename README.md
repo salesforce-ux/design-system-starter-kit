@@ -1,6 +1,6 @@
 # Lightning Design System Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/design-system-starter-kit.svg?style=svg&circle-token=6c0b617673fd9c9e4eb4fb9defe953a92fc1797c)](https://circleci.com/gh/salesforce-ux/design-system-starter-kit)
 
-Rapid prototyping environment using the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/).
+Rapid prototyping environment using the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/), HTML, and Sass.
 
 ## Quick Start
 

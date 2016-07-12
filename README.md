@@ -6,7 +6,7 @@ Rapid prototyping environment using the [Salesforce Lightning Design System](htt
 
 Prerequisites: a stable version of [Node.js](https://nodejs.org/en/).
 
-1. `git clone git@github.com:salesforce-ux/design-system-starter-kit.git && cd design-system-starter-kit`
+1. `git clone https://github.com/salesforce-ux/design-system-starter-kit.git && cd design-system-starter-kit`
 2. `npm install`
 3. `npm start`
 4. Open <http://localhost:3000>

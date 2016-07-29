@@ -34,7 +34,7 @@ gulp.task('styles', () =>
         'node_modules'
       ]
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({ browsers: ['last 2 versions'] }))
+    .pipe($.autoprefixer({ browsers: ['last 2 versions'], remove: false }))
     .pipe($.minifyCss({ advanced: false }))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/styles'))

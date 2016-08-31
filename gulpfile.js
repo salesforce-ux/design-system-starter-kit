@@ -14,12 +14,12 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 // You can read more about the new JavaScript features here:
 // https://babeljs.io/docs/learn-es2015/
 
-import path from 'path';
-import gulp from 'gulp';
-import del from 'del';
-import runSequence from 'run-sequence';
-import browserSync from 'browser-sync';
-import gulpLoadPlugins from 'gulp-load-plugins';
+const path = require('path');
+const gulp = require('gulp');
+const del = require('del');
+const runSequence = require('run-sequence');
+const browserSync = require('browser-sync');
+const gulpLoadPlugins = require('gulp-load-plugins');
 
 const $ = gulpLoadPlugins();
 

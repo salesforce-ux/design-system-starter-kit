@@ -13,6 +13,10 @@ Prerequisites: a stable version of [Node.js](https://nodejs.org/en/).
 
 That's it! Edit the `app/index.html` file and build awesome prototypes.
 
+## Deploy on Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## What's inside?
 
 - SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)

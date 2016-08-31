@@ -1,0 +1,15 @@
+{
+  "name": "Design System Starter Kit",
+  "description": "A rapid prototyping environment using the Salesforce Lightning Design System.",
+  "keywords": [
+    "salesforce",
+    "design-system"
+  ],
+  "website": "https://github.com/salesforce-ux/design-system-starter-kit",
+  "repository": "https://github.com/salesforce-ux/design-system-starter-kit",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ Prerequisites: [Node.js](https://nodejs.org/en/) 6.x.x.
 1. `npm run dev`
 1. Open <http://localhost:3000>
 
-That's it! Edit the `app/index.html` file and build awesome prototypes.
+That's it! Edit the `app/views/index.html` file and build awesome prototypes.
 
 ## Deploy to Heroku
 

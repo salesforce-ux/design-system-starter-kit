@@ -1,5 +1,11 @@
 {% extends "_template.html" %}
 
+<!--
+  # Don't want to use templates (here: Nunjucks)?
+    Using the templating engine is optional.
+    Feel free to use normal HTML instead!
+-->
+
 {% block content %}
 <header class="app-header">
   <h1 class="slds-text-heading--large">
@@ -9,13 +15,58 @@
       </svg>
       <span class="slds-assistive-text">Description Icon</span>
     </span>
-    <span>It’s working!</span>
+    <!-- Headline is populated with data coming from data/index.json -->
+    <span>{{ headline }}</span>
   </h1>
 </header>
 <div class="app-main">
   <img src="assets/img-efficiency.svg" alt="Efficiency!" />
   <p class="slds-text-body--regular slds-m-top--large">You may now edit files in the <code>app</code> directory to build something with the Lightning Design System.</p>
   <p class="slds-text-body--regular slds-m-top--large">Component documentation and markup available at: <a href="https://www.lightningdesignsystem.com">https://www.lightningdesignsystem.com</a>.</p>
+  <hr />
+  <h2 class="slds-text-heading--medium slds-m-top--large">Example of injected data</h2>
+  <p class="slds-text-body--regular slds-m-vertical--large">The data in this table comes from <code>views/data/index.json</code>.</p>
+  <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+    <thead>
+      <tr class="slds-text-heading--label">
+        <th scope="col">
+          <div class="slds-truncate" title="Account Name">Account Name</div>
+        </th>
+        <th scope="col">
+          <div class="slds-truncate" title="Billing State/Province">Billing State/Province</div>
+        </th>
+        <th scope="col">
+          <div class="slds-truncate" title="Phone">Phone</div>
+        </th>
+        <th scope="col">
+          <div class="slds-truncate" title="Type">Type</div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--
+        Looping around values in Nunjucks
+        http://mozilla.github.io/nunjucks/templating.html#for
+      -->
+      {% for account in accounts %}
+      <tr>
+        <th scope="row" data-label="Account Name">
+          <div class="slds-truncate" title="{{ account.name }}"><a href="javascript:void(0);">{{ account.name }}</a></div>
+        </th>
+        <td data-label="Billing State/Province">
+          <div class="slds-truncate" title="{{ account.state }}">{{ account.state }}</div>
+        </td>
+        <td data-label="Phone">
+          <div class="slds-truncate" title="{{ account.phone }}">{{ account.phone }}</div>
+        </td>
+        <td data-label="Type">
+          <div class="slds-truncate" title="{{ account.type }}">{{ account.type }}</div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
 </div>
 <footer class="app-footer">Built using the <a href="https://github.com/salesforce-ux/design-system-starter-kit">Salesforce Lightning Design System Starter Kit</a>.</footer>
 {% endblock %}

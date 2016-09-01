@@ -1,0 +1,77 @@
+{
+  "headline": "It’s working!",
+  "accounts": [
+    {
+      "name": "Burlington Textiles Corp of America",
+      "state": "NC",
+      "phone": "(336) 222-7000",
+      "type": "Customer - Direct"
+    },
+    {
+      "name": "Dickenson plc",
+      "state": "KS",
+      "phone": "(785) 241-6200",
+      "type": "Customer - Channel"
+    },
+    {
+      "name": "Edge Communications",
+      "state": "TX",
+      "phone": "(512) 757-6000",
+      "type": "Customer - Direct"
+    },
+    {
+      "name": "Express Logistics and Transport",
+      "state": "OR",
+      "phone": "(503) 421-7800",
+      "type": "Customer - Channel"
+    },
+    {
+      "name": "GenePoint",
+      "state": "CA",
+      "phone": "(650) 867-3450",
+      "type": "Customer - Channel"
+    },
+    {
+      "name": "Grand Hotels & Resorts Ltd",
+      "state": "IL",
+      "phone": "(312) 596-1000",
+      "type": "Customer - Direct"
+    },
+    {
+      "name": "Pyramid Construction Inc.",
+      "state": "",
+      "phone": "(014) 427-4427",
+      "type": "Customer - Channel"
+    },
+    {
+      "name": "sForce",
+      "state": "CA",
+      "phone": "(415) 901-7000",
+      "type": ""
+    },
+    {
+      "name": "United Oil & Gas Corp.",
+      "state": "NY",
+      "phone": "(212) 842-5500",
+      "type": "Customer - Direct"
+    },
+    {
+      "name": "United Oil & Gas, Singapore",
+      "state": "Singapore",
+      "phone": "(650) 450-8810",
+      "type": "Customer - Direct"
+    },
+    {
+      "name": "United Oil & Gas, UK",
+      "state": "UK",
+      "phone": "+44 191 4956203",
+      "type": "Customer - Direct"
+    },
+    {
+      "name": "University of Arizona",
+      "state": "AZ",
+      "phone": "(520) 773-9050",
+      "type": "Customer - Direct"
+    }
+  ]
+}

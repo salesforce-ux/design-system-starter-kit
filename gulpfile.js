@@ -15,6 +15,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 // https://babeljs.io/docs/learn-es2015/
 
 const path = require('path');
+const fs = require('fs');
 const gulp = require('gulp');
 const del = require('del');
 const runSequence = require('run-sequence');
@@ -32,12 +33,28 @@ gulp.task('assets', () =>
     .pipe(gulp.dest('dist/assets'))
 );
 
+// Get data from the corresponding filename
+// e.g. inject data/foo.json into foo.html
+var getData = (file) => {
+  const dataPath = path.resolve('./app/views/data/' + path.basename(file.path, '.html') + '.json')
+  let data = {};
+
+  try {
+    data = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+  } catch(e) {
+    // Don't fail if the JSON is badly formed or the file doesn't exist
+  } finally {
+    return data
+  }
+}
+
 gulp.task('views', () =>
   gulp
     .src([
       'app/views/**/*.html',
       '!app/views/**/_*.html'
     ], { base: 'app/views' })
+    .pipe($.data(getData))
     .pipe($.nunjucks.compile())
     .pipe(gulp.dest('dist/'))
 );
@@ -74,7 +91,10 @@ gulp.task('watch', ['build'], () => {
   });
 
   gulp.watch('app/styles/*.scss', ['styles']);
-  gulp.watch('app/views/**/*.html', ['views']);
+  gulp.watch([
+    'app/views/**/*.html',
+    'app/views/data/*.json'
+  ], ['views']);
   gulp.watch('assets/**/*', ['assets']);
   gulp.watch('app/scripts/**/*', ['scripts']);
   gulp.watch([

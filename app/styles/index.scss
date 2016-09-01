@@ -1,11 +1,13 @@
 // Import the design system
-@import '@salesforce-ux/design-system/scss/index';
+$static-font-path: '/assets/fonts/webfonts';
+@import 'node_modules/@salesforce-ux/design-system/scss/index';
 
 // Import the app's partials
 @import 'header';
+@import 'footer';
 
 // Or add styles here
 
 .app-main {
-  padding-top: $spacing-large;
+  padding: $spacing-large;
 }

@@ -3,28 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salesforce Lightning Design System Starter Kit</title>
 
   <!-- Your styles -->
   <link rel="stylesheet" href="styles/index.css" />
 </head>
-<body class="slds-p-around--small">
-  <h1 class="slds-text-heading--large">
-    <span class="slds-icon_container">
-      <svg aria-hidden="true" class="slds-icon slds-icon-text-default slds-icon--small">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-      </svg>
-      <span class="slds-assistive-text">Description Icon</span>
-    </span>
-    <span>It’s working!</span>
-  </h1>
+<body>
+  <header class="app-header">
+    <h1 class="slds-text-heading--large">
+      <span class="slds-icon_container">
+        <svg aria-hidden="true" class="slds-icon slds-icon-text-default slds-icon--small">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+        </svg>
+        <span class="slds-assistive-text">Description Icon</span>
+      </span>
+      <span>It’s working!</span>
+    </h1>
+  </header>
   <div class="app-main">
     <img src="assets/img-efficiency.svg" alt="Efficiency!" />
-    <p class="slds-text-body--regular">You may now edit files in the <code>app</code> directory to build something with the Lightning Design System.</p>
-    <p class="slds-text-body--regular slds-m-top--large">Thank you for using the <a href="http://getslds.com">Salesforce Lightning Design System</a>.</p>
+    <p class="slds-text-body--regular slds-m-top--large">You may now edit files in the <code>app</code> directory to build something with the Lightning Design System.</p>
+    <p class="slds-text-body--regular slds-m-top--large">Component documentation and markup available at: <a href="https://www.lightningdesignsystem.com">https://www.lightningdesignsystem.com</a>.</p>
   </div>
+  <footer class="app-footer">Built using the <a href="https://github.com/salesforce-ux/design-system-starter-kit">Salesforce Lightning Design System Starter Kit</a>.</footer>
   <script src="scripts/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 </body>

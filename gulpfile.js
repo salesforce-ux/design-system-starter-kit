@@ -23,6 +23,23 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 
 const $ = gulpLoadPlugins();
 
+gulp.task('assets', () =>
+  gulp
+    .src([
+      'node_modules/@salesforce-ux/design-system/assets/**/*',
+      'assets/**/*'
+    ])
+    .pipe(gulp.dest('dist/assets'))
+);
+
+gulp.task('views', () =>
+  gulp
+    .src([
+      'app/*.html'
+    ], { base: 'app' })
+    .pipe(gulp.dest('dist/'))
+);
+
 gulp.task('styles', () =>
   gulp
     .src('app/styles/*.scss')
@@ -37,30 +54,30 @@ gulp.task('styles', () =>
     .pipe($.autoprefixer({ browsers: ['last 2 versions'], remove: false }))
     .pipe($.minifyCss({ advanced: false }))
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('.tmp/styles'))
+    .pipe(gulp.dest('dist/styles'))
     .pipe(browserSync.stream({ match: '**/*.css' }))
 );
 
-// Static Server + watching scss/html files
-gulp.task('serve', ['styles'], () => {
-
+// Static Server (development)
+gulp.task('serve:browsersync', ['build'], () => {
   browserSync.init({
     notify: false,
-    server: [
-      '.tmp',
-      'app',
-      'node_modules/@salesforce-ux/design-system'
-    ]
+    server: 'dist'
   });
-
-  gulp.watch("app/styles/*.scss", ['styles']);
-  gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('clean', () => del(['.tmp'], { dot: true }));
+gulp.task('watch', ['serve:browsersync'], () => {
+  gulp.watch('app/styles/*.scss', ['styles']);
+  gulp.watch('app/*.html', ['views']);
+  gulp.watch('assets/**/*', ['assets']);
+  gulp.watch('dist/*.html').on('change', browserSync.reload);
+  gulp.watch('dist/assets/**/*').on('change', browserSync.reload);
+})
 
-gulp.task('default', callback => {
+gulp.task('clean', () => del(['dist'], { dot: true }));
+
+gulp.task('build', callback => {
   runSequence(
-    'clean', 'styles', 'serve',
+    'clean', 'assets', 'views', 'styles',
   callback);
 });

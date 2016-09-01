@@ -6,7 +6,8 @@
   "main": "",
   "scripts": {
     "test": "gulp styles",
-    "start": "gulp"
+    "dev": "gulp watch",
+    "prestart": "gulp build"
   },
   "engines": {
     "node": ">=6.5.0",
@@ -25,6 +26,7 @@
     "@salesforce-ux/design-system": "~2.0.2",
     "browser-sync": "^2.12.3",
     "del": "^2.2.0",
+    "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-load-plugins": "^1.2.2",
@@ -32,6 +34,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
+    "http-auth": "^2.4.4",
     "run-sequence": "^1.1.5"
   }
 }

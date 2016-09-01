@@ -11,5 +11,15 @@
     {
       "url": "heroku/nodejs"
     }
-  ]
+  ],
+  "env": {
+    "USERNAME": {
+      "description": "Username for basic authentication protection (optional)",
+      "required": false
+    },
+    "PASSWORD": {
+      "description": "Password for basic authentication protection (optional)",
+      "required": false
+    }
+  }
 }

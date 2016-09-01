@@ -8,7 +8,7 @@ Prerequisites: a stable version of [Node.js](https://nodejs.org/en/).
 
 1. `git clone https://github.com/salesforce-ux/design-system-starter-kit.git && cd design-system-starter-kit`
 2. `npm install`
-3. `npm start`
+3. `npm run dev`
 4. Open <http://localhost:3000>
 
 That's it! Edit the `app/index.html` file and build awesome prototypes.

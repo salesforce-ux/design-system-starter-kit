@@ -40,16 +40,21 @@ gulp.task('views', () =>
     .pipe(gulp.dest('dist/'))
 );
 
+gulp.task('scripts', () =>
+  gulp
+    .src([
+      'app/scripts/**/*'
+    ], { base: 'app' })
+    .pipe(gulp.dest('dist/'))
+);
+
 gulp.task('styles', () =>
   gulp
     .src('app/styles/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
-      precision: 10,
-      includePaths: [
-        'node_modules'
-      ]
+      precision: 10
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({ browsers: ['last 2 versions'], remove: false }))
     .pipe($.minifyCss({ advanced: false }))
@@ -59,25 +64,25 @@ gulp.task('styles', () =>
 );
 
 // Static Server (development)
-gulp.task('serve:browsersync', ['build'], () => {
-  browserSync.init({
+gulp.task('watch', ['build'], () => {
+  browserSync({
     notify: false,
     server: 'dist'
   });
-});
 
-gulp.task('watch', ['serve:browsersync'], () => {
   gulp.watch('app/styles/*.scss', ['styles']);
   gulp.watch('app/*.html', ['views']);
   gulp.watch('assets/**/*', ['assets']);
+  gulp.watch('app/scripts/**/*', ['scripts']);
   gulp.watch('dist/*.html').on('change', browserSync.reload);
+  gulp.watch('dist/scripts/**/*').on('change', browserSync.reload);
   gulp.watch('dist/assets/**/*').on('change', browserSync.reload);
-})
+});
 
 gulp.task('clean', () => del(['dist'], { dot: true }));
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'assets', 'views', 'styles',
+    'clean', 'assets', 'views', 'styles', 'scripts',
   callback);
 });

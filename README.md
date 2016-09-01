@@ -16,7 +16,11 @@ That's it! Edit the `app/views/index.html` file and build awesome prototypes.
 
 ## Deploy to Heroku
 
+Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2 clicks.
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+**Your work is confidential?** Fill in a username and password in the Heroku settings.
 
 ## What's inside?
 

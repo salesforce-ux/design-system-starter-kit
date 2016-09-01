@@ -1,11 +1,17 @@
-{% extends "_template.html" %}
-
 <!--
   # Don't want to use templates (here: Nunjucks)?
     Using the templating engine is optional.
     Feel free to use normal HTML instead!
 -->
 
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
 {% block content %}
 <header class="app-header">
   <h1 class="slds-text-heading--large">
@@ -15,7 +21,9 @@
       </svg>
       <span class="slds-assistive-text">Description Icon</span>
     </span>
-    <!-- Headline is populated with data coming from data/index.json -->
+    <!--
+      Headline: is populated with data coming from data/index.json
+    -->
     <span>{{ headline }}</span>
   </h1>
 </header>

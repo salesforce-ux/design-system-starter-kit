@@ -35,8 +35,10 @@ gulp.task('assets', () =>
 gulp.task('views', () =>
   gulp
     .src([
-      'app/*.html'
-    ], { base: 'app' })
+      'app/views/**/*.html',
+      '!app/views/**/_*.html'
+    ], { base: 'app/views' })
+    .pipe($.nunjucks.compile())
     .pipe(gulp.dest('dist/'))
 );
 
@@ -67,16 +69,19 @@ gulp.task('styles', () =>
 gulp.task('watch', ['build'], () => {
   browserSync({
     notify: false,
-    server: 'dist'
+    server: 'dist',
+    online: true
   });
 
   gulp.watch('app/styles/*.scss', ['styles']);
-  gulp.watch('app/*.html', ['views']);
+  gulp.watch('app/views/**/*.html', ['views']);
   gulp.watch('assets/**/*', ['assets']);
   gulp.watch('app/scripts/**/*', ['scripts']);
-  gulp.watch('dist/*.html').on('change', browserSync.reload);
-  gulp.watch('dist/scripts/**/*').on('change', browserSync.reload);
-  gulp.watch('dist/assets/**/*').on('change', browserSync.reload);
+  gulp.watch([
+    'dist/**/*.html',
+    'dist/scripts/**/*',
+    'dist/assets/**/*'
+  ]).on('change', browserSync.reload);
 });
 
 gulp.task('clean', () => del(['dist'], { dot: true }));

@@ -2,6 +2,10 @@
 
 Where you may put all your scripts.
 
+## Default interactions
+
+[`app.js`](app.js) contains a few basic interactions, useful for prototyping purposes.
+
 ## Loading scripts
 
 Load scripts like in classic HTML:

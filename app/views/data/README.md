@@ -1,10 +1,14 @@
-# Data
+# Data in templates
 
 Data is stored in JSON files named after the HTML page names.
 This helps prototyping efficiently with large amounts of data.
 
 - Data from `index.json` gets injected into `index.html`
 - Data from `foo.json` gets injected into `foo.html`
+
+The starter kit leverages [gulp-nunjucks](https://github.com/sindresorhus/gulp-nunjucks)
+combined with [gulp-data](https://github.com/colynb/gulp-data) to inject data
+in templates.
 
 ## Accessing data in templates
 

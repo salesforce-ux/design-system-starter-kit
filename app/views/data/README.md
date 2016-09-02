@@ -33,5 +33,6 @@ in templates.
 <ul>
 {% for account in accounts %}
   <li>{{ account.name }}</li>
+{% endfor %}
 </ul>
 ```

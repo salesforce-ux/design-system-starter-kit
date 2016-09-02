@@ -1,8 +1,8 @@
 {
-  "name": "slds-starter-kit",
-  "repository": "https://github.com/salesforce-ux/slds-starter-kit",
+  "name": "design-system-starter-kit",
+  "repository": "https://github.com/salesforce-ux/design-system-starter-kit",
   "version": "1.0.0",
-  "description": "Boilerplate to get started with a local SLDS installation",
+  "description": "Boilerplate to get started with a local Lightning Design System installation",
   "main": "",
   "scripts": {
     "dev": "gulp",

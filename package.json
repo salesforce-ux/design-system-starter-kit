@@ -5,8 +5,7 @@
   "description": "Boilerplate to get started with a local SLDS installation",
   "main": "",
   "scripts": {
-    "test": "gulp styles",
-    "dev": "gulp watch",
+    "dev": "gulp",
     "prestart": "gulp build"
   },
   "engines": {

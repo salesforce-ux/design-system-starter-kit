@@ -33,6 +33,14 @@ gulp.task('assets', () =>
     .pipe(gulp.dest('dist/assets'))
 );
 
+gulp.task('favicon', () =>
+  gulp
+    .src([
+      'app/favicon*.*'
+    ], { base: 'app' })
+    .pipe(gulp.dest('dist'))
+);
+
 // Get data from the corresponding filename
 // e.g. inject data/foo.json into foo.html
 var getData = (file) => {
@@ -83,7 +91,7 @@ gulp.task('styles', () =>
 );
 
 // Static Server (development)
-gulp.task('watch', ['build'], () => {
+gulp.task('default', ['build'], () => {
   browserSync({
     notify: false,
     server: 'dist',
@@ -108,6 +116,6 @@ gulp.task('clean', () => del(['dist'], { dot: true }));
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'assets', 'views', 'styles', 'scripts',
+    'clean', 'assets', 'views', 'styles', 'scripts', 'favicon',
   callback);
 });

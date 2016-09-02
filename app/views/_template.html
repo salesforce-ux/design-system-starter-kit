@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
-  {% block content %}{% endblock %}
+  {% block content %}
+    <!-- Content from HTML files gets injected here -->
+  {% endblock %}
   <script src="/scripts/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 </body>

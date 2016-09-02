@@ -9,9 +9,9 @@ Rapid prototyping environment using the [Salesforce Lightning Design System](htt
 Pre-requisites: [Node.js](https://nodejs.org/en/) 6 or up.
 
 1. Fork the repository
-1. Clone it on your computer
-1. `npm install`
-1. `npm run dev`
+1. Clone it onto your computer
+1. Run `npm install`
+1. Run `npm run dev`
 1. Open <http://localhost:3000>
 
 That's it! Edit the `app/views/index.html` file and build awesome prototypes.

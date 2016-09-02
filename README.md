@@ -4,7 +4,7 @@ Rapid prototyping environment using the [Salesforce Lightning Design System](htt
 
 ## Quick Start
 
-Prerequisites: [Node.js](https://nodejs.org/en/) 6.x.x.
+Pre-requisites: [Node.js](https://nodejs.org/en/) 6 or up.
 
 1. Fork the repository
 1. Clone it on your computer

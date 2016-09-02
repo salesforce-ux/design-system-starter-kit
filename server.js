@@ -19,9 +19,8 @@ const port = process.env.PORT || 3000;
 // Set USER and PASSWORD environment variables
 const basic = auth.basic({
     realm: 'Salesforce Lightning Design System Prototype'
-  }, function(username, password, callback) {
-    callback(username === process.env.USERNAME && password === process.env.PASSWORD);
-  });
+  }, (username, password, callback) =>
+    callback(username === process.env.USERNAME && password === process.env.PASSWORD));
 
 if (process.env.USERNAME && process.env.PASSWORD) {
   app.use(auth.connect(basic));
@@ -29,6 +28,5 @@ if (process.env.USERNAME && process.env.PASSWORD) {
 
 app.use('/', express.static('./dist'));
 
-app.listen(port, function() {
-  console.log(`Listening on ${port}!`);
-});
+app.listen(port, () =>
+  console.log(`Listening on ${port}!`));

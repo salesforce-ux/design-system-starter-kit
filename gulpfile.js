@@ -43,7 +43,7 @@ gulp.task('favicon', () =>
 
 // Get data from the corresponding filename
 // e.g. inject data/foo.json into foo.html
-var getData = (file) => {
+const getData = (file) => {
   const dataPath = path.resolve('./app/views/data/' + path.basename(file.path, '.html') + '.json')
   let data = {};
 

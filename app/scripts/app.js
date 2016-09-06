@@ -39,7 +39,7 @@ const dropdownButtons = document.querySelectorAll('.slds-dropdown-trigger--click
 
 Array.from(dropdownButtons)
   .forEach((button) =>
-    button.addEventListener('click', (event) => toggleParent(event.target), false)
+    button.addEventListener('click', (event) => toggleParent(event.currentTarget), false)
   );
 
 /**
@@ -68,10 +68,10 @@ const defaultTabs = tabs('default');
 const scopedTabs = tabs('scoped');
 
 const assignTabEvents = (event) => {
-  tabActiveReset(event.target);
-  tabActiveSet(event.target);
-  tabPanelsReset(event.target);
-  tabPanelShow(event.target);
+  tabActiveReset(event.currentTarget);
+  tabActiveSet(event.currentTarget);
+  tabPanelsReset(event.currentTarget);
+  tabPanelShow(event.currentTarget);
 }
 
 Array.from(defaultTabs).forEach((tab) => {

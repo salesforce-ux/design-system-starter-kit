@@ -24,7 +24,7 @@ Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2
 
 **Your work is confidential?** Fill in a username and password in the Heroku settings.
 
-## What's inside?
+## What’s inside?
 
 - SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)
 - Powerful templating using [Nunjucks](http://mozilla.github.io/nunjucks/)

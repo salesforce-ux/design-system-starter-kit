@@ -10,12 +10,14 @@ The starter kit uses a powerful (but optional) templating engine:
 The syntax is very close to traditional HTML, allowing designers and
 developers alike to get comfortable with the code really quickly.
 
-## Templates
+## Pages
+
+Views are HTML or Nunjucks files, e.g. `index.html`, `filename.html`.
+Each page is accessible at `http://your-domain/filename.html`.
+Add as many as needed, and link between them like you would with classic HTML.
+
+## Templates and partials
 
 A default template is provided in [`_template.html`](_template.html).
 
-## Views
-
-Views are HTML or Nunjucks files, e.g. `index.html`, `filename.html`.
-
-Add as many as needed, and link between them like you would with classic HTML.
+Partials should have a name of the form `_partial.html` (e.g. `_header.html`).

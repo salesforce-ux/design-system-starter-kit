@@ -7,7 +7,7 @@ in templates.
 Data is stored in JSON files named after the HTML page names.
 This helps prototyping efficiently with large amounts of data.
 
-- Data from `index.json` gets injected into `index.html`
+- Data from `example.json` gets injected into `example.html`
 - Data from `foo.json` gets injected into `foo.html`
 
 ## Accessing data in templates

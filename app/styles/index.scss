@@ -1,17 +1,31 @@
-// Import the design system
+//
+// Prototype styles (using the Sass CSS preprocessor)
+//
+
+//
+// First, we're importing the design system from the npm package
+//
 $static-font-path: '/assets/fonts/webfonts';
 @import 'node_modules/@salesforce-ux/design-system/scss/index';
 
-// Import the app's partials (filenames starting with a "_")
-@import 'header';
+//
+// Then, we're importing some styles via Sass partials (filenames starting with a "_")
+//
 @import 'footer';
 
 //
-// You can also add styles in this file, like so:
+// We can also add styles directly in this file, like so:
 //
 
 // Push down the global navigation below the header using a placeholder element
 .app-header-placeholder {
+  // A note on Design Tokens in Sass:
+  //
+  // $height-header is a Sass variable pointing to a Design Token
+  // Design tokens are listed at:
+  // https://www.lightningdesignsystem.com/design-tokens/
+  //
+  // This is how you leverage Design Tokens in Sass:
   height: $height-header;
 }
 

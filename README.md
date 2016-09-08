@@ -31,7 +31,7 @@ Pre-requisites: [Node.js](https://nodejs.org/en/) 6 or up.
 1. Run `npm run dev` (or `gulp`)
 1. Open <http://localhost:3000>
 
-That's it! You can start by editing the `app/views/index.html` file and build awesome prototypes.
+That’s it! You can start by editing the `app/views/index.html` file and build awesome prototypes.
 
 ## Deploy to Heroku
 
@@ -45,11 +45,25 @@ Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2
 
 - SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)
 - Powerful templating using [Nunjucks](http://mozilla.github.io/nunjucks/)
-- Some JavaScript, making a few components interactive 
+- Some JavaScript, making a few components interactive
 - [SVG4Everybody](https://github.com/jonathantneal/svg4everybody), a polyfill that helps browsers display SVG icons
 - [Live reload using BrowserSync](https://www.browsersync.io/): automatic browser reloading on file changes, and cross-device testing
 - Sourcemaps support ([for live in-browser Sass development](https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0))
 - [Autoprefixer](https://github.com/postcss/autoprefixer) (adds vendor prefixes to CSS rules)
+
+## FAQ
+
+### Which browsers does the Starter Kit support?
+
+When it comes to the CSS, the Starter Kit has the same support level as the Lightning Design System itself.
+See [the list of supported browsers](https://www.lightningdesignsystem.com/faq/#what-browsers-are-supported).
+
+For JavaScript, at the moment only a few very recent browsers are supported (Chrome & Firefox recommended).
+
+### Is there a showcase of prototypes using the Starter Kit?
+
+Not yet, but we’d love to know about your creations! Feel free to get in touch in the [issues of the project](https://github.com/salesforce-ux/design-system-starter-kit/issues).
+In the mean time, you can [check out the example prototype](https://starter-kit-demo.herokuapp.com/example.html). 
 
 ----
 

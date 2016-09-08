@@ -6,12 +6,16 @@ $static-font-path: '/assets/fonts/webfonts';
 @import 'header';
 @import 'footer';
 
-// Or add styles here
+//
+// You can also add styles in this file, like so:
+//
 
+// Push down the global navigation below the header using a placeholder element
 .app-header-placeholder {
   height: $height-header;
 }
 
+// Wrap the prototype in a scrollable container
 .app-wrapper {
   overflow: auto;
   position: absolute;

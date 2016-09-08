@@ -13,114 +13,159 @@
   Page content (gets injected into the template)
 -->
 {% block content %}
-<header class="app-header">
-  <h1 class="slds-text-heading--large">
-    <span class="slds-icon_container">
-      <svg aria-hidden="true" class="slds-icon slds-icon-text-default slds-icon--small">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-      </svg>
-      <span class="slds-assistive-text">Description Icon</span>
-    </span>
+{% include "_page-header.html" %}
+
+
+<!--
+  Using the grid to make a 2-column layout
+  https://www.lightningdesignsystem.com/components/utilities/grid/
+-->
+<div class="slds-grid">
+  <!--
+    First column
+  -->
+  <div class="slds-p-horizontal--large slds-col slds-size--2-of-3">
+    <header class="app-header">
+      <h1 class="slds-text-heading--large">
+        <span class="slds-icon_container">
+          <svg aria-hidden="true" class="slds-icon slds-icon-text-default slds-icon--small">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+          </svg>
+          <span class="slds-assistive-text">Description Icon</span>
+        </span>
+        <!--
+          Headline: is populated with data coming from data/index.json
+        -->
+        <span>{{ headline }}</span>
+      </h1>
+    </header>
+
+    <img src="assets/img-efficiency.svg" alt="" />
+
+    <p class="slds-text-body--regular slds-m-top--large">You may now edit files in the <code>app</code> directory to build something with the <a href="https://www.lightningdesignsystem.com">Salesforce Lightning Design System</a>.</p>
+    <p class="slds-text-body--regular slds-m-top--large">Component documentation and markup available at: <a href="https://www.lightningdesignsystem.com">https://www.lightningdesignsystem.com</a>.</p>
+    <hr />
+    <h2 class="slds-text-heading--medium slds-m-top--large">Example of injected data</h2>
+    <p class="slds-text-body--regular slds-m-vertical--large">Data showed in this table comes from <a href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/app/views/data/index.json"><code>views/data/index.json</code></a>.</p>
+
     <!--
-      Headline: is populated with data coming from data/index.json
+      Data table component
+      https://www.lightningdesignsystem.com/components/data-tables/#flavor-basic-data-table-striped-rows
+
+      Modifiers:
+      - fixed layout: slds-table--fixed-layout (to make text truncation work within cells)
+      - striped rows: slds-table--striped
     -->
-    <span>{{ headline }}</span>
-  </h1>
-</header>
-<div class="app-main">
-  <img src="assets/img-efficiency.svg" alt="Efficiency!" />
-  <p class="slds-text-body--regular slds-m-top--large">You may now edit files in the <code>app</code> directory to build something with the <a href="https://www.lightningdesignsystem.com">Salesforce Lightning Design System</a>.</p>
-  <p class="slds-text-body--regular slds-m-top--large">Component documentation and markup available at: <a href="https://www.lightningdesignsystem.com">https://www.lightningdesignsystem.com</a>.</p>
-  <hr />
-  <h2 class="slds-text-heading--medium slds-m-top--large">Examples of interactions</h2>
-  <div class="slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="true">
-    <button class="slds-button slds-button--icon-border-filled" aria-haspopup="true">
-      <svg aria-hidden="true" class="slds-button__icon">
-        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-      </svg>
-      <span class="slds-assistive-text">Show More</span>
-    </button>
-    <div class="slds-dropdown slds-dropdown--left">
-      <ul class="dropdown__list" role="menu">
-        <li class="slds-dropdown__item">
-          <a href="javascript:void(0);" role="menuitem">
-            <p class="slds-truncate">Menu Item One</p>
-          </a>
-        </li>
-        <li class="slds-dropdown__item">
-          <a href="javascript:void(0);" role="menuitem">
-            <p class="slds-truncate">Menu Item Two</p>
-          </a>
-        </li>
-        <li class="slds-dropdown__item">
-          <a href="javascript:void(0);" role="menuitem">
-            <p class="slds-truncate">Menu Item Three</p>
-          </a>
-        </li>
-        <li class="slds-dropdown__item slds-has-divider--top-space">
-          <a href="javascript:void(0);" role="menuitem">
-            <p class="slds-truncate">Menu Item Four</p>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--fixed-layout slds-table--striped">
+      <thead>
+        <tr class="slds-text-heading--label">
+          <!--
+            The first cell (Account Name) requires space for long labels,
+            so we're manually setting its width to half the size of the table
+            using the spacing utility slds-size--1-of-2
+          -->
+          <th scope="col" class="slds-size--1-of-2">
+            <div class="slds-truncate" title="Account Name">Account Name</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Billing State/Province">Billing State/Province</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Phone">Phone</div>
+          </th>
+          <th scope="col">
+            <div class="slds-truncate" title="Type">Type</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--
+          Looping around values in Nunjucks
+          http://mozilla.github.io/nunjucks/templating.html#for
+        -->
+        {% for account in accounts %}
+        <tr>
+          <th scope="row" data-label="Account Name">
+            <div class="slds-truncate" title="{{ account.name }}"><a href="javascript:void(0);">{{ account.name }}</a></div>
+          </th>
+          <td data-label="Billing State/Province">
+            <div class="slds-truncate" title="{{ account.state }}">{{ account.state }}</div>
+          </td>
+          <td data-label="Phone">
+            <div class="slds-truncate" title="{{ account.phone }}">{{ account.phone }}</div>
+          </td>
+          <td data-label="Type">
+            <div class="slds-truncate" title="{{ account.type }}">{{ account.type }}</div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 
-  <div class="slds-tabs--default">
-    <ul class="slds-tabs--default__nav" role="tablist">
-      <li class="slds-tabs--default__item slds-text-heading--label slds-active" title="Item One" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a></li>
-      <li class="slds-tabs--default__item slds-text-heading--label" title="Item Two"
-        role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Item Two</a></li>
-      <li class="slds-tabs--default__item slds-text-heading--label" title="Item Three"
-        role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a></li>
-    </ul>
-    <div id="tab-default-1" class="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
-    <div id="tab-default-2" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
-    <div id="tab-default-3" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item Three Content</div>
+  <!--
+    Second column
+  -->
+  <div class="slds-p-around--large slds-col slds-size--1-of-3">
+    <h2 class="slds-section__title slds-m-bottom--large">Examples of interactions</h2>
+    <h3 class="slds-section-title--divider slds-m-bottom--medium">Tabs</h3>
+    <!--
+      Tabs component
+      https://www.lightningdesignsystem.com/components/tabs/
+    -->
+    <div class="slds-tabs--default">
+      <ul class="slds-tabs--default__nav" role="tablist">
+        <li class="slds-tabs--default__item slds-text-heading--label slds-active" title="Item One" role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a></li>
+        <li class="slds-tabs--default__item slds-text-heading--label" title="Item Two"
+          role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Item Two</a></li>
+        <li class="slds-tabs--default__item slds-text-heading--label" title="Item Three"
+          role="presentation"><a class="slds-tabs--default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a></li>
+      </ul>
+      <div id="tab-default-1" class="slds-tabs--default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
+      <div id="tab-default-2" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
+      <div id="tab-default-3" class="slds-tabs--default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item Three Content</div>
+    </div>
+
+    <h3 class="slds-section-title--divider slds-m-vertical--medium">Dropdown menu</h3>
+    Click me:
+    <!--
+      Dropdown Menu Component
+      https://www.lightningdesignsystem.com/components/menus/#flavor-dropdown-dropdown-menu
+    -->
+    <div class="slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="true">
+      <button class="slds-button slds-button--icon-border-filled" aria-haspopup="true">
+        <svg aria-hidden="true" class="slds-button__icon">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+        </svg>
+        <span class="slds-assistive-text">Show More</span>
+      </button>
+      <div class="slds-dropdown slds-dropdown--left">
+        <ul class="dropdown__list" role="menu">
+          <li class="slds-dropdown__item">
+            <a href="javascript:void(0);" role="menuitem">
+              <p class="slds-truncate">Menu Item One</p>
+            </a>
+          </li>
+          <li class="slds-dropdown__item">
+            <a href="javascript:void(0);" role="menuitem">
+              <p class="slds-truncate">Menu Item Two</p>
+            </a>
+          </li>
+          <li class="slds-dropdown__item">
+            <a href="javascript:void(0);" role="menuitem">
+              <p class="slds-truncate">Menu Item Three</p>
+            </a>
+          </li>
+          <li class="slds-dropdown__item slds-has-divider--top-space">
+            <a href="javascript:void(0);" role="menuitem">
+              <p class="slds-truncate">Menu Item Four</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <hr />
-  <h2 class="slds-text-heading--medium slds-m-top--large">Example of injected data</h2>
-  <p class="slds-text-body--regular slds-m-vertical--large">Data showed in this table comes from <a href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/app/views/data/index.json"><code>views/data/index.json</code></a>.</p>
-  <table class="slds-table slds-table--bordered slds-table--cell-buffer">
-    <thead>
-      <tr class="slds-text-heading--label">
-        <th scope="col">
-          <div class="slds-truncate" title="Account Name">Account Name</div>
-        </th>
-        <th scope="col">
-          <div class="slds-truncate" title="Billing State/Province">Billing State/Province</div>
-        </th>
-        <th scope="col">
-          <div class="slds-truncate" title="Phone">Phone</div>
-        </th>
-        <th scope="col">
-          <div class="slds-truncate" title="Type">Type</div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <!--
-        Looping around values in Nunjucks
-        http://mozilla.github.io/nunjucks/templating.html#for
-      -->
-      {% for account in accounts %}
-      <tr>
-        <th scope="row" data-label="Account Name">
-          <div class="slds-truncate" title="{{ account.name }}"><a href="javascript:void(0);">{{ account.name }}</a></div>
-        </th>
-        <td data-label="Billing State/Province">
-          <div class="slds-truncate" title="{{ account.state }}">{{ account.state }}</div>
-        </td>
-        <td data-label="Phone">
-          <div class="slds-truncate" title="{{ account.phone }}">{{ account.phone }}</div>
-        </td>
-        <td data-label="Type">
-          <div class="slds-truncate" title="{{ account.type }}">{{ account.type }}</div>
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
 </div>
+
 <footer class="app-footer">Built using the <a href="https://github.com/salesforce-ux/design-system-starter-kit">Salesforce Lightning Design System Starter Kit</a>.</footer>
 {% endblock %}

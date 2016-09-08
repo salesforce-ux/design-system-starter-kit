@@ -1,3 +1,9 @@
 .app-header {
-  padding: $spacing-large;
+  // $spacing-large is a Design Token
+  // Design tokens are listed at:
+  // https://www.lightningdesignsystem.com/design-tokens/
+  //
+  // This is how you leverage Design Tokens in Sass:
+  padding-top: $spacing-large;
+  padding-bottom: $spacing-large;
 }

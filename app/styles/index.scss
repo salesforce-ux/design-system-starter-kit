@@ -2,12 +2,22 @@
 $static-font-path: '/assets/fonts/webfonts';
 @import 'node_modules/@salesforce-ux/design-system/scss/index';
 
-// Import the app's partials
+// Import the app's partials (filenames starting with a "_")
 @import 'header';
 @import 'footer';
 
 // Or add styles here
 
-.app-main {
-  padding: $spacing-large;
+.app-header-placeholder {
+  height: $height-header;
+}
+
+.app-wrapper {
+  overflow: auto;
+  position: absolute;
+  -webkit-overflow-scrolling: touch;
+  top: $height-context-bar + $height-header;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

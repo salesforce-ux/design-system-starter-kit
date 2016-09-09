@@ -12,7 +12,7 @@ This helps prototyping efficiently with large amounts of data.
 
 ## Accessing data in templates
 
-```json
+```json5
 // /app/views/data/accounts.json
 {
   "headline": "Account list",

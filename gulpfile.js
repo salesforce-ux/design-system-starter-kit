@@ -48,13 +48,13 @@ const getData = (file) => {
   let data = {};
 
   try {
-    data = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
+    data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   } catch(e) {
     // Don't fail if the JSON is badly formed or the file doesn't exist
   } finally {
-    return data
+    return data;
   }
-}
+};
 
 gulp.task('views', () =>
   gulp
@@ -108,7 +108,11 @@ gulp.task('default', ['build'], () => {
   gulp.watch([
     'dist/**/*.html',
     'dist/scripts/**/*',
-    'dist/assets/**/*'
+
+    // Note: we're not watching icons and fonts changes,
+    // as they're slowing down the task
+    'dist/assets/*.*',
+    'dist/assets/styles/*.*'
   ]).on('change', browserSync.reload);
 });
 

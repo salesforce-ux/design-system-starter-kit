@@ -47,7 +47,7 @@ Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2
 - Powerful templating using [Nunjucks](http://mozilla.github.io/nunjucks/)
 - Some JavaScript, making a few components interactive
 - [SVG4Everybody](https://github.com/jonathantneal/svg4everybody), a polyfill that helps browsers display SVG icons
-- [Live reload using BrowserSync](https://www.browsersync.io/): automatic browser reloading on file changes, and cross-device testing
+- [Live reload using BrowserSync](https://www.browsersync.io/): automatic browser reloading on file changes, and simultaneous cross-device testing
 - Sourcemaps support ([for live in-browser Sass development](https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0))
 - [Autoprefixer](https://github.com/postcss/autoprefixer) (adds vendor prefixes to CSS rules)
 

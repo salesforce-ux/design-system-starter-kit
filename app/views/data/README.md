@@ -4,15 +4,16 @@ The starter kit leverages [gulp-nunjucks](https://github.com/sindresorhus/gulp-n
 combined with [gulp-data](https://github.com/colynb/gulp-data) to inject data
 in templates.
 
-Data is stored in JSON files named after the HTML page names.
-This helps prototyping efficiently with large amounts of data.
+This helps prototyping efficiently with medium to large amounts of data.
+
+Data is stored in JSON files named after the HTML page names:
 
 - Data from `example.json` gets injected into `example.html`
 - Data from `foo.json` gets injected into `foo.html`
 
 ## Accessing data in templates
 
-```json
+```json5
 // /app/views/data/accounts.json
 {
   "headline": "Account list",

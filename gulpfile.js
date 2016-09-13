@@ -27,8 +27,8 @@ const $ = gulpLoadPlugins();
 gulp.task('assets', () =>
   gulp
     .src([
-      'node_modules/@salesforce-ux/design-system/assets/**/*',
-      'assets/**/*'
+      'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}',
+      'assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}'
     ])
     .pipe(gulp.dest('dist/assets'))
 );
@@ -70,7 +70,7 @@ gulp.task('views', () =>
 gulp.task('scripts', () =>
   gulp
     .src([
-      'app/scripts/**/*'
+      'app/scripts/**/*.js'
     ], { base: 'app' })
     .pipe(gulp.dest('dist/'))
 );
@@ -103,16 +103,16 @@ gulp.task('default', ['build'], () => {
     'app/views/**/*.html',
     'app/views/data/*.json'
   ], ['views']);
-  gulp.watch('assets/**/*', ['assets']);
-  gulp.watch('app/scripts/**/*', ['scripts']);
+  gulp.watch('assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}', ['assets']);
+  gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch([
     'dist/**/*.html',
-    'dist/scripts/**/*',
+    'dist/scripts/**/*.js',
 
     // Note: we're not watching icons and fonts changes,
     // as they're slowing down the task
-    'dist/assets/*.*',
-    'dist/assets/styles/*.*'
+    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg,md}',
+    'dist/assets/styles/*.css'
   ]).on('change', browserSync.reload);
 });
 

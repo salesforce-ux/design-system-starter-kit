@@ -64,7 +64,7 @@ gulp.task('views', () =>
     ], { base: 'app/views' })
     .pipe($.data(getData))
     .pipe($.nunjucks.compile())
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('dist'))
 );
 
 gulp.task('scripts', () =>

@@ -1,6 +1,6 @@
 # Assets
 
-Directory dedicated to your images, icons, and files.
+Directory dedicated to your images, icons, and fonts.
 
 ## Loading an asset
 

@@ -27,8 +27,8 @@ const $ = gulpLoadPlugins();
 gulp.task('assets', () =>
   gulp
     .src([
-      'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}',
-      'assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}'
+      'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}',
+      'src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}'
     ])
     .pipe(gulp.dest('dist/assets'))
 );
@@ -102,7 +102,7 @@ gulp.task('default', ['build'], () => {
     'src/views/**/*.html',
     'src/views/data/*.json'
   ], ['views']);
-  gulp.watch('assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}', ['assets']);
+  gulp.watch('src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}', ['assets']);
   gulp.watch('src/scripts/**/*.js', ['scripts']);
   gulp.watch([
     'dist/**/*.html',
@@ -110,7 +110,7 @@ gulp.task('default', ['build'], () => {
 
     // Note: we're not watching icons and fonts changes,
     // as they're slowing down the task
-    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg,md}',
+    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg}',
     'dist/assets/styles/*.css'
   ]).on('change', browserSync.reload);
 });

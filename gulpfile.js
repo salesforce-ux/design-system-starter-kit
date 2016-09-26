@@ -93,8 +93,7 @@ gulp.task('styles', () =>
 gulp.task('default', ['build'], () => {
   browserSync({
     notify: false,
-    server: 'dist',
-    online: true
+    server: 'dist'
   });
 
   gulp.watch('src/styles/*.scss', ['styles']);

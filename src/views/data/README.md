@@ -14,7 +14,7 @@ Data is stored in JSON files named after the HTML page names:
 ## Accessing data in templates
 
 ```json5
-// /app/views/data/accounts.json
+// /src/views/data/accounts.json
 {
   "headline": "Account list",
   "accounts": [
@@ -29,7 +29,7 @@ Data is stored in JSON files named after the HTML page names:
 ```
 
 ```html
-<!-- /app/views/accounts.html -->
+<!-- /src/views/accounts.html -->
 <h1>{{ headline }}</h1>
 <ul>
 {% for account in accounts %}

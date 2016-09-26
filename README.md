@@ -31,7 +31,7 @@ Pre-requisites: [Node.js](https://nodejs.org/en/) 6 or up.
 1. Run `npm run dev` (or `gulp`)
 1. Open <http://localhost:3000>
 
-That’s it! You can start by editing the `app/views/index.html` file and build awesome prototypes.
+That’s it! You can start by editing the `src/views/index.html` file and build awesome prototypes.
 
 ## Deploy to Heroku
 

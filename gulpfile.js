@@ -36,15 +36,15 @@ gulp.task('assets', () =>
 gulp.task('favicon', () =>
   gulp
     .src([
-      'app/favicon*.*'
-    ], { base: 'app' })
+      'src/favicon*.*'
+    ], { base: 'src' })
     .pipe(gulp.dest('dist'))
 );
 
 // Get data from the corresponding filename
 // e.g. inject data/foo.json into foo.html
 const getData = (file) => {
-  const dataPath = path.resolve('./app/views/data/' + path.basename(file.path, '.html') + '.json')
+  const dataPath = path.resolve('./src/views/data/' + path.basename(file.path, '.html') + '.json')
   let data = {};
 
   try {
@@ -59,9 +59,9 @@ const getData = (file) => {
 gulp.task('views', () =>
   gulp
     .src([
-      'app/views/**/*.html',
-      '!app/views/**/_*.html'
-    ], { base: 'app/views' })
+      'src/views/**/*.html',
+      '!src/views/**/_*.html'
+    ], { base: 'src/views' })
     .pipe($.data(getData))
     .pipe($.nunjucks.compile())
     .pipe(gulp.dest('dist'))
@@ -70,14 +70,14 @@ gulp.task('views', () =>
 gulp.task('scripts', () =>
   gulp
     .src([
-      'app/scripts/**/*.js'
-    ], { base: 'app' })
+      'src/scripts/**/*.js'
+    ], { base: 'src' })
     .pipe(gulp.dest('dist/'))
 );
 
 gulp.task('styles', () =>
   gulp
-    .src('app/styles/*.scss')
+    .src('src/styles/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
@@ -97,13 +97,13 @@ gulp.task('default', ['build'], () => {
     online: true
   });
 
-  gulp.watch('app/styles/*.scss', ['styles']);
+  gulp.watch('src/styles/*.scss', ['styles']);
   gulp.watch([
-    'app/views/**/*.html',
-    'app/views/data/*.json'
+    'src/views/**/*.html',
+    'src/views/data/*.json'
   ], ['views']);
   gulp.watch('assets/**/*.{woff,woff2,txt,jpg,png,gif,svg,md}', ['assets']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('src/scripts/**/*.js', ['scripts']);
   gulp.watch([
     'dist/**/*.html',
     'dist/scripts/**/*.js',

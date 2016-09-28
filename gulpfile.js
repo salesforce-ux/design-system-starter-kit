@@ -118,6 +118,6 @@ gulp.task('clean', () => del(['dist'], { dot: true }));
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', 'assets', 'views', 'styles', 'scripts', 'favicon',
+    'clean', [ 'assets', 'views', 'styles', 'scripts', 'favicon' ],
   callback);
 });

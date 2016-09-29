@@ -63,7 +63,12 @@ For JavaScript, at the moment only a few very recent browsers are supported (Chr
 ### Is there a showcase of prototypes using the Starter Kit?
 
 Not yet, but we’d love to know about your creations! Feel free to get in touch in the [issues of the project](https://github.com/salesforce-ux/design-system-starter-kit/issues).
-In the mean time, you can [check out the example prototype](https://starter-kit-demo.herokuapp.com/example.html). 
+In the mean time, you can [check out the example prototype](https://starter-kit-demo.herokuapp.com/example.html).
+
+
+## See Also
+
+The [Design System UI Kit](https://github.com/salesforce-ux/design-system-ui-kit/) is a great way for designers to put beautiful static prototypes together.
 
 ----
 

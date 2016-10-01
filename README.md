@@ -23,7 +23,7 @@ Deploying your prototype to Heroku for free – in only 2 clicks – is also lig
 
 ## Quick Start
 
-Pre-requisites: [Node.js](https://nodejs.org/en/) 6 or up.
+Pre-requisites: [Node.js](https://nodejs.org/en/) 4.2 or up.
 
 1. Fork the repository
 1. Clone it onto your computer

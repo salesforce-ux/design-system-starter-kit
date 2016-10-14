@@ -1,8 +1,9 @@
-# src directory
+# app directory
 
 This directory contains the source files that make your prototype:
 
-- [`/src/assets/`](assets/): images, fonts
-- [`/src/scripts/`](scripts/): JavaScript files
-- [`/src/styles/`](styles/): stylesheets (built using Sass)
-- [`/src/views/`](views/): markup and data for your pages and templates
+- [`/app/assets/`](assets/): images, fonts
+- [`/app/views/`](views/): markup and data for your pages and templates
+- [`/app/styles/`](styles/): stylesheets (built using Sass)
+- [`/app/scripts/`](scripts/): JavaScript files
+- [`/app/react/`](react/): JSX files

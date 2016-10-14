@@ -17,6 +17,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 const path = require('path');
 const fs = require('fs');
 const gulp = require('gulp');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
 const del = require('del');
 const runSequence = require('run-sequence');
 const browserSync = require('browser-sync');
@@ -24,21 +27,25 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 
 const $ = gulpLoadPlugins();
 
+browserify().transform("babelify", {presets: ["es2015"]});
+
 gulp.task('assets', () =>
   gulp
-    .src([
-      'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}',
-      'src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}'
-    ])
-    .pipe(gulp.dest('dist/assets'))
+  .src([
+    'node_modules/@salesforce-ux/design-system/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}',
+    'src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}'
+  ])
+  .pipe(gulp.dest('dist/assets'))
 );
 
 gulp.task('favicon', () =>
   gulp
-    .src([
-      'src/favicon*.*'
-    ], { base: 'src' })
-    .pipe(gulp.dest('dist'))
+  .src([
+    'src/favicon*.*'
+  ], {
+    base: 'src'
+  })
+  .pipe(gulp.dest('dist'))
 );
 
 // Get data from the corresponding filename
@@ -49,7 +56,7 @@ const getData = (file) => {
 
   try {
     data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-  } catch(e) {
+  } catch (e) {
     // Don't fail if the JSON is badly formed or the file doesn't exist
   } finally {
     return data;
@@ -58,66 +65,99 @@ const getData = (file) => {
 
 gulp.task('views', () =>
   gulp
-    .src([
-      'src/views/**/*.html',
-      '!src/views/**/_*.html'
-    ], { base: 'src/views' })
-    .pipe($.data(getData))
-    .pipe($.nunjucks.compile())
-    .pipe(gulp.dest('dist'))
+  .src([
+    'src/views/**/*.html',
+    '!src/views/**/_*.html'
+  ], {
+    base: 'src/views'
+  })
+  .pipe($.data(getData))
+  .pipe($.nunjucks.compile())
+  .pipe(gulp.dest('dist/'))
 );
+
+gulp.task('react', function() {
+    return browserify({
+        extensions: ['.js', '.jsx'],
+        entries: 'src/react/app.jsx',
+    })
+    .transform(babelify.configure({
+        ignore: /(bower_components)|(node_modules)/,
+        presets: ['es2015', 'react']
+    }))
+    .bundle()
+    .on("error", function (err) { console.log("Error : " + err.message); })
+    .pipe(source('scripts/react.js'))
+    .pipe(gulp.dest('dist'));
+});
 
 gulp.task('scripts', () =>
   gulp
-    .src([
-      'src/scripts/**/*.js'
-    ], { base: 'src' })
-    .pipe(gulp.dest('dist/'))
+  .src([
+    'src/scripts/**/*.js'
+  ], {
+    base: 'src'
+  })
+  .pipe(gulp.dest('dist/'))
 );
 
 gulp.task('styles', () =>
   gulp
-    .src('src/styles/*.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass.sync({
-      precision: 10
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({ browsers: ['last 2 versions'], remove: false }))
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('dist/styles'))
-    .pipe(browserSync.stream({ match: '**/*.css' }))
+  .src('src/styles/*.scss')
+  .pipe($.plumber())
+  .pipe($.sourcemaps.init())
+  .pipe($.sass.sync({
+    precision: 10
+  }).on('error', $.sass.logError))
+  .pipe($.autoprefixer({
+    browsers: ['last 2 versions'],
+    remove: false
+  }))
+  .pipe($.minifyCss({
+    advanced: false
+  }))
+  .pipe($.sourcemaps.write('.'))
+  .pipe(gulp.dest('dist/styles'))
+  .pipe(browserSync.stream({
+    match: '**/*.css'
+  }))
 );
 
 // Static Server (development)
 gulp.task('default', ['build'], () => {
   browserSync({
     notify: false,
-    server: 'dist'
+    server: 'dist',
+    online: true
   });
 
   gulp.watch('src/styles/*.scss', ['styles']);
   gulp.watch([
     'src/views/**/*.html',
+    'src/views/**/*.{js,jsx}',
     'src/views/data/*.json'
   ], ['views']);
+  gulp.watch('src/react/**/*.jsx', ['react']);
   gulp.watch('src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}', ['assets']);
   gulp.watch('src/scripts/**/*.js', ['scripts']);
   gulp.watch([
     'dist/**/*.html',
+    'dist/**/*.js',
     'dist/scripts/**/*.js',
 
     // Note: we're not watching icons and fonts changes,
     // as they're slowing down the task
-    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg}',
+    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg,md}',
     'dist/assets/styles/*.css'
   ]).on('change', browserSync.reload);
 });
 
-gulp.task('clean', () => del(['dist'], { dot: true }));
+gulp.task('clean', () => del(['dist'], {
+  dot: true
+}));
 
 gulp.task('build', callback => {
   runSequence(
-    'clean', [ 'assets', 'views', 'styles', 'scripts', 'favicon' ],
-  callback);
+    'clean', 'assets', 'views', 'react', 'styles', 'scripts', 'favicon',
+    callback);
 });

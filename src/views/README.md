@@ -20,11 +20,4 @@ Add as many as needed, and link between them like you would with classic HTML.
 
 A default template is provided in [`_template.html`](_template.html).
 
-Partials should have a name of the form `_partial.html` (e.g. `_page-header.html`).
-
-## Examples
-
-- [`example.html`](example.html): shows what you can achieve in minutes with the starter kit
-- [`blank.html`](blank.html): a blank template for you to easily create your own prototype
-- [`workshop.html`](workshop.html): boilerplate for the [Dreamforce 2016 workshop](http://sfdcworkshop.com/workshop/rapid-prototyping-with-slds/)
-- [`workshop-done.html`](workshop-done.html): what your page should look like when you’ve completed the workshop
+Partials should have a name of the form `_partial.html` (e.g. `_header.html`).

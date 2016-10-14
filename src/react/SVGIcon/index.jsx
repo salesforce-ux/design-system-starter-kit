@@ -13,7 +13,6 @@ class SVGIcon extends React.Component {
     const props = ['className', 'sprite', 'symbol'];
     return (
       <svg
-        {...props}
         aria-hidden={true}
         className={className}
         dangerouslySetInnerHTML={{__html: this.getUse()}} />

@@ -70,6 +70,8 @@ In the mean time, you can [check out the example prototype](https://starter-kit-
 
 The [Design System UI Kit](https://github.com/salesforce-ux/design-system-ui-kit/) is a great way for designers to put beautiful static prototypes together.
 
+Using React? Check out the [react branch](https://github.com/salesforce-ux/design-system-starter-kit/tree/react) (beta)!
+
 ----
 
 ## License

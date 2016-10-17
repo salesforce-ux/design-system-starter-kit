@@ -2,6 +2,13 @@
 
 ![Starter Kit by Salesforce UX](https://rawgit.com/salesforce-ux/design-system-starter-kit/master/starter-kit.svg)
 
+----
+
+⚠️ This is a React version of the Starter Kit.
+It still needs work to make it more stable and robust. Your help is appreciated!
+
+----
+
 Rapid prototyping environment using the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/), HTML, and [Sass](http://www.sass-lang.com/).
 
 ## Who is this for?

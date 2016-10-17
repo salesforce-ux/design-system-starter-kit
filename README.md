@@ -4,7 +4,7 @@
 
 ----
 
-⚠️ This is a React version of the Starter Kit.
+⚠️ **This is a React version of the Starter Kit.**  
 It still needs work to make it more stable and robust. Your help is appreciated!
 
 ----

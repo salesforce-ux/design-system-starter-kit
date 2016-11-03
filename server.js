@@ -29,4 +29,4 @@ if (process.env.USERNAME && process.env.PASSWORD) {
 app.use('/', express.static('./dist'));
 
 app.listen(port, () =>
-  console.log(`Listening on ${port}!`));
+  console.log(`Listening on port ${port}!\n\nDeveloping locally? Run "npm run dev" instead.`));

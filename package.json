@@ -39,7 +39,8 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "http-auth": "^2.4.8",
-    "run-sequence": "^1.1.5"
+    "run-sequence": "^1.1.5",
+    "react-lightning-design-system": "git+ssh://git@github.com/ButuzGOL/react-lightning-design-system.git#small-enhancements"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",

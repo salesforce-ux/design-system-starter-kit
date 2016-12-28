@@ -25,12 +25,12 @@
   "dependencies": {
     "@salesforce-ux/design-system": "~2.1.2",
     "browser-sync": "^2.15.0",
+    "browserify": "^13.1.0",
     "del": "^2.2.0",
     "express": "^4.14.0",
-    "browserify": "^13.1.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
     "gulp-data": "^1.2.1",
     "gulp-load-plugins": "^1.2.2",
     "gulp-minify-css": "^1.2.4",
@@ -39,8 +39,8 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "http-auth": "^2.4.8",
-    "run-sequence": "^1.1.5",
-    "react-lightning-design-system": "git+ssh://git@github.com/ButuzGOL/react-lightning-design-system.git#small-enhancements"
+    "react-lightning-design-system": "^2.2.1",
+    "run-sequence": "^1.1.5"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -54,6 +54,16 @@
     "react-dom": "^15.3.2"
   },
   "browserify": {
-    "transform": [["babelify", { "presets": ["es2015", "react"] }]]
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ]
+        }
+      ]
+    ]
   }
 }

@@ -50,6 +50,7 @@
   <!--
     Placeholder to push the context bar down
   -->
+  
   <div class="app-header-placeholder"></div>
 
   <!--
@@ -76,7 +77,7 @@
           </a>
         </div>
         <span class="slds-context-bar__label-action slds-context-bar__app-name">
-          <span class="slds-truncate">App Name</span>
+          <span class="slds-truncate" title="{ props.appName || &#x27;App Name&#x27; }">Wisefiles</span>
         </span>
       </div>
     </div>
@@ -88,11 +89,11 @@
           </a>
         </li>
         <li class="slds-context-bar__item slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger--hover" aria-haspopup="true">
-          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item">
-            <span class="slds-truncate">Menu Item</span>
+          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Projects">
+            <span class="slds-truncate">Projects</span>
           </a>
           <div class="slds-context-bar__icon-action slds-p-left--none" tabindex="0">
-            <button class="slds-button slds-button--icon slds-context-bar__button" tabindex="-1">
+            <button class="slds-button slds-button--icon slds-context-bar__button" tabindex="-1" title="Open menu item submenu">
               <svg aria-hidden="true" class="slds-button__icon">
                 <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
               </svg>
@@ -100,7 +101,7 @@
             </button>
           </div>
           <div class="slds-dropdown slds-dropdown--right">
-            <ul class="dropdown__list" role="menu">
+            <ul class="slds-dropdown__list" role="menu">
               <li class="slds-dropdown__item" role="presentation">
                 <a href="javascript:void(0);" role="menuitem" tabindex="-1">
                   <span class="slds-truncate">
@@ -130,19 +131,34 @@
             </ul>
           </div>
         </li>
-        <li class="slds-context-bar__item">
-          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item 0">
-            <span class="slds-truncate">Menu Item</span>
+        <li class="slds-context-bar__item slds-is-active">
+          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Subjects">
+            <span class="slds-truncate">Subjects</span>
           </a>
         </li>
         <li class="slds-context-bar__item">
-          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item 1">
-            <span class="slds-truncate">Menu Item</span>
+          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Record Requests">
+            <span class="slds-truncate">Record Requests</span>
           </a>
         </li>
         <li class="slds-context-bar__item">
-          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Menu Item 2">
-            <span class="slds-truncate">Menu Item</span>
+          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Items">
+            <span class="slds-truncate">Items</span>
+          </a>
+        </li>
+        <li class="slds-context-bar__item">
+          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Reports">
+            <span class="slds-truncate">Reports</span>
+          </a>
+        </li>
+        <li class="slds-context-bar__item">
+          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Documents">
+            <span class="slds-truncate">Documents</span>
+          </a>
+        </li>
+        <li class="slds-context-bar__item">
+          <a href="javascript:void(0);" class="slds-context-bar__label-action" title="Service Requests">
+            <span class="slds-truncate">Service Requests</span>
           </a>
         </li>
       </ul>

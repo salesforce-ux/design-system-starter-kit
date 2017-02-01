@@ -11,6 +11,8 @@ It still needs work to make it more stable and robust. Your help is appreciated!
 
 Rapid prototyping environment using the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com/), HTML, and [Sass](http://www.sass-lang.com/).
 
+**[Open the demo on Heroku](https://starter-kit-demo-react.herokuapp.com/)**
+
 ## Who is this for?
 
 From the prototyper to the large application developer… the Design System Starter Kit

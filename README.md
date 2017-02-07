@@ -26,7 +26,8 @@ Deploying your prototype to Heroku for free – in only 2 clicks – is also lig
 Pre-requisites: [Node.js](https://nodejs.org/en/) 4.2 or up.
 
 1. Fork the repository
-1. Clone it onto your computer
+1. Clone it or [download it](https://github.com/salesforce-ux/design-system-starter-kit/archive/master.zip) onto your computer
+1. In a terminal, `cd` into the `design-system-starter-kit` directory
 1. Run `npm install`
 1. Run `npm run dev` (or `gulp`)
 1. Open <http://localhost:3000>

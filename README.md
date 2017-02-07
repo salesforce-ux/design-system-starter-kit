@@ -34,6 +34,8 @@ Pre-requisites: [Node.js](https://nodejs.org/en/) 4.2 or up.
 
 That’s it! You can start by editing the `src/views/index.html` file and build awesome prototypes.
 
+Tip: copy markup from the [Lightning Design System Components](https://www.lightningdesignsystem.com/components-overview/) and paste it into the HTML files of the starter kit.
+
 ## Deploy to Heroku
 
 Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2 clicks.

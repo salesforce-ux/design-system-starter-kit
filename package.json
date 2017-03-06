@@ -7,7 +7,9 @@
   "scripts": {
     "test": "gulp build",
     "dev": "gulp",
-    "prestart": "gulp build"
+    "prestart": "gulp build",
+    "lint:js": "eslint . --format codeframe --ignore-pattern=dist --ignore-pattern=src/scripts/vendor",
+    "lint:css": "stylelint src/styles/**/*.scss"
   },
   "engines": {
     "node": "^6.5.0",
@@ -24,9 +26,9 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@salesforce-ux/design-system": "~2.2.1",
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.18.8",
     "del": "^2.2.2",
-    "express": "^4.14.1",
+    "express": "^4.15.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-data": "^1.2.1",
@@ -34,9 +36,32 @@
     "gulp-nunjucks": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.0",
+    "gulp-sourcemaps": "^2.4.1",
     "http-auth": "^3.1.1",
     "json5": "^0.5.1",
     "run-sequence": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.0",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "stylelint": "^7.9.0",
+    "stylelint-config-slds": "^1.0.5"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-slds",
+    "rules": {
+      "selector-class-pattern": [
+        "^(?!slds-)[a-zA-Z-_]+$",
+        {
+          "resolveNestedSelectors": true,
+          "severity": "error"
+        }
+      ]
+    }
   }
 }

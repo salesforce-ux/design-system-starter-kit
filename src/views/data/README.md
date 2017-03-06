@@ -8,6 +8,7 @@ This helps prototyping efficiently with medium to large amounts of data.
 
 Data is stored in JSON files named after the HTML page names:
 
+- Data from `common.json` gets injected into all views
 - Data from `example.json` gets injected into `example.html`
 - Data from `foo.json` gets injected into `foo.html`
 

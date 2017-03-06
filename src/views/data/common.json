@@ -1,0 +1,7 @@
+// DO NOT DELETE THIS FILE!
+// This data gets imported in all views:
+{
+  // To access this data in a view, you'd write:
+  // {{ common.somedata }}
+  "somedata": "somevalue"
+}

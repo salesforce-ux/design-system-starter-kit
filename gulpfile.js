@@ -14,6 +14,7 @@ const gulp = require('gulp');
 const del = require('del');
 const runSequence = require('run-sequence');
 const browserSync = require('browser-sync');
+const JSON5 = require('json5');
 const gulpLoadPlugins = require('gulp-load-plugins');
 
 const $ = gulpLoadPlugins();
@@ -35,14 +36,16 @@ gulp.task('favicon', () =>
     .pipe(gulp.dest('dist'))
 );
 
+const commonData = JSON5.parse(fs.readFileSync('./src/views/data/common.json', 'utf8'));
+
 // Get data from the corresponding filename
 // e.g. inject data/foo.json into foo.html
 const getData = (file) => {
   const dataPath = path.resolve('./src/views/data/' + path.basename(file.path, '.html') + '.json')
-  let data = {};
+  let data = { common: commonData };
 
   try {
-    data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    data = Object.assign(data, JSON5.parse(fs.readFileSync(dataPath, 'utf8')));
   } catch(e) {
     // Don't fail if the JSON is badly formed or the file doesn't exist
   } finally {

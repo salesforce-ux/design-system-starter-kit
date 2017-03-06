@@ -17,7 +17,7 @@ Load scripts like in classic HTML:
 </html>
 ```
 
-## svg4everybody
+## svg4everybody (in the `/vendor` directory)
 
 The starter kit includes [svg4everybody](https://jonathantneal.github.io/svg4everybody/),
 which adds external spritemaps support to otherwise SVG-capable browsers.

@@ -1,7 +1,0 @@
-// DO NOT DELETE THIS FILE!
-// This data gets injected in all views:
-{
-  // To access this data in a view, you'd write:
-  // {{ common.somedata }}
-  "somedata": "somevalue"
-}

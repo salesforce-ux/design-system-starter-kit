@@ -36,13 +36,13 @@ gulp.task('favicon', () =>
     .pipe(gulp.dest('dist'))
 )
 
-const commonData = JSON5.parse(fs.readFileSync('./src/views/data/common.json', 'utf8'))
+const sharedData = JSON5.parse(fs.readFileSync('./src/views/data/shared.json', 'utf8'))
 
 // Get data from the corresponding filename
 // e.g. inject data/foo.json into foo.html
 const getData = (file) => {
   const dataPath = path.resolve('./src/views/data/' + path.basename(file.path, '.html') + '.json')
-  let data = { common: commonData }
+  let data = { shared: sharedData }
 
   try {
     data = Object.assign(data, JSON5.parse(fs.readFileSync(dataPath, 'utf8')))

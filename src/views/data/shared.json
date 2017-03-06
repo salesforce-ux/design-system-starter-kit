@@ -1,0 +1,8 @@
+// DO NOT DELETE THIS FILE!
+// This data is shared across all templates:
+{
+  // To access this data in a view, you'd write:
+  // {{ shared.somedata }}
+  "somedata": "somevalue",
+  "builtWith": "Salesforce Lightning Design System Starter Kit"
+}

@@ -9,14 +9,14 @@ This helps prototyping efficiently with medium to large amounts of data.
 
 Data is stored in JSON files named after the HTML page names:
 
-- Data from `common.json` gets injected into all views
+- Data from `shared.json` gets shared across all views
 - Data from `example.json` gets injected into `example.html`
 - Data from `foo.json` gets injected into `foo.html`
 
 ## Accessing data in templates
 
 ```json5
-// /src/views/data/common.json
+// /src/views/data/shared.json
 
 {
   "orgName": "Your Org Name"
@@ -38,7 +38,7 @@ Data is stored in JSON files named after the HTML page names:
 
 ```html
 <!-- /src/views/accounts.html -->
-<a href="/">{{ common.orgName }}</a>
+<a href="/">{{ shared.orgName }}</a>
 
 <h1>{{ pageTitle }}</h1>
 <ul>

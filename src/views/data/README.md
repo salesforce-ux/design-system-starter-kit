@@ -2,7 +2,8 @@
 
 The starter kit leverages [gulp-nunjucks](https://github.com/sindresorhus/gulp-nunjucks)
 combined with [gulp-data](https://github.com/colynb/gulp-data) to inject data
-in templates.
+in templates. Note that the data is parsed using [JSON5](http://json5.org/),
+a very flexible superset of JSON.
 
 This helps prototyping efficiently with medium to large amounts of data.
 
@@ -15,9 +16,15 @@ Data is stored in JSON files named after the HTML page names:
 ## Accessing data in templates
 
 ```json5
+// /src/views/data/common.json
+
+{
+  "orgName": "Your Org Name"
+}
+
 // /src/views/data/accounts.json
 {
-  "headline": "Account list",
+  "pageTitle": "Account list",
   "accounts": [
     {
       "name": "Burlington Textiles Corp of America"
@@ -31,7 +38,9 @@ Data is stored in JSON files named after the HTML page names:
 
 ```html
 <!-- /src/views/accounts.html -->
-<h1>{{ headline }}</h1>
+<a href="/">{{ common.orgName }}</a>
+
+<h1>{{ pageTitle }}</h1>
 <ul>
 {% for account in accounts %}
   <li>{{ account.name }}</li>

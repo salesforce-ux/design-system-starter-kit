@@ -5,6 +5,8 @@
 !/.gitignore
 !/.editorconfig
 !/.eslintrc.yml
+!/.stylelintrc.yml
+!/.eslintignore
 
 # Ignore modules
 /node_modules

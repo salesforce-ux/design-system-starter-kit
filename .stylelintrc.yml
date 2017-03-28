@@ -1,0 +1,6 @@
+extends: stylelint-config-slds
+rules:
+  selector-class-pattern:
+  - "^(?!slds-)[a-zA-Z-_]+$"
+  - resolveNestedSelectors: true
+    severity: error

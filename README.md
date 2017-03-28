@@ -1,4 +1,4 @@
-# Lightning Design System Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/design-system-starter-kit.svg?style=svg&circle-token=6c0b617673fd9c9e4eb4fb9defe953a92fc1797c)](https://circleci.com/gh/salesforce-ux/design-system-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/salesforce-ux/design-system-starter-kit.svg)](https://greenkeeper.io/)
+# Lightning Design System Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/design-system-starter-kit.svg?style=shield&circle-token=6c0b617673fd9c9e4eb4fb9defe953a92fc1797c)](https://circleci.com/gh/salesforce-ux/design-system-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/salesforce-ux/design-system-starter-kit.svg)](https://greenkeeper.io/)
 
 ![Starter Kit by Salesforce UX](https://rawgit.com/salesforce-ux/design-system-starter-kit/master/starter-kit.svg)
 
@@ -26,12 +26,15 @@ Deploying your prototype to Heroku for free – in only 2 clicks – is also lig
 Pre-requisites: [Node.js](https://nodejs.org/en/) 4.2 or up.
 
 1. Fork the repository
-1. Clone it onto your computer
+1. Clone it or [download it](https://github.com/salesforce-ux/design-system-starter-kit/archive/master.zip) onto your computer
+1. In a terminal, `cd` into the `design-system-starter-kit` directory
 1. Run `npm install`
 1. Run `npm run dev` (or `gulp`)
 1. Open <http://localhost:3000>
 
 That’s it! You can start by editing the `src/views/index.html` file and build awesome prototypes.
+
+Tip: copy markup from the [Lightning Design System Components](https://www.lightningdesignsystem.com/components-overview/) and paste it into the HTML files of the starter kit.
 
 ## Deploy to Heroku
 
@@ -71,14 +74,3 @@ In the mean time, you can [check out the example prototype](https://starter-kit-
 The [Design System UI Kit](https://github.com/salesforce-ux/design-system-ui-kit/) is a great way for designers to put beautiful static prototypes together.
 
 Using React? Check out the [react branch](https://github.com/salesforce-ux/design-system-starter-kit/tree/react) (beta)!
-
-----
-
-## License
-
-Copyright (c) 2016, salesforce.com, inc. All rights reserved.  
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

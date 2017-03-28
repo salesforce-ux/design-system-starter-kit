@@ -1,8 +1,22 @@
+# Ignore all hidden dotfiles
 .*
 
-!.gitignore
-!.editorconfig
+# Whitelist useful dotfiles
+!/.gitignore
+!/.editorconfig
+!/.eslintrc.yml
+!/.stylelintrc.yml
+!/.eslintignore
 
-node_modules
+# Ignore modules
+/node_modules
+
+# Add a .gitkeep file in an empty
+# directory to check it in the repository
+!.gitkeep
+
+# Ignore dist directory containing built assets
 dist
+
+# Ignore logs
 *.log

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Lightning Design System Starter Kit</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+  <style>
+  .communitySetupCmcWorkspaceTile {
+    /*DO NOT USE THIS CODE, JUST FOR PRESENTATION*/
+    height: 12.5rem;
+    display: inline-block;
+    width: 290px;
+  }
+  .slds-stateful{
+    min-width: 111px;
+    height: 32px;
+    overflow: hidden;
+    -webkit-transition: background-color .15s .15s ease-out, opacity .15s ease-out, -webkit-transform .4s ease-out;
+    -webkit-transform: scale(1);
+  }
+  .slds-stateful.slds-button--success .text{
+    top: -30px;
+  }
+  .slds-stateful .text{
+    display: inline-block;
+    position: relative;
+    top: 0;
+    -webkit-transition: all .45s cubic-bezier(0.630, -0.045, 0.200, 1.455);
+  }
+  button.slds-stateful .text > span{
+    display: block !important;
+  }
+
+  .slds-stateful.done{
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  </style>
+</head>
+<body>
+  <div class="slds-p-around--large slds-text-align--center slds-container--center slds-container--small">
+    <h1 class="slds-text-heading--large">True stateful button</h1><br>
+    <button class="slds-button slds-button--neutral slds-not-selected slds-stateful" aria-live="assertive">
+      <span class="text">
+        <span>
+          <svg class="slds-button__icon--stateful slds-button__icon--left" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+          </svg>Follow</span>
+        <span>
+          <svg class="slds-button__icon--stateful slds-button__icon--left" aria-hidden="true">
+            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
+          </svg>
+          Following
+        </span>
+      </span>
+    </button>
+  </div>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+  <script type="text/javascript">
+    let stateful = document.getElementsByClassName('slds-stateful')[0];
+    let text = stateful.firstElementChild;
+    stateful.addEventListener("click" , function(){
+      this.classList.add("slds-button--success");
+      setTimeout(function(){
+        stateful.classList.add("done");
+        console.log("done")
+      },600)
+    });
+  </script>
+</body>
+</html>

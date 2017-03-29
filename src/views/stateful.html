@@ -21,8 +21,9 @@
     min-width: 111px;
     height: 32px;
     overflow: hidden;
-    -webkit-transition: background-color .15s .15s ease-out, opacity .15s ease-out, -webkit-transform .4s ease-out;
-    -webkit-transform: scale(1);
+    -webkit-transform: translateY(0);
+    -webkit-transition:
+      background-color .15s .15s ease-out, opacity .8s ease-out, transform 1s .15s ease-out;
   }
   .slds-stateful.slds-button--success .text{
     top: -30px;
@@ -38,7 +39,7 @@
   }
 
   .slds-stateful.done{
-    -webkit-transform: scale(0);
+    -webkit-transform: translateY(-10px);
     opacity: 0;
   }
   </style>

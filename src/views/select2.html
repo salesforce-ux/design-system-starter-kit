@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Lightning Design System Starter Kit</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".js-example-basic-multiple").select2({
+        placeholder: "Enter a profile type",
+        theme: "SLDS"
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--small">
+    <h1 class="slds-text-heading--large">Select2 Demo</h1>
+    <div class="slds-form-element__control">
+      <label class="slds-form-element__label" for="profile">Profile</label>
+      <select class="js-example-basic-multiple slds-input" placeholder="hello" multiple="multiple" id="profile" name="profile">
+        <optgroup label="Customer">
+          <option value="Pizza Flipper">Pizza Flipper</option>
+          <option value="Coffee Barista">Coffee Barista</option>
+          <option value="Dough Roller">Dough Roller</option>
+          <option value="Coffee Barista">Coffee Barista</option>
+        </optgroup>
+        <optgroup label="Internal">
+          <option value="Chatter Moderator User">Chatter Moderator User</option>
+          <option value="Chatter Free User">Chatter Free User</option>
+          <option value="Marketing User">Marketing User</option>
+          <option value="Read Only">Read Only</option>
+          <option value="Standard User">Standard User</option>
+          <option value="Systems Administrator">Systems Administrator</option>
+        </optgroup>
+        <optgroup label="Partner">
+          <option value="Admin">Admin</option>
+          <option value="Account Executive">Account Executive</option>
+          <option value="Marketing Admin">Marketing Admin</option>
+          <option value="Financial Officer">Financial Officer</option>
+          <option value="Janitor">Janitor</option>
+          <option value="Auto Mechanic">Auto Mechanic</option>
+          <option value="Steam Roller Driver">Steam Roller Driver</option>
+          <option value="Snow Plower">Snow Plower</option>
+        </optgroup>
+      </select>
+    </div>
+  </div>
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+</html>

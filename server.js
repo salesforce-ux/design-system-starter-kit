@@ -10,7 +10,7 @@ const auth = require('http-auth')
 const port = process.env.PORT || 3000
 
 // Basic auth
-// Set USER and PASSWORD environment variables
+// Set USERNAME and PASSWORD environment variables
 const basic = auth.basic({
   realm: 'Salesforce Lightning Design System Prototype'
 }, (username, password, next) => {

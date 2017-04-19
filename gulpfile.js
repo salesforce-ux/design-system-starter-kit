@@ -75,7 +75,7 @@ gulp.task('scripts', () =>
 
 gulp.task('styles', () =>
   gulp
-    .src('src/styles/*.scss')
+    .src('src/styles/**/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
@@ -97,7 +97,7 @@ gulp.task('default', ['build'], () => {
     server: 'dist'
   })
 
-  gulp.watch('src/styles/*.scss', ['styles'])
+  gulp.watch('src/styles/**/*.scss', ['styles'])
   gulp.watch([
     'src/views/**/*.html',
     'src/views/data/*.json'

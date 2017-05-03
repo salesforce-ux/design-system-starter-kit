@@ -8,6 +8,11 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <meta name="robots" content="noindex, nofollow" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <style type="text/css">
+    #select2-names-results{
+      display: none;
+    }
+  </style>
   <!-- Prototype styles -->
   <link rel="stylesheet" href="/styles/index.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -18,13 +23,21 @@
         placeholder: "Enter a profile type",
         theme: "SLDS"
       });
+      $(".js-example-basic").select2({
+        placeholder: "Enter Names",
+        theme: "SLDS",
+        tags: true,
+        tokenSeparators: [',', ' ']
+      });
     });
   </script>
 </head>
 <body>
-  <div class="slds-p-around--large slds-container--center slds-container--small">
-    <h1 class="slds-text-heading--large">Select2 Demo</h1>
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">Smart Suggest Search Demo</h1>
+    <br>
     <div class="slds-form-element__control">
+      <h2 class="slds-text-heading--medium"><strong>Picklist:</strong> When selecting from a predefined list, like profiles</h2>
       <label class="slds-form-element__label" for="profile">Profile</label>
       <select class="js-example-basic-multiple slds-input" placeholder="hello" multiple="multiple" id="profile" name="profile">
         <optgroup label="Customer">
@@ -52,6 +65,14 @@
           <option value="Snow Plower">Snow Plower</option>
         </optgroup>
       </select>
+    </div>
+
+    <hr>
+
+    <div class="slds-form-element__control">
+      <h2 class="slds-text-heading--medium"><strong>String:</strong> When entering string values</h2>
+      <label class="slds-form-element__label" for="names">Name</label>
+      <select class="js-example-basic slds-input" id="names" multiple="multiple" name="names"></select>
     </div>
   </div>
 

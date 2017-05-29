@@ -85,3 +85,23 @@ Array.from(defaultTabs).forEach((tab) => {
 Array.from(scopedTabs).forEach((tab) => {
   tab.addEventListener('click', assignTabEvents, false)
 })
+
+
+/**
+ * Builder Navigaiton Demo
+ */
+var $nav = $("#builder_tools");
+var $tool_trigger = $("#tool_trigger > button")
+var $tools = $nav.find(".tool");
+var $panel = $("#tool_panel");
+
+$tool_trigger.on("click" , function(){
+  $(this).parents("nav").toggleClass("tools_active");
+  $tools.removeClass("active");
+  $panel.removeClass("show_panel");
+});
+$tools.on("click" , function(){
+  $tools.removeClass("active");
+  $(this).addClass("active");
+  $panel.addClass("show_panel");
+})

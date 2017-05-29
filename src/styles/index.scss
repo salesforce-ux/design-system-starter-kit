@@ -131,7 +131,6 @@ $static-font-path: '/assets/fonts/webfonts';
       }
     }
   }
-
   .select2-results__option--highlighted[aria-selected] {
     background-color: #5897fb;
     color: white;
@@ -148,5 +147,191 @@ $static-font-path: '/assets/fonts/webfonts';
     color: #54698d;
     text-transform: uppercase;
     letter-spacing: .0625rem;
+  }
+}
+
+// ==========================
+// Builder tools
+// ==========================
+$button_size: 45px;
+#builder_tools{
+  z-index: 200;
+  position: fixed;
+  left: 0px;
+  top: 20px;
+  ul{
+    position: absolute;
+    width: $button_size;
+    transition: all .3s ease;
+    border-radius: 0 3px 4px 0;
+    box-shadow: 0px 1px 4px rgba(22 , 45 , 61 , .4);
+    li{
+      position: absolute;
+      transition: top .3s ease-out, opacity .1s linear;
+      transition-delay: .2s;
+      button{
+        position: relative;
+        text-align: center;
+        display: block;
+        overflow: hidden;
+        color: #fff;
+        width: $button_size;
+        height: $button_size;
+        line-height: $button_size;
+        border: 1px solid $color-background-alt-inverse;
+        border-radius: 0;
+        background-color: $color-background-alt-inverse;
+        transition: color .3s ease;
+        &:hover{
+          width: auto;
+          min-width: $button_size;
+          border-radius: 0 3px  3px 0;
+          z-index: 10;
+          color: #fff;
+          span{
+            visibility: visible;
+          }
+        }
+        svg{
+          transition: fill .3s ease, transform .2s ease-in-out;
+          width: 1.2rem;
+          height: 1.2rem;
+          display: inline-block;
+          fill: #fff;
+          position: absolute;
+          top: 14px;
+          left: 13px;
+        }
+        span{
+          display: inline-block;
+          padding-left: 40px;
+          font-size: 14px;
+          white-space: nowrap;
+          visibility: hidden;
+          padding-right: 12px;
+          text-align: left;
+        }
+      }
+      &:first-child button{
+        border-radius: 0px 3px 3px 0;
+        z-index: 20;
+      }
+      &:last-child button{
+        border-radius: 0px 0 3px 0;
+      }
+      &:not(.tools-trigger) a:hover{
+        width: inherit;
+        span{
+          visibility: visible;
+        }
+      }
+      &.active button,
+      &.active button:hover{
+        position: relative;
+        color: #fff;
+        background-color: $color-brand-dark;
+        cursor: default;
+        width: $button_size;
+        border-radius: 0;
+        border: none;
+        overflow: visible;
+        box-shadow: 10px 0 0px 0px $color-brand-dark;
+        &:after,
+        &:before{
+          content: "";
+          display: block;
+          background: url('../assets/curl.svg');
+          top: 0px;
+          position: absolute;
+          right: -10px;
+          width: 10px;
+          height: 10px;
+        }
+        &:after{
+          top: 45px;
+          transform: scaleY(-1);
+        }
+        &:before{
+          top: -10px;
+        }
+        span{
+          display: none;
+        }
+        svg{
+          fill: #fff;
+        }
+      }
+      &.tool{
+        top:0;
+        opacity: 0;
+      }
+      &#tool_trigger{
+        button{
+          svg{
+            transition: transform .6s cubic-bezier(0.750, -0.310, 0.260, 1.305);
+          }
+        }
+      }
+    }
+  }
+  li.active:first-child button,
+  li.active:first-child button:hover{
+    &:before{
+      content: "";
+      background-color: $color-brand-dark;
+      right: -4px;
+      top: 0;
+    }
+  }
+  &.tools_active{
+    #tool_trigger{
+      button{
+        border-bottom: 1px solid rgba(255,255,255,.2);
+        border-radius: 0 3px 0 0;
+      }
+      svg{
+        transform: rotate(135deg);
+      }
+    }
+    ul li{
+      @for $i from 1 through 5{
+        &:nth-child(#{$i}){
+          opacity: 1;
+          top: ($i *$button_size)-$button_size;
+        }
+      }
+    }
+  }
+}
+
+
+
+aside#tool_panel{
+  opacity: 0;
+  position: fixed;
+  left: 45px;
+  top: 20px;
+  width: 250px;
+  max-height: calc(100% - 100px);
+  overflow-y: auto;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: inset 5px 0px $color-brand-dark, $shadow-drop-down;
+  transition: left .2s ease-out, opacity .15s linear;
+  header{
+    position: fixed;
+    width: 215px;
+    background-color: white;
+    padding: 1px;
+    margin-left: 19px;
+    padding: 20px 0 0 5px;
+  }
+  section{
+    padding: 20px;
+    margin-top: 50px;
+  }
+  &.show_panel{
+    opacity: 1;
+    left: 55px;
   }
 }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Lightning Design System Starter Kit</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--small">
+    <nav id="builder_tools">
+      <ul>
+        <li id="tool_trigger">
+          <button class="slds-button slds-button_icon" aria-pressed="false" title="Show Hide Tools">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+            </svg>
+            <span class="slds-assistive-text">show Hide Tools</span>
+          </button>
+        </li>
+        <li class="tool">
+          <button class="slds-button slds-button_icon" aria-pressed="false" title="Components">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#connected_apps"></use>
+            </svg>
+            <span>Components</span>
+          </button>
+        </li>
+        <li class="tool">
+          <button class="slds-button slds-button_icon" aria-pressed="false" title="Branding">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#brush"></use>
+            </svg>
+            <span>Branding</span>
+          </button>
+        </li>
+        <li class="tool">
+          <button class="slds-button slds-button_icon" aria-pressed="false" title="PageSections">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#justify_text"></use>
+            </svg>
+            <span>Page Sections</span>
+          </button>
+        </li>
+        <li class="tool">
+          <button class="slds-button slds-button_icon" aria-pressed="false" title="Settings">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+            </svg>
+            <span class>Settings</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <aside id="tool_panel">
+      <header>
+        <span class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="Record Title">Branding</span>
+        <div class="slds-dropdown-trigger slds-dropdown-trigger--click" aria-expanded="false">
+          <button class="slds-button slds-button--icon-border-filled slds-button_icon-small" aria-haspopup="true">
+            <svg aria-hidden="true" class="slds-button__icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+            </svg>
+            <span class="slds-assistive-text">Show More</span>
+          </button>
+          <div class="slds-dropdown slds-dropdown--left">
+            <ul class="dropdown__list" role="menu">
+              <li class="slds-dropdown__item">
+                <a href="javascript:void(0);" role="menuitem">
+                  <p class="slds-truncate">Menu Item One</p>
+                </a>
+              </li>
+              <li class="slds-dropdown__item">
+                <a href="javascript:void(0);" role="menuitem">
+                  <p class="slds-truncate">Menu Item Two</p>
+                </a>
+              </li>
+              <li class="slds-dropdown__item">
+                <a href="javascript:void(0);" role="menuitem">
+                  <p class="slds-truncate">Menu Item Three</p>
+                </a>
+              </li>
+              <li class="slds-dropdown__item slds-has-divider--top-space">
+                <a href="javascript:void(0);" role="menuitem">
+                  <p class="slds-truncate">Menu Item Four</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+      </header>
+      <section>
+        <img src="/assets/panel_branding.png">
+      </section>
+    </aside>
+  </div>
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+</html>

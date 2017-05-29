@@ -153,12 +153,20 @@ $static-font-path: '/assets/fonts/webfonts';
 // ==========================
 // Builder tools
 // ==========================
+
+#builder_canvas{
+  background: url('../assets/builder_canvas.png');
+  width: 100%;
+  height: 900px;
+  background-size: 100%;
+}
 $button_size: 45px;
+$top_offset: 60px;
 #builder_tools{
   z-index: 200;
   position: fixed;
   left: 0px;
-  top: 20px;
+  top: $top_offset;
   ul{
     position: absolute;
     width: $button_size;
@@ -182,12 +190,14 @@ $button_size: 45px;
         border-radius: 0;
         background-color: $color-background-alt-inverse;
         transition: color .3s ease;
+        border-right: 1px solid #455B7D;
         &:hover{
           width: auto;
           min-width: $button_size;
           border-radius: 0 3px  3px 0;
           z-index: 10;
           color: #fff;
+          border: 1px solid #455B7D;
           span{
             visibility: visible;
           }
@@ -218,6 +228,7 @@ $button_size: 45px;
       }
       &:last-child button{
         border-radius: 0px 0 3px 0;
+        border-bottom: 1px solid #455B7D;
       }
       &:not(.tools-trigger) a:hover{
         width: inherit;
@@ -286,7 +297,7 @@ $button_size: 45px;
   &.tools_active{
     #tool_trigger{
       button{
-        border-bottom: 1px solid rgba(255,255,255,.2);
+        border-bottom: 1px solid rgba(255,255,255,.4);
         border-radius: 0 3px 0 0;
       }
       svg{
@@ -304,13 +315,11 @@ $button_size: 45px;
   }
 }
 
-
-
 aside#tool_panel{
   opacity: 0;
   position: fixed;
   left: 45px;
-  top: 20px;
+  top: $top_offset;
   width: 250px;
   max-height: calc(100% - 100px);
   overflow-y: auto;

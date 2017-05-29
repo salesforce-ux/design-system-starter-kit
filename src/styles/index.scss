@@ -177,6 +177,10 @@ $top_offset: 60px;
       position: absolute;
       transition: top .3s ease-out, opacity .1s linear;
       transition-delay: .2s;
+      &:last-child button{
+        border-radius: 0px 0 3px 0;
+        border-bottom: 1px solid #455B7D;
+      }
       button{
         position: relative;
         text-align: center;
@@ -198,6 +202,7 @@ $top_offset: 60px;
           z-index: 10;
           color: #fff;
           border: 1px solid #455B7D;
+          background-color: lighten($color-background-alt-inverse, 4%);
           span{
             visibility: visible;
           }
@@ -222,18 +227,15 @@ $top_offset: 60px;
           text-align: left;
         }
       }
-      &:first-child button{
-        border-radius: 0px 3px 3px 0;
-        z-index: 20;
-      }
-      &:last-child button{
-        border-radius: 0px 0 3px 0;
-        border-bottom: 1px solid #455B7D;
-      }
-      &:not(.tools-trigger) a:hover{
-        width: inherit;
-        span{
-          visibility: visible;
+      &#tool_trigger{
+        button{
+          border-radius: 0px 3px 3px 0;
+          z-index: 20;
+          border: 1px solid #455B7D;
+          border-left: none;
+          svg{
+            transition: transform .6s cubic-bezier(0.750, -0.310, 0.260, 1.305);
+          }
         }
       }
       &.active button,
@@ -275,13 +277,6 @@ $top_offset: 60px;
       &.tool{
         top:0;
         opacity: 0;
-      }
-      &#tool_trigger{
-        button{
-          svg{
-            transition: transform .6s cubic-bezier(0.750, -0.310, 0.260, 1.305);
-          }
-        }
       }
     }
   }

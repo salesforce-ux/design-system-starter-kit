@@ -94,14 +94,30 @@ var $nav = $("#builder_tools");
 var $tool_trigger = $("#tool_trigger > button")
 var $tools = $nav.find(".tool");
 var $panel = $("#tool_panel");
+var $close = $("#tool_panel > header button");
 
 $tool_trigger.on("click" , function(){
   $(this).parents("nav").toggleClass("tools_active");
   $tools.removeClass("active");
   $panel.removeClass("show_panel");
 });
+$close.on("click", function(){
+  $panel.removeClass("show_panel");
+  $tools.removeClass("active");
+})
 $tools.on("click" , function(){
   $tools.removeClass("active");
   $(this).addClass("active");
   $panel.addClass("show_panel");
 })
+
+var scrollShadow = function(ele){
+  ele.scroll(function(){
+    if( ele.scrollTop() >= 3 ){
+      ele.addClass("scroll_shadow")
+    }else{
+      ele.removeClass("scroll_shadow")
+    }
+  })
+}
+scrollShadow($panel)

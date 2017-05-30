@@ -324,11 +324,19 @@ aside#tool_panel{
   transition: left .2s ease-out, opacity .15s linear;
   header{
     position: fixed;
-    width: 215px;
+    width: 230px;
     background-color: white;
     padding: 1px;
-    margin-left: 19px;
-    padding: 20px 0 0 5px;
+    margin-left: 5px;
+    padding: 20px 0 10px 20px;
+    transition: box-shadow .2s ease;
+    span{
+      vertical-align: -15px;
+    }
+    button{
+      float: right;
+      margin-right: 10px;
+    }
   }
   section{
     padding: 20px;
@@ -337,5 +345,11 @@ aside#tool_panel{
   &.show_panel{
     opacity: 1;
     left: 55px;
+  }
+}
+
+.scroll_shadow{
+  header{
+    box-shadow: $shadow-header;
   }
 }

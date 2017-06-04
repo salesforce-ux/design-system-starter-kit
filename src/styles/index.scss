@@ -6,7 +6,6 @@
 // First, we're importing the design system from the npm package
 //
 $static-font-path: '/assets/fonts/webfonts';
-
 @import 'node_modules/@salesforce-ux/design-system/scss/index';
 
 //
@@ -35,7 +34,7 @@ $static-font-path: '/assets/fonts/webfonts';
   overflow: auto;
   position: absolute;
   -webkit-overflow-scrolling: touch;
-  top: $height-context-bar + $height-header;
+     top: $height-context-bar + $height-header;
   bottom: 0;
   right: 0;
   left: 0;

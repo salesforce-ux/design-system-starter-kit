@@ -91,8 +91,9 @@ p {
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
   left: 0;
-  top: 0;
-  position: absolute;
+  top: .5rem;
+  position: fixed;
+  z-index: 2;
 }
 
 .site-landing--logo-icon {
@@ -107,6 +108,12 @@ p {
   height: auto;
   right: 0;
   top: 39rem;
+  z-index: 2;
+}
+
+.nav-locked {
+  position: fixed;
+  top: .5rem;
 }
 
 .site-landing--nav-item {

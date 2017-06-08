@@ -4,27 +4,6 @@
 'use strict'
 
 /**
- * These interactions are provided for prototyping use ONLY.
- *
- * Browser support, accessibility and security are not concerns in this prototype.
- * This is not aimed at being keyboard accessible or screen-reader friendly.
- * For these reasons, the JavaScript below is NOT for production use.
- */
-
-const warningStyles = `
-  color: #fff;
-  background-color: #c23934;
-  display: block;
-  text-align: center;
-  padding: 8px 32px;
-  font: 100 16px/28px sans-serif;
-  background-image: linear-gradient(45deg,rgba(0,0,0,.025) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.025) 50%,rgba(0,0,0,.025) 75%,transparent 75%,transparent);
-  background-size: 64px 64px;
-`
-console.log('%c%s', warningStyles, 'Please do not use the provided JavaScript in production!')
-console.log('Code in app.js is not built for accessibility, performance, or cross-browser compatibility.')
-
-/**
  * Open / Close an element
  * @param {Node} element
  */

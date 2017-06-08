@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1571px" height="504px" viewBox="0 0 1571 504" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slds-homepage-colors" transform="translate(-60.000000, -559.000000)">
+            <g id="header" transform="translate(45.000000, -7.000000)">
+                <g id="Group-2" transform="translate(15.000000, 566.000000)">
+                    <g id="shapes" transform="translate(0.000000, 38.000000)">
+                        <polygon id="Rectangle-5" fill="#F5D57E" points="778.562256 345.759766 920.32959 162.075684 729.50708 115.461426"></polygon>
+                        <polygon id="Rectangle-5" fill="#D94F22" points="209.355469 83.6303711 491.835938 181.308105 1.13671875 402.971191"></polygon>
+                        <polygon id="Rectangle-5" fill="#9FC8C0" points="491.862061 181.414062 777.887695 345.542236 342.292236 465.83252"></polygon>
+                        <polygon id="Rectangle-5" fill="#F5D57E" points="1301.51758 55.3485107 1342.74341 363.574219 1156.0061 136.464722"></polygon>
+                        <polygon id="Rectangle-5" fill="#611613" points="1156.01562 136.271973 1343.33008 363.618652 777.896973 345.572266"></polygon>
+                        <polygon id="Rectangle-5" fill="#4AB0BC" points="729.551025 115.538086 778.550293 345.699463 491.762329 181.3479"></polygon>
+                        <polygon id="Rectangle-5" fill="#B6DFE4" points="1301.48389 55.3530273 1156.01074 136.476074 1044.33398 0.689941406"></polygon>
+                        <polygon id="Rectangle-5" fill="#D94F22" points="1043.92676 0.485351562 1156.1543 136.458984 778.514893 345.712402"></polygon>
+                        <polygon id="Rectangle-5" fill="#B6DFE4" points="1570.36523 6.28710938 1549.01172 186.619141 1301.3396 55.4069824"></polygon>
+                        <polygon id="Rectangle-5" fill="#4AB0BC" points="1548.9751 186.436279 1342.16089 364.217041 1301.55371 55.4692383"></polygon>
+                        <polygon id="Rectangle-5" fill="#611613" points="492.126465 181.179688 342.635254 465.925659 0.693359375 403.070312"></polygon>
+                    </g>
+                    <g id="tree" transform="translate(849.000000, 126.000000)">
+                        <g transform="translate(16.136842, 2.319876)" id="Line" stroke="#655F2D" stroke-linecap="square">
+                            <path d="M2.11315789,0.258881413 L2.11315789,59.1806546"></path>
+                        </g>
+                        <polygon id="Rectangle-8" fill="#C2CB8D" points="18.2154541 0.0366728409 18.2573396 36.1231731 0.122471217 51.7127648"></polygon>
+                        <polygon id="Rectangle-8" fill="#8A9259" transform="translate(27.241526, 25.796701) scale(-1, 1) translate(-27.241526, -25.796701) " points="36.2959807 0.050549051 36.215704 36.1038455 18.1870708 51.542852"></polygon>
+                        <polygon id="Rectangle-9" fill="#655F2D" points="18.2786865 35.8767524 18.328591 51.877733 0.0428364001 51.7674672"></polygon>
+                        <polygon id="Rectangle-9" fill="#4D461C" transform="translate(27.455256, 43.908054) scale(-1, 1) translate(-27.455256, -43.908054) " points="36.6322535 35.9198914 36.605249 51.8962166 18.2782586 51.7973256"></polygon>
+                    </g>
+                    <g id="tree" transform="translate(339.000000, 111.000000)">
+                        <g transform="translate(17.136842, 2.319876)" id="Line" stroke="#655F2D" stroke-linecap="square">
+                            <path d="M1.11315789,0.258881413 L1.11315789,59.4279606"></path>
+                        </g>
+                        <polygon id="Rectangle-8" fill="#C2CB8D" points="18.2154541 0.0366728409 18.2573396 36.1231731 0.122471217 51.7127648"></polygon>
+                        <polygon id="Rectangle-8" fill="#8A9259" transform="translate(27.241526, 25.796701) scale(-1, 1) translate(-27.241526, -25.796701) " points="36.2959807 0.050549051 36.215704 36.1038455 18.1870708 51.542852"></polygon>
+                        <polygon id="Rectangle-9" fill="#655F2D" points="18.2786865 35.8767524 18.328591 51.877733 0.0428364001 51.7674672"></polygon>
+                        <polygon id="Rectangle-9" fill="#4D461C" transform="translate(27.455256, 43.908054) scale(-1, 1) translate(-27.455256, -43.908054) " points="36.6322535 35.9198914 36.605249 51.8962166 18.2782586 51.7973256"></polygon>
+                    </g>
+                    <g id="tree" transform="translate(261.000000, 84.000000)">
+                        <g transform="translate(17.136842, 2.319876)" id="Line" stroke="#655F2D" stroke-linecap="square">
+                            <path d="M1.11315789,0.258881413 L1.11315789,59.4279606"></path>
+                        </g>
+                        <polygon id="Rectangle-8" fill="#C2CB8D" points="18.2154541 0.0366728409 18.2573396 36.1231731 0.122471217 51.7127648"></polygon>
+                        <polygon id="Rectangle-8" fill="#8A9259" transform="translate(27.241526, 25.796701) scale(-1, 1) translate(-27.241526, -25.796701) " points="36.2959807 0.050549051 36.215704 36.1038455 18.1870708 51.542852"></polygon>
+                        <polygon id="Rectangle-9" fill="#655F2D" points="18.2786865 35.8767524 18.328591 51.877733 0.0428364001 51.7674672"></polygon>
+                        <polygon id="Rectangle-9" fill="#4D461C" transform="translate(27.455256, 43.908054) scale(-1, 1) translate(-27.455256, -43.908054) " points="36.6322535 35.9198914 36.605249 51.8962166 18.2782586 51.7973256"></polygon>
+                    </g>
+                    <g id="tree" transform="translate(1402.000000, 0.000000)">
+                        <g transform="translate(18.915789, 2.688110)" id="Line" stroke="#655F2D" stroke-linecap="square">
+                            <path d="M2.29366999,0.299973701 L2.29366999,67.8125151"></path>
+                        </g>
+                        <polygon id="Rectangle-8" fill="#C2CB8D" points="21.1693115 0.0424939268 21.2179893 41.8570101 0.142331414 59.9211401"></polygon>
+                        <polygon id="Rectangle-8" fill="#8A9259" transform="translate(31.659070, 29.891415) scale(-1, 1) translate(-31.659070, -29.891415) " points="42.1818154 0.0585727099 42.0885209 41.8346147 21.1363256 59.7242571"></polygon>
+                        <polygon id="Rectangle-9" fill="#655F2D" points="21.2427979 41.571475 21.300795 60.1122938 0.0497828433 59.9845255"></polygon>
+                        <polygon id="Rectangle-9" fill="#4D461C" transform="translate(31.907460, 50.877586) scale(-1, 1) translate(-31.907460, -50.877586) " points="42.572619 41.6214614 42.5412354 60.1337113 21.2423006 60.0191233"></polygon>
+                    </g>
+                    <g id="tree" transform="translate(808.000000, 133.000000)">
+                        <g transform="translate(12.042105, 1.620231)" id="Line" stroke="#655F2D" stroke-linecap="square">
+                            <path d="M0.782219061,0.180806066 L0.782219061,41.5052423"></path>
+                        </g>
+                        <polygon id="Rectangle-8" fill="#C2CB8D" points="12.8000488 0.0256127778 12.8294819 25.2288828 0.0860608553 36.1168516"></polygon>
+                        <polygon id="Rectangle-8" fill="#8A9259" transform="translate(19.142694, 18.016743) scale(-1, 1) translate(-19.142694, -18.016743) " points="25.5052837 0.0353040991 25.4488731 25.2153842 12.7801038 35.9981823"></polygon>
+                        <polygon id="Rectangle-9" fill="#655F2D" points="12.8444824 25.0567794 12.8795504 36.2320675 0.0301012541 36.1550565"></polygon>
+                        <polygon id="Rectangle-9" fill="#4D461C" transform="translate(19.292883, 30.665942) scale(-1, 1) translate(-19.292883, -30.665942) " points="25.7415836 25.0869082 25.7226074 36.2449767 12.8441817 36.1759099"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

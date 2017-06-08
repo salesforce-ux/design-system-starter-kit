@@ -12,37 +12,113 @@
   <link rel="stylesheet" href="/styles/index.css" />
 </head>
 <body>
-  <div class="slds-p-around--large slds-container--center slds-container--small">
-    <h1 class="slds-text-heading--large">
-      Welcome to the Design System Starter Kit
-    </h1>
-    <p class="slds-text-body--regular slds-m-vertical--large">A rapid prototyping environment using the <a href="https://www.lightningdesignsystem.com">Lightning Design System</a>, brought to you by <a href="https://twitter.com/SalesforceUX">Salesforce UX</a>.</p>
+  <header class="site-landing--header">
+    <h1 class="site-landing--heading-large slds-text-title_caps">Lightning Design System</h1>
+    <h2 class="site-landing--heading-small slds-m-top--small">Create the world's best enterprise app experiences</h2>
+    <button class="slds-button slds-button_brand site-landing--header-cta slds-m-vertical--x-large">GET STARTED</button>
+    <img class="site-landing--header-geo" src="/assets/header-geo.svg" />
+    <img class="site-landing--header-wires" src="/assets/header-wires.svg" />
+  </header>
 
-    <img src="/assets/img-efficiency.svg" alt="" />
-
-    <h2 class="slds-text-heading--medium slds-m-top--large">Get Started</h2>
-    <p class="slds-text-body--regular slds-m-top--large">Edit files in the <a href="https://github.com/salesforce-ux/design-system-starter-kit/tree/master/src"><code>src</code> directory</a> to start building your prototype.</p>
-    <p class="slds-text-body--regular slds-m-top--large">Lightning Design System component documentation and markup available at: <a href="https://www.lightningdesignsystem.com">https://www.lightningdesignsystem.com</a>.</p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">Example Prototype</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">We’ve put together a prototype to show you what the starter kit is capable of, have a look!</p>
-    <p><a href="/example.html" class="slds-button slds-button--brand">Example Prototype</a></p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">Dreamforce Workshop Tutorial</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">Learn how to design in the browser with the Dreamforce 2016 tutorial, “Rapid prototyping with the Design System Starter Kit and UI Kit”.</p>
-    <p>
-      <a href="http://sfdcworkshop.com/workshop/rapid-prototyping-with-slds/" class="slds-button slds-button--brand">Dreamforce Tutorial</a>
-      <a href="/workshop.html" class="slds-button slds-button--neutral">DIY Boilerplate</a>
-      <a href="/workshop-done.html" class="slds-button slds-button--neutral">Result</a>
-    </p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">Feedback and Questions</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">Ask questions about prototyping using the design system, report issues about the starter kit… <a href="https://github.com/salesforce-ux/design-system-starter-kit/">on the GitHub repository</a>.</p>
-    <hr />
-    <h2 class="slds-text-heading--medium slds-m-top--large">See Also</h2>
-    <p class="slds-text-body--regular slds-m-top--large slds-m-bottom--small">More comfortable designing in <a href="https://www.sketchapp.com/">Sketch</a>? Try the <a href="https://github.com/salesforce-ux/design-system-ui-kit/">Design System UI Kit</a>.</p>
-
+  <div class="site-landing--logo">
+    <span class="slds-icon_container slds-icon-utility-salesforce1 site-landing--logo-icon" title="Description of icon when needed">
+      <svg class="slds-icon slds-icon-text-default slds-icon_large" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"></use>
+      </svg>
+      <span class="slds-assistive-text">Description of icon</span>
+    </span>
   </div>
+  <div class="site-landing--nav slds-grid slds-grid_align-spread">
+    <div class="site-landing--nav-item">Guidelines</div>
+    <div class="site-landing--nav-item">Components</div>
+    <div class="site-landing--nav-item">Utilities</div>
+    <div class="site-landing--nav-item">Design Tokens</div>
+    <div class="site-landing--nav-item">Icons</div>
+    <div class="site-landing--nav-item">Help & Support</div>
+    <div class="site-landing--nav-item">
+      <span class="slds-icon_container slds-icon-utility-search" title="Description of icon when needed">
+        <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+        </svg>
+        <span class="slds-assistive-text">Description of icon</span>
+      </span>
+    </div>
+  </div>
+
+  <section class="site-landing--section site-landing--first-section">
+    <h2 class="site-landing--heading-medium slds-text-align_center slds-text-title_caps">
+      Lorem Ipsum Dolor
+    </h2>
+    <p class="site-landing--heading-small slds-m-top_medium">The Lightning Design System enables you to build rich enterprise experiences and custom applications with the patterns and established best practices that are native to Salesforce.</p>
+    <div class="slds-grid slds-grid_align-spread site-landing--isometric-section">
+      <div class="slds-col">
+        <p class="site-landing--small-link">Components</p>
+        <p class="site-landing--small-link">Utilities</p>
+        <p class="site-landing--small-link">Design Tokens</p>
+        <p class="site-landing--small-link">Icons</p>
+      </div>
+      <div class="slds-col">
+        <img class="site-landing--isometric-img" src="/assets/isometric_illo.svg" />
+      </div>
+    </div>
+  </section>
+
+  <section class="site-landing--section">
+    <div class="site-landing--section_img_left">
+      <img class="site-landing--ally-wire" src="/assets/accessible-wire.svg" />
+      <img class="site-landing--ally-geo" src="/assets/accessible-shapes.svg" />
+      <img class="site-landing--ally-tree" src="/assets/accessible-tree.svg" />
+      <img class="site-landing--ally-lantern" src="/assets/accessible-lantern.svg" />
+    </div>
+    <div class="slds-grid slds-grid_align-end">
+      <div class="site-landing--section_box_right">
+        <h2 class="site-landing--heading-small slds-text-title_caps">Accessible</h2>
+        <p class="site-landing--section_desc slds-m-top--small">The Lightning Design System provides accessible markup which will serve as a foundation for your application development. To build accessible components, you will need to follow the accessibility guidance for our interactive components, including keyboard behavior and the management of ARIA roles and properties.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-landing--section">
+    <div class="site-landing--section_img_right">
+      <img class="site-landing--living-wires" src="/assets/living-wires.svg" />
+      <img class="site-landing--living-geo" src="/assets/living-geo.svg" />
+      <img class="site-landing--living-mapcompass" src="/assets/living-mapcompass.svg" />
+    </div>
+    <div class="slds-grid">
+      <div class="site-landing--section_box_left">
+        <h2 class="site-landing--heading-small slds-text-title_caps">Living</h2>
+        <p class="site-landing--section_desc slds-m-top--small">The Salesforce UX team actively designs, develops, tests, and maintains the design system. As Salesforce pushes out UI changes with every release, the design system stays seamlessly in sync.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-landing--section">
+    <div class="site-landing--section_img_left">
+      <img class="site-landing--platform-wires" src="/assets/platform-wires.svg" />
+      <img class="site-landing--platform-geo" src="/assets/platform-geo.svg" />
+      <img class="site-landing--platform-knife" src="/assets/platform-knife.svg" />
+    </div>
+    <div class="slds-grid slds-grid_align-end">
+      <div class="site-landing--section_box_right-2">
+        <h2 class="site-landing--heading-small slds-text-title_caps">Platform-Agnostic</h2>
+        <p class="site-landing--section_desc slds-m-top--small">You can use our CSS framework with any technology stack you can dream up. Additionally, we provide guidance around how to use it in conjunction with Salesforce technologies such as Lightning, Visualforce, and Heroku.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-landing--section">
+    <div class="site-landing--section_img_right">
+      <img class="site-landing--motion-wires" src="/assets/motion-wires.svg" />
+      <img class="site-landing--motion-geo" src="/assets/motion-geo.svg" />
+      <img class="site-landing--motion-fire" src="/assets/motion-fire.svg" />
+    </div>
+    <div class="slds-grid">
+      <div class="site-landing--section_box_left">
+        <h2 class="site-landing--heading-small slds-text-title_caps">Motion</h2>
+        <p class="site-landing--section_desc slds-m-top--small">The Salesforce UX team actively designs, develops, tests, and maintains the design system. As Salesforce pushes out UI changes with every release, the design system stays seamlessly in sync.</p>
+      </div>
+    </div>
+  </section>
 
   <script src="/scripts/app.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>

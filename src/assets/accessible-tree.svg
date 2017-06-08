@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="362px" height="147px" viewBox="0 0 362 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>accessible-tree</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slds-homepage-colors" transform="translate(-241.000000, -2310.000000)">
+            <g id="Group-Copy-2" transform="translate(74.000000, 2169.000000)">
+                <g id="Group-18">
+                    <g id="accessible-tree" transform="translate(166.000000, 140.000000)">
+                        <g id="tree2" transform="translate(30.187204, 85.800000)">
+                            <path d="M12.8127962,4.2 L12.8127962,45.2" id="Line" stroke="#8BCFE9" stroke-linecap="square"></path>
+                            <polygon id="Rectangle-8" fill="#B6DFE4" points="12.8127962 0.2 12.8127962 25.3395561 0.812796209 36.2"></polygon>
+                            <polygon id="Rectangle-8" fill="#6EBFC9" transform="translate(18.812796, 18.200000) scale(-1, 1) translate(-18.812796, -18.200000) " points="24.8127962 0.2 24.8127962 25.4060716 12.8127962 36.2"></polygon>
+                            <polygon id="Rectangle-9" fill="#6EBFC9" points="12.8127962 25.2 12.8127962 36.2 0.812796209 36.2"></polygon>
+                            <polygon id="Rectangle-9" fill="#4AB0BC" transform="translate(18.812796, 30.700000) scale(-1, 1) translate(-18.812796, -30.700000) " points="24.8127962 25.2 24.8127962 36.2 12.8127962 36.2"></polygon>
+                        </g>
+                        <g id="tree-1" transform="translate(0.187204, 101.800000)">
+                            <path d="M12.8127962,4.2 L12.8127962,45.2" id="Line" stroke="#8BCFE9" stroke-linecap="square"></path>
+                            <polygon id="Rectangle-8" fill="#B6DFE4" points="12.8127962 0.2 12.8127962 25.3395561 0.812796209 36.2"></polygon>
+                            <polygon id="Rectangle-8" fill="#6EBFC9" transform="translate(18.812796, 18.200000) scale(-1, 1) translate(-18.812796, -18.200000) " points="24.8127962 0.2 24.8127962 25.4060716 12.8127962 36.2"></polygon>
+                            <polygon id="Rectangle-9" fill="#6EBFC9" points="12.8127962 25.2 12.8127962 36.2 0.812796209 36.2"></polygon>
+                            <polygon id="Rectangle-9" fill="#4AB0BC" transform="translate(18.812796, 30.700000) scale(-1, 1) translate(-18.812796, -30.700000) " points="24.8127962 25.2 24.8127962 36.2 12.8127962 36.2"></polygon>
+                        </g>
+                        <g id="tree3" transform="translate(338.187204, 0.800000)">
+                            <path d="M12.8127962,4.2 L12.8127962,45.2" id="Line" stroke="#8BCFE9" stroke-linecap="square"></path>
+                            <polygon id="Rectangle-8" fill="#B6DFE4" points="12.8127962 0.2 12.8127962 25.3395561 0.812796209 36.2"></polygon>
+                            <polygon id="Rectangle-8" fill="#6EBFC9" transform="translate(18.812796, 18.200000) scale(-1, 1) translate(-18.812796, -18.200000) " points="24.8127962 0.2 24.8127962 25.4060716 12.8127962 36.2"></polygon>
+                            <polygon id="Rectangle-9" fill="#6EBFC9" points="12.8127962 25.2 12.8127962 36.2 0.812796209 36.2"></polygon>
+                            <polygon id="Rectangle-9" fill="#4AB0BC" transform="translate(18.812796, 30.700000) scale(-1, 1) translate(-18.812796, -30.700000) " points="24.8127962 25.2 24.8127962 36.2 12.8127962 36.2"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

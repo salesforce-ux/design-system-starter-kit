@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="581px" height="393px" viewBox="0 0 581 393" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>platform-wires</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slds-homepage-colors" transform="translate(-91.000000, -3980.000000)">
+            <g id="Group-2" transform="translate(-400.000000, 3860.000000)">
+                <g id="Group-4-Copy-2" transform="translate(0.000000, 120.800766)">
+                    <g id="platform-wires" transform="translate(490.000000, 0.000000)">
+                        <g id="wireframes-blue" opacity="0.5" transform="translate(1.689655, 2.805284)" stroke="#1AA2DC" stroke-width="0.7" stroke-linecap="square">
+                            <path d="M220.310345,0.39395024 L34.3103448,242.39395" id="Line"></path>
+                            <path d="M34.3103448,242.39395 L429.310345,254.39395" id="Line"></path>
+                            <path d="M400.310345,39.3939502 L34.3103448,242.39395" id="Line"></path>
+                            <path d="M0.310344828,81.3939502 L133.310345,114.39395" id="Line"></path>
+                            <path d="M220.310345,0.39395024 L429.310345,254.39395" id="Line"></path>
+                            <path d="M400.310345,39.3939502 L429.310345,254.39395" id="Line"></path>
+                            <path d="M400.310345,39.3939502 L576.310345,125.39395" id="Line"></path>
+                            <path d="M401.310345,39.3939502 L220.310345,0.39395024" id="Line"></path>
+                            <path d="M429.310345,254.39395 L576.310345,126.39395" id="Line"></path>
+                            <path d="M429.310345,255.39395 L575.310345,337.39395" id="Line"></path>
+                            <path d="M429.310345,255.39395 L365.310345,387.39395" id="Line"></path>
+                            <path d="M34.3103448,242.39395 L365.310345,387.39395" id="Line"></path>
+                            <path d="M400.310345,39.3939502 L576.310345,5.39395024" id="Line"></path>
+                        </g>
+                        <g id="circles" transform="translate(0.280788, 0.000000)" fill="#1AA2DC">
+                            <circle id="Oval-2" cx="576.719212" cy="8.199234" r="4"></circle>
+                            <circle id="Oval-2" cx="576.719212" cy="340.199234" r="4"></circle>
+                            <circle id="Oval-2" cx="35.7192118" cy="245.199234" r="2"></circle>
+                            <circle id="Oval-2" cx="366.719212" cy="390.199234" r="2"></circle>
+                            <circle id="Oval-2" cx="1.71921182" cy="84.199234" r="1"></circle>
+                            <circle id="Oval-2" cx="133.719212" cy="116.199234" r="2"></circle>
+                            <ellipse id="Oval-2" cx="222.347906" cy="2.80528376" rx="2.80049261" ry="2.80528376"></ellipse>
+                            <ellipse id="Oval-2" cx="300.219828" cy="98.699234" rx="3.50061576" ry="3.5"></ellipse>
+                            <ellipse id="Oval-2" cx="431.219828" cy="257.699234" rx="3.50061576" ry="3.5"></ellipse>
+                            <circle id="Oval-2" cx="401.779209" cy="42.199234" r="3"></circle>
+                            <circle id="Oval-2" cx="577.779209" cy="128.199234" r="3"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="665px" height="382px" viewBox="0 0 665 382" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>accessible-shapes</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slds-homepage-colors" transform="translate(-203.000000, -2302.000000)">
+            <g id="Group-Copy-2" transform="translate(74.000000, 2169.000000)">
+                <g id="Group-18">
+                    <g id="Group-4" transform="translate(409.806357, 293.763341) scale(-1, 1) rotate(15.000000) translate(-409.806357, -293.763341) translate(40.806357, 88.763341)">
+                        <g id="accessible-shapes" transform="translate(1.800948, 97.558600)">
+                            <polygon id="Rectangle-5" fill="#DAEFF1" points="544.952271 184.290718 643.933617 55.2764047 510.940461 22.5835856"></polygon>
+                            <polygon id="Rectangle-5" fill="#DAEFF1" points="146.707115 0.0875793819 344.310627 69.1332526 0.557666061 223.527366"></polygon>
+                            <polygon id="Rectangle-5" fill="#B5DFE4" points="344.352931 69.2911321 544.952271 184.290718 239.271422 268.268207"></polygon>
+                            <polygon id="Rectangle-5" fill="#DAEFF1" points="544.952271 184.290718 460.97745 311.354598 240.237348 268.009388"></polygon>
+                            <polygon id="Rectangle-5" fill="#91CED6" points="510.940461 22.5835856 544.952271 184.290718 344.352931 69.2911321"></polygon>
+                            <polygon id="Rectangle-5" fill="#6DBEC9" points="344.352931 69.2911321 240.237348 268.009388 0.557666061 223.527366"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

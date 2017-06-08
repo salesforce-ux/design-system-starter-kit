@@ -41,3 +41,192 @@ $static-font-path: '/assets/fonts/webfonts';
   left: 0;
 }
 
+body {
+  background-color: #FEFEFE;
+}
+
+/* TYPE */
+.site-landing--heading-large {
+  font-size: 3.5rem;
+  color: #15375F;
+}
+
+.site-landing--heading-medium {
+  font-size: 1.5rem;
+}
+
+.site-landing--heading-small {
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.4rem;
+}
+
+.site-landing--small-link {
+  font-size: .75rem;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+/* HEADER */
+.site-landing--header {
+  text-align: center;
+  padding: 15rem;
+  background: #b9e2f3; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#b9e2f3, #f5fdff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#b9e2f3, #f5fdff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#b9e2f3, #f5fdff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#b9e2f3, #f5fdff); /* Standard syntax (must be last) */
+}
+
+.site-landing--header-cta {
+  font-size: 1.1rem;
+  padding: .5rem 3rem;
+}
+
+.site-landing--logo {
+  width: 9.96rem;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.site-landing--logo-icon {
+  padding: 0.6rem 3.5rem;
+}
+
+.site-landing--nav {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+  position: absolute;
+  width: 80rem;
+  height: auto;
+  right: 0;
+  top: 39rem;
+}
+
+.site-landing--nav-item {
+  padding: 1.5rem 1rem;
+}
+
+.site-landing--nav-item:first-child {
+  padding-left: 2.5rem;
+}
+
+.site-landing--nav-item:last-child {
+  padding-right: 4rem;
+}
+
+/* HEADER IMAGES */
+.site-landing--header-geo {
+  margin-top: 6rem;
+  position: absolute;
+  left:0;
+}
+
+.site-landing--header-wires {
+  position: absolute;
+    margin-top: 6rem;
+  left: 0;
+}
+
+/* BODY */
+.site-landing--section {
+  padding: 5rem 15rem;
+}
+
+.site-landing--first-section {
+  margin-top: 12rem;
+}
+
+.site-landing--isometric-section {
+  margin: 6rem 0;
+}
+
+.site-landing--section_box_right {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+  padding: 4rem;
+  width: 28rem;
+  height: auto;
+  margin: -10rem 0 0 -4rem;
+  z-index: 1;
+}
+
+.site-landing--section_box_right-2 {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+  padding: 4rem;
+  width: 28rem;
+  height: auto;
+  margin: -7rem 0 0 -4rem;
+  z-index: 1;
+}
+
+.site-landing--section_box_left {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
+  padding: 4rem;
+  width: 28rem;
+  height: auto;
+  z-index: 1;
+  margin: 5rem 0;
+}
+
+/* BODY IMAGES */
+.site-landing--ally-wire {
+  position: absolute;
+  margin: -2rem 0 0 -8rem;
+}
+
+.site-landing--ally-lantern {
+  position: absolute;
+  margin: -3rem 0 0 -30rem;
+}
+
+.site-landing--ally-tree {
+  position: absolute;
+  margin: 0 0 0 -38rem;
+}
+
+.site-landing--living-wires {
+  position: absolute;
+  margin: -1rem 0 0 16rem;
+}
+
+.site-landing--living-geo {
+  float: right;
+}
+
+.site-landing--living-mapcompass {
+  position: absolute;
+  margin: 1rem 0 0 42rem;
+}
+
+.site-landing--platform-wires {
+  position: absolute;
+  margin: 0rem 0 0 -2rem;
+}
+
+.site-landing--platform-knife {
+  position: absolute;
+  margin: -6rem 0 0 -31rem;
+}
+
+.site-landing--motion-geo {
+  float: right;
+}
+
+.site-landing--motion-wires {
+  position: absolute;
+  margin: 3rem 0 0 10rem;
+}
+
+.site-landing--motion-fire {
+  position: absolute;
+  margin: -6rem 0 0 31rem;
+}

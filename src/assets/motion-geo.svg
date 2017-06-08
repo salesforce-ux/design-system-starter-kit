@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="646px" height="406px" viewBox="0 0 646 406" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slds-homepage-colors" transform="translate(-960.000000, -4864.000000)">
+            <g id="animation-section" transform="translate(312.000000, 4727.000000)">
+                <g id="Group-6" transform="translate(971.000000, 340.000000) scale(-1, 1) translate(-971.000000, -340.000000) translate(648.000000, 137.000000)">
+                    <g id="Group-4-Copy-4">
+                        <g id="animaiton-tree" transform="translate(113.000000, 0.000000)">
+                            <g id="tree2" transform="translate(466.000000, 54.000000)">
+                                <path d="M12.8127962,4.2 L12.8127962,45.2" id="Line" stroke="#8BCFE9" stroke-linecap="square"></path>
+                                <polygon id="Rectangle-8" fill="#B6DFE4" points="12.8127962 0.2 12.8127962 25.3395561 0.812796209 36.2"></polygon>
+                                <polygon id="Rectangle-8" fill="#6EBFC9" transform="translate(18.812796, 18.200000) scale(-1, 1) translate(-18.812796, -18.200000) " points="24.8127962 0.2 24.8127962 25.4060716 12.8127962 36.2"></polygon>
+                                <polygon id="Rectangle-9" fill="#6EBFC9" points="12.8127962 25.2 12.8127962 36.2 0.812796209 36.2"></polygon>
+                                <polygon id="Rectangle-9" fill="#4AB0BC" transform="translate(18.812796, 30.700000) scale(-1, 1) translate(-18.812796, -30.700000) " points="24.8127962 25.2 24.8127962 36.2 12.8127962 36.2"></polygon>
+                            </g>
+                            <g id="tree1" transform="translate(17.000000, 7.000000)">
+                                <path d="M12.8127962,4.2 L12.8127962,45.2" id="Line" stroke="#8BCFE9" stroke-linecap="square"></path>
+                                <polygon id="Rectangle-8" fill="#B6DFE4" points="12.8127962 0.2 12.8127962 25.3395561 0.812796209 36.2"></polygon>
+                                <polygon id="Rectangle-8" fill="#6EBFC9" transform="translate(18.812796, 18.200000) scale(-1, 1) translate(-18.812796, -18.200000) " points="24.8127962 0.2 24.8127962 25.4060716 12.8127962 36.2"></polygon>
+                                <polygon id="Rectangle-9" fill="#6EBFC9" points="12.8127962 25.2 12.8127962 36.2 0.812796209 36.2"></polygon>
+                                <polygon id="Rectangle-9" fill="#4AB0BC" transform="translate(18.812796, 30.700000) scale(-1, 1) translate(-18.812796, -30.700000) " points="24.8127962 25.2 24.8127962 36.2 12.8127962 36.2"></polygon>
+                            </g>
+                            <g id="tree">
+                                <path d="M12.8127962,4.2 L12.8127962,45.2" id="Line" stroke="#8BCFE9" stroke-linecap="square"></path>
+                                <polygon id="Rectangle-8" fill="#B6DFE4" points="12.8127962 0.2 12.8127962 25.3395561 0.812796209 36.2"></polygon>
+                                <polygon id="Rectangle-8" fill="#6EBFC9" transform="translate(18.812796, 18.200000) scale(-1, 1) translate(-18.812796, -18.200000) " points="24.8127962 0.2 24.8127962 25.4060716 12.8127962 36.2"></polygon>
+                                <polygon id="Rectangle-9" fill="#6EBFC9" points="12.8127962 25.2 12.8127962 36.2 0.812796209 36.2"></polygon>
+                                <polygon id="Rectangle-9" fill="#4AB0BC" transform="translate(18.812796, 30.700000) scale(-1, 1) translate(-18.812796, -30.700000) " points="24.8127962 25.2 24.8127962 36.2 12.8127962 36.2"></polygon>
+                            </g>
+                        </g>
+                        <g id="Group-16" transform="translate(323.000000, 212.000000) scale(-1, -1) translate(-323.000000, -212.000000) translate(0.000000, 18.000000)">
+                            <g id="animation-geoshapes" transform="translate(0.000000, 0.380742)">
+                                <polygon id="Rectangle-5" fill="#DAEFF1" points="249.993579 242.511214 349.230713 113.677688 215.654956 80.9830795"></polygon>
+                                <polygon id="Rectangle-5" fill="#DAEFF1" points="49.3034424 127.241365 249.521387 242.358642 0.60456543 326.728617"></polygon>
+                                <polygon id="Rectangle-5" fill="#6EBFC9" points="514.210937 95.5793151 645.331055 255.037196 249.527881 242.379704"></polygon>
+                                <polygon id="Rectangle-5" fill="#B4DFE4" points="644.680273 255.074868 581.043506 386.831751 250.069287 242.221482"></polygon>
+                                <polygon id="Rectangle-5" fill="#90CDD6" points="215.685718 81.0368479 249.985205 242.468919 49.2336304 127.19496"></polygon>
+                                <polygon id="Rectangle-5" fill="#90CDD6" points="435.74873 0.340419009 514.308008 95.7104826 249.960425 242.477994"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

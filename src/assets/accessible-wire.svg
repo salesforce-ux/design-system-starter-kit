@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="786px" height="387px" viewBox="0 0 786 387" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>accessible-wire</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slds-homepage-colors" transform="translate(-75.000000, -2264.000000)">
+            <g id="Group-Copy-2" transform="translate(-284.000000, 2169.000000)">
+                <g id="Group-18">
+                    <g id="Group-4" transform="translate(591.310041, 349.855234) scale(-1, 1) rotate(15.000000) translate(-591.310041, -349.855234) translate(37.310041, 136.355234)">
+                        <g id="accessible-wire">
+                            <g id="wireframes-blue" opacity="0.5" transform="translate(1.800948, 3.804262)" stroke="#1AA2DC" stroke-width="0.7" stroke-linecap="square">
+                                <path d="M460.847224,369.547164 L545.552862,241.649462" id="Line"></path>
+                                <path d="M461.578042,368.713341 L240.130832,326.592877" id="Line"></path>
+                                <path d="M240.837939,325.368132 L124.464949,401.067056" id="Line"></path>
+                                <path d="M344.953522,126.649876 L545.552862,241.649462" id="Line"></path>
+                                <path d="M511.541052,79.9423292 L344.953522,126.649876" id="Line"></path>
+                                <path d="M731.425389,0.31897512 L545.552862,241.649462" id="Line"></path>
+                                <path d="M511.541052,79.9423292 L545.552862,241.649462" id="Line"></path>
+                                <path d="M147.307707,57.4463229 L0.192331919,281.144929" id="Line"></path>
+                                <path d="M344.953522,126.649876 L0.192331919,281.144929" id="Line"></path>
+                                <path d="M345.212341,127.615801 L238.647269,324.919844" id="Line"></path>
+                                <path d="M239.872013,325.626951 L0.192331919,281.144929" id="Line"></path>
+                                <path d="M239.613194,324.661025 L545.811681,242.615388" id="Line"></path>
+                                <path d="M511.541052,79.9423292 L643.827102,113.859893" id="Line"></path>
+                                <path d="M343.987597,126.908695 L146.6006,58.6710678" id="Line"></path>
+                            </g>
+                            <g id="circles" transform="translate(-0.000000, -0.000000)" fill="#1AA2DC">
+                                <circle id="Oval-2" cx="148.7318" cy="63.317531" r="4"></circle>
+                                <circle id="Oval-2" cx="733.297769" cy="3.99951256" r="4"></circle>
+                                <circle id="Oval-2" cx="241.744394" cy="329.307488" r="4"></circle>
+                                <circle id="Oval-2" cx="346.436633" cy="131.004648" r="2"></circle>
+                                <circle id="Oval-2" cx="547.518335" cy="245.072382" r="3"></circle>
+                                <circle id="Oval-2" cx="513.183082" cy="84.0218461" r="1"></circle>
+                                <circle id="Oval-2" cx="463.220071" cy="372.792858" r="1"></circle>
+                                <circle id="Oval-2" cx="646.017319" cy="116.98992" r="2"></circle>
+                                <ellipse id="Oval-2" cx="125.80339" cy="404.257005" rx="3.50118483" ry="3.5"></ellipse>
+                                <circle id="Oval-2" cx="3.18955653" cy="284.291392" r="3"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

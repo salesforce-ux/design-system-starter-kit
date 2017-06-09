@@ -14,7 +14,7 @@
 <body>
   <header class="site-landing--header">
     <img class="site-landing--header-top-left-cloud animated-slow infinite bounce-x" src="/assets/header-top_left_cloud.svg" />
-    <img class="site-landing--header-lightning-balloon animated-slow infinite bounce-y" src="/assets/header-lightning_hot_air_balloon.svg" />
+    <img class="site-landing--header-lightning-balloon animated infinite bounce-y" src="/assets/header-lightning_hot_air_balloon.svg" />
     <img class="site-landing--header-top-right-cloud" src="/assets/header-top_right_cloud.svg" />
     <img class="site-landing--header-hotair-balloon-left animated infinite bounce-y-small" src="/assets/header-hot_air_balloon_small.svg" />
     <img class="site-landing--header-middle-cloud" src="/assets/header-middle_cloud.svg" />
@@ -74,14 +74,14 @@
   </section>
 
   <section class="site-landing--section">
-    <div class="site-landing--section_img_left">
+    <div class="site-landing--section_img_left site-landing--section-ally-imgs">
       <img class="site-landing--ally-geo" src="/assets/accessible-shapes.svg" />
-      <img class="site-landing--ally-wire" src="/assets/accessible-wire.svg" />
+      <div id="ally-wire" class="site-landing--ally-wire"></div>
       <img class="site-landing--ally-tree" src="/assets/accessible-tree.svg" />
       <img class="site-landing--ally-lantern" src="/assets/accessible-lantern.svg" />
     </div>
     <div class="slds-grid slds-grid_align-end">
-      <div class="site-landing--section_box_right">
+      <div class="site-landing--section_box_right site-landing--section-ally-box">
         <h2 class="site-landing--heading-small slds-text-title_caps">Accessible</h2>
         <p class="site-landing--section_desc slds-m-top--small">The Lightning Design System provides accessible markup which will serve as a foundation for your application development. To build accessible components, you will need to follow the accessibility guidance for our interactive components, including keyboard behavior and the management of ARIA roles and properties.</p>
       </div>
@@ -131,6 +131,7 @@
   </section>
 
   <script src="/scripts/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.6.0/bodymovin.min.js"></script>
   <script src="/scripts/site.js"></script>
   <script src="/scripts/vendor/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>

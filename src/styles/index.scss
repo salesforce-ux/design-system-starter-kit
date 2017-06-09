@@ -257,8 +257,6 @@ p {
 /* BODY IMAGES */
 .site-landing--ally-wire {
   position: absolute;
-  top: -2rem;
-  right: 9rem;
 }
 
 .site-landing--ally-geo {
@@ -330,12 +328,12 @@ p {
 
 /* ANIMATIONS */
 .animated {
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: both;
 }
 
 .animated-slow {
-  animation-duration: 3s;
+  animation-duration: 50s;
   animation-fill-mode: both;
 }
 
@@ -349,11 +347,20 @@ p {
     transform: translate3d(0,0,0);
   }
 
+  // 20% {
+  //   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  //   transform: translate3d(0, -2px, 0);
+  // }
+
   50% {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0, -3px, 0);
+    transform: translate3d(0, -5px, 0);
   }
 
+  // 70% {
+  //   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  //   transform: translate3d(0, -2px, 0);
+  // }
 
   100% {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -385,25 +392,40 @@ p {
     transform: translate3d(0,0,0);
   }
 
-  25% {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(-2px, 0, 0);
-  }
+  // 25% {
+  //   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  //   transform: translate3d(-30px, 0, 0);
+  // }
 
   50% {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-380px, 0, 0);
   }
 
-  75% {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(-2px, 0, 0);
-  }
+  // 75% {
+  //   animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  //   transform: translate3d(-30px, 0, 0);
+  // }
 
   100% {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
     transform: translate3d(0,0,0);
   }
+}
+
+@keyframes allyInsert {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ally-insert {
+  animation-name: allyInsert;
 }
 
 .bounce-x {

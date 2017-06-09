@@ -71,8 +71,9 @@ p {
 
 /* HEADER */
 .site-landing--header {
+  position: relative;
   text-align: center;
-  padding: 15rem;
+  padding: 18rem;
   background: #b9e2f3; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(#b9e2f3, #f5fdff); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#b9e2f3, #f5fdff); /* For Opera 11.1 to 12.0 */
@@ -83,6 +84,10 @@ p {
 .site-landing--header-cta {
   font-size: 1.1rem;
   padding: .5rem 3rem;
+}
+
+.site-landing--header-assets {
+  position: relative;
 }
 
 .site-landing--logo {
@@ -107,7 +112,7 @@ p {
   width: 80rem;
   height: auto;
   right: 0;
-  top: 39rem;
+  top: 42rem;
   z-index: 2;
 }
 
@@ -129,16 +134,75 @@ p {
 }
 
 /* HEADER IMAGES */
-.site-landing--header-geo {
-  margin-top: 6rem;
+.site-landing--header-top-left-cloud {
   position: absolute;
-  left:0;
+  top: 4rem;
+  left: 6rem;
+}
+
+.site-landing--header-lightning-balloon {
+  position: absolute;
+  top: 5rem;
+  left: 41rem;
+}
+
+.site-landing--header-top-right-cloud {
+  position: absolute;
+  top: 6rem;
+  right: 6rem;
+}
+
+.site-landing--header-hotair-balloon-left {
+  position: absolute;
+  left: 10rem;
+}
+
+.site-landing--header-middle-cloud {
+  position: absolute;
+  top: 22rem;
+  left: 13rem;
+}
+
+.site-landing--header-hotair-balloon-right {
+  position: absolute;
+  top: 15rem;
+  right: 11rem;
+}
+
+.site-landing--header-geo {
+  position: absolute;
+  left: 0;
+  margin-top: 5rem;
 }
 
 .site-landing--header-wires {
   position: absolute;
-    margin-top: 6rem;
   left: 0;
+  margin-top: 5rem;
+}
+
+.site-landing--header-mountain {
+  position: absolute;
+  left: 20rem;
+  top: 32rem;
+}
+
+.site-landing--header-bottom-left-cloud {
+  position: absolute;
+  left: -2rem;
+  top: 32rem;
+}
+
+.site-landing--header-bottom-right-cloud {
+  position: absolute;
+  right: -2rem;
+  top: 28rem;
+}
+
+.site-landing--header-characters {
+  position: absolute;
+  right: 18rem;
+  top: 30rem;
 }
 
 /* BODY */
@@ -154,13 +218,19 @@ p {
   margin: 6rem 0;
 }
 
+.site-landing--section_img_right,
+.site-landing--section_img_left {
+  position: relative;
+  width: 50rem;
+}
+
 .site-landing--section_box_right {
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.20);
   padding: 4rem;
   width: 28rem;
   height: auto;
-  margin: -10rem 0 0 -4rem;
+  margin: 13rem 3rem 0 0;
   z-index: 1;
 }
 
@@ -181,59 +251,172 @@ p {
   width: 28rem;
   height: auto;
   z-index: 1;
-  margin: 5rem 0;
+  margin: 13rem 0 0;
 }
 
 /* BODY IMAGES */
 .site-landing--ally-wire {
   position: absolute;
-  margin: -2rem 0 0 -8rem;
+  top: -2rem;
+  right: 9rem;
+}
+
+.site-landing--ally-geo {
+  position: absolute;
 }
 
 .site-landing--ally-lantern {
   position: absolute;
-  margin: -3rem 0 0 -30rem;
+  top: -2.7rem;
+  left: 10rem;
 }
 
 .site-landing--ally-tree {
   position: absolute;
-  margin: 0 0 0 -38rem;
+  top: -0.5rem;
+  left: 4rem;
 }
 
 .site-landing--living-wires {
   position: absolute;
-  margin: -1rem 0 0 16rem;
+  left: 15rem;
 }
 
 .site-landing--living-geo {
-  float: right;
+  position: absolute;
+  left: 16rem;
+  top: -1rem;
 }
 
 .site-landing--living-mapcompass {
   position: absolute;
-  margin: 1rem 0 0 42rem;
+  left: 38rem;
+}
+
+.site-landing--platform-geo {
+  position: absolute;
+  left: -4rem;
+  top: 2rem;
 }
 
 .site-landing--platform-wires {
   position: absolute;
-  margin: 0rem 0 0 -2rem;
+  left: -6rem;
+  top: 2rem;
 }
 
 .site-landing--platform-knife {
   position: absolute;
-  margin: -6rem 0 0 -31rem;
+  top: -5rem;
 }
 
 .site-landing--motion-geo {
-  float: right;
+  position: absolute;
+  left: 25rem;
 }
 
 .site-landing--motion-wires {
   position: absolute;
-  margin: 3rem 0 0 10rem;
+  left: 15.5rem;
+  top: 3rem;
 }
 
 .site-landing--motion-fire {
   position: absolute;
-  margin: -6rem 0 0 31rem;
+  left: 35rem;
+  top: -8rem;
+}
+
+
+/* ANIMATIONS */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated-slow {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce-y {
+  from, 0%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  50% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0, -3px, 0);
+  }
+
+
+  100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes bounce-y-small {
+  from, 0%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  50% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0, -2px, 0);
+  }
+
+
+  100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes bounce-x {
+  from, 0%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  25% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  50% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  75% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  100% {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+}
+
+.bounce-x {
+  animation-name: bounce-x;
+  transform-origin: center bottom;
+}
+
+.bounce-y {
+  animation-name: bounce-y;
+  transform-origin: center bottom;
+}
+
+.bounce-y-small {
+  animation-name: bounce-y-small;
+  transform-origin: center bottom;
 }

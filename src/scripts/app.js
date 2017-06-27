@@ -52,7 +52,7 @@ Array.from(dropdownButtons)
  * https://www.lightningdesignsystem.com/components/tabs/
  */
 
-const tabs = (variant) => document.querySelectorAll(`.slds-tabs--${variant} [role=tablist] [role=tab]`)
+const tabs = (variant) => document.querySelectorAll(`.slds-tabs_${variant} [role=tablist] [role=tab]`)
 const tabActiveReset = (tab) => Array.from(tab.parentNode.parentNode.querySelectorAll('li'))
   .forEach((element) => element.classList.remove('slds-active'))
 const tabActiveSet = (tab) => tab.parentNode.classList.add('slds-active')

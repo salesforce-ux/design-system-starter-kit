@@ -1,0 +1,84 @@
+$flow_ele_w: 110px;
+$flow_ele_node_size: 10px;
+.slds-flow-element{
+  text-align: center;
+  width: $flow_ele_w;
+  height: $flow_ele_w - 20;
+  .slds-icon_container{
+    position: relative;
+    margin-bottom: 10px;
+    transition: opacity .15s linear, box-shadow .15s linear ;
+    .slds-icon{
+      padding: 7px;
+    }
+    >button{
+      position: absolute;
+      display: none;
+    }
+    [class*="slds-flow-line-node"]{
+      border-radius: 10px;
+      width: $flow_ele_node_size;
+      height: $flow_ele_node_size;
+      background: white;
+      padding: 0;
+      border: 1px solid $color-background-notification-badge-active;
+      transition: all .15s ease;
+      &:hover{
+        transform: scale(1.5);
+        background-color: $color-background-selection;
+        border-color: $color-background-notification-badge-hover;
+      }
+    }
+    .slds-flow-line-node_top,
+    .slds-flow-line-node_bottom{
+      left: - ($flow_ele_node_size / 2);
+      margin-left: 50%;
+    }
+    .slds-flow-line-node_top{
+      top: - ($flow_ele_node_size / 2);
+    }
+    .slds-flow-line-node_bottom{
+      top: 48px - ($flow_ele_node_size / 2);
+    }
+    .slds-flow-line-node_right,
+    .slds-flow-line-node_left{
+      top: (48px / 2) - ($flow_ele_node_size / 2);
+    }
+    .slds-flow-line-node_right{
+      left: 48px - ($flow_ele_node_size / 2);
+    }
+    .slds-flow-line-node_left{
+      left: 0 - ($flow_ele_node_size / 2);
+    }
+  }
+  &:hover, &.active{
+    cursor: move;
+    .slds-icon_container{
+      opacity: .9;
+      box-shadow: 0 0 0 2px $color-background-info;
+      [class*="slds-flow-line-node"]{
+        display: block;
+      }
+    }
+    &.active{
+      .slds-icon_container{
+        opacity: 1;
+        box-shadow: 0 0 0 2px $color-brand, 	0 0 4px 2px #1589EE;
+      }
+      .delete_element{
+        display: block;
+        right:-15px;
+        top:-15px;
+      }
+    }
+  }
+
+  p{
+    height: 32px;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+  }
+}

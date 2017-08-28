@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salesforce Lightning Design System Starter Kit</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".slds-flow-element").on("click" , function(){
+        $(this).toggleClass("active");
+      })
+    });
+  </script>
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">Flow Elements Demo</h1>
+    <hr>
+
+    <div class="slds-flow-element">
+      <span class="slds-icon_container slds-icon-standard-account" title="Move flow element">
+
+        <button class="slds-button slds-button_icon slds-button slds-button_icon delete_element" aria-describedby="delete element" title="Delete element">
+          <svg class="slds-button__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+          </svg>
+          <span class="slds-assistive-text">Delete element</span>
+        </button>
+        <button type="button" class="slds-flow-line-node_top" aria-describedby="drag line from top" title="Drag line from top">
+          <span class="slds-assistive-text">Help</span>
+        </button>
+        <button type="button" class="slds-flow-line-node_right" aria-describedby="drag line from right" title="Drag line from right">
+          <span class="slds-assistive-text">Help</span>
+        </button>
+        <button type="button" class="slds-flow-line-node_bottom" aria-describedby="drag line from bottom" title="Drag line from bottom">
+          <span class="slds-assistive-text">Help</span>
+        </button>
+        <button type="button" class="slds-flow-line-node_left" aria-describedby="drag line from left" title="Drag line from left">
+          <span class="slds-assistive-text">Help</span>
+        </button>
+
+        <svg class="slds-icon slds-icon_large" aria-hidden="true" data-reactid="2814">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop" data-reactid="2815"></use>
+        </svg>
+        <span class="slds-assistive-text">Move flow element</span>
+      </span>
+      <p class="slds-text-body_regular">This is a description for this flow element</p>
+    </div>
+
+  </div>
+
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+</html>

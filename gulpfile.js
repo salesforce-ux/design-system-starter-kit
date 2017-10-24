@@ -1,4 +1,4 @@
-// Copyright (c) 2016-present, salesforce.com, inc. All rights reserved
+// Copyright (c) 2017-present, Salesforce.com, Inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 'use strict'
@@ -75,7 +75,7 @@ gulp.task('scripts', () =>
 
 gulp.task('styles', () =>
   gulp
-    .src('src/styles/*.scss')
+    .src('src/styles/**/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
@@ -97,7 +97,7 @@ gulp.task('default', ['build'], () => {
     server: 'dist'
   })
 
-  gulp.watch('src/styles/*.scss', ['styles'])
+  gulp.watch('src/styles/**/*.scss', ['styles'])
   gulp.watch([
     'src/views/**/*.html',
     'src/views/data/*.json'

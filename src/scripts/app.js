@@ -1,4 +1,4 @@
-// Copyright (c) 2016-present, salesforce.com, inc. All rights reserved
+// Copyright (c) 2017-present, Salesforce.com, Inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 'use strict'
@@ -52,7 +52,7 @@ Array.from(dropdownButtons)
  * https://www.lightningdesignsystem.com/components/tabs/
  */
 
-const tabs = (variant) => document.querySelectorAll(`.slds-tabs--${variant} [role=tablist] [role=tab]`)
+const tabs = (variant) => document.querySelectorAll(`.slds-tabs_${variant} [role=tablist] [role=tab]`)
 const tabActiveReset = (tab) => Array.from(tab.parentNode.parentNode.querySelectorAll('li'))
   .forEach((element) => element.classList.remove('slds-active'))
 const tabActiveSet = (tab) => tab.parentNode.classList.add('slds-active')

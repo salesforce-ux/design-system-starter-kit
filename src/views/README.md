@@ -26,5 +26,5 @@ Partials should have a name of the form `_partial.html` (e.g. `_page-header.html
 
 - [`example.html`](example.html): shows what you can achieve in minutes with the starter kit
 - [`blank.html`](blank.html): a blank template for you to easily create your own prototype
-- [`workshop.html`](workshop.html): boilerplate for the [Dreamforce 2016 workshop](http://sfdcworkshop.com/workshop/rapid-prototyping-with-slds/)
+- [`workshop.html`](workshop.html): boilerplate for the [TrailheaDX 2017 workshop](https://tdx-starter-kit.herokuapp.com/)
 - [`workshop-done.html`](workshop-done.html): what your page should look like when you’ve completed the workshop

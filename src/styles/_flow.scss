@@ -1,84 +1,94 @@
-$flow_ele_w: 110px;
+$flow_ele_w: 160px;
 $flow_ele_node_size: 10px;
+/*-------------------------------
+  Flow Element global styles
+-------------------------------*/
 .slds-flow-element{
+  display: inline-block;
   text-align: center;
+  margin: 20px;
   width: $flow_ele_w;
-  height: $flow_ele_w - 20;
+  height: $flow_ele_w - 60;
+  position: relative;
   .slds-icon_container{
     position: relative;
     margin-bottom: 10px;
-    transition: opacity .15s linear, box-shadow .15s linear ;
+    transition: transform .15s ease, box-shadow .1s linear ;
     .slds-icon{
-      padding: 7px;
-    }
-    >button{
-      position: absolute;
-      display: none;
-    }
-    [class*="slds-flow-line-node"]{
-      border-radius: 10px;
-      width: $flow_ele_node_size;
-      height: $flow_ele_node_size;
-      background: white;
-      padding: 0;
-      border: 1px solid $color-background-notification-badge-active;
-      transition: all .15s ease;
-      &:hover{
-        transform: scale(1.5);
-        background-color: $color-background-selection;
-        border-color: $color-background-notification-badge-hover;
-      }
-    }
-    .slds-flow-line-node_top,
-    .slds-flow-line-node_bottom{
-      left: - ($flow_ele_node_size / 2);
-      margin-left: 50%;
-    }
-    .slds-flow-line-node_top{
-      top: - ($flow_ele_node_size / 2);
-    }
-    .slds-flow-line-node_bottom{
-      top: 48px - ($flow_ele_node_size / 2);
-    }
-    .slds-flow-line-node_right,
-    .slds-flow-line-node_left{
-      top: (48px / 2) - ($flow_ele_node_size / 2);
-    }
-    .slds-flow-line-node_right{
-      left: 48px - ($flow_ele_node_size / 2);
-    }
-    .slds-flow-line-node_left{
-      left: 0 - ($flow_ele_node_size / 2);
+      padding: 10px;
     }
   }
-  &:hover, &.active{
+  &:hover{
     cursor: move;
     .slds-icon_container{
-      opacity: .9;
-      box-shadow: 0 0 0 2px $color-background-info;
-      [class*="slds-flow-line-node"]{
-        display: block;
-      }
+      -webkit-transform: scale(1.05);
     }
-    &.active{
-      .slds-icon_container{
-        opacity: 1;
-        box-shadow: 0 0 0 2px $color-brand, 	0 0 4px 2px #1589EE;
-      }
-      .delete_element{
-        display: block;
-        right:-15px;
-        top:-15px;
+  }
+  &.active{
+    .slds-icon_container{
+      -webkit-transform: scale(1.05);
+      box-shadow: 0 0 0 3px white, 0px 0px 6px 2px rgba(0,0,0,.5);
+    }
+    .flow-del_element{
+      display: block;
+    }
+  }
+  p{
+    display:block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &.flow_element_name{
+      font-weight: $font-weight-bold;
+    }
+  }
+  /*-------------------------------
+    Flow Element Specific shape styles
+  -------------------------------*/
+  &.flow_diamond{
+    .slds-icon_container,
+    .slds-icon_container .delete_element{
+      transform: rotate(45deg);
+    }
+    .slds-icon_container{
+      background-color:$color-background-customer;
+      .flow_controls, svg{
+        transform: rotate(-45deg);
       }
     }
   }
-
-  p{
-    height: 32px;
-    line-height: 1.2;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient: vertical;
+  /*-------------------------------
+    Buttons on the flow element
+  -------------------------------*/
+  .flow_controls{
+    position: absolute;
+    top:0; right: 0; bottom: 0; left: 0;
+    button{
+      position: absolute;
+    }
+  }
+  .flow-del_element{
+    display: none;
+    left: 75%;
+    top: -20px;
+    margin-left: -8px;
+  }
+  .flow-add_element{
+    background: white;
+    border-radius: 100px;
+    margin-left: -8px;
+    box-shadow: 0 0 0 2px white;
+    bottom: -9px;
+    transition: transform .15s ease;
+    &:hover{
+      box-shadow: 0 0 0 2px white, 0 0 3px 2px rgba(0,0,0,.5);
+    }
+    &.active{
+      transform: rotate(45deg);
+      background-color: $color-background-toggle-hover;
+      svg{
+        fill: white;
+      }
+    }
   }
 }

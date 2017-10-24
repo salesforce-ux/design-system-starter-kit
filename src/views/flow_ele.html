@@ -14,7 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
   <script>
     $(document).ready(function() {
-      $(".slds-flow-element").on("click" , function(){
+      $(".slds-flow-element, .flow-add_element").on("click" , function(event){
+        event.stopPropagation(); // prevent z-index clicking
         $(this).toggleClass("active");
       })
     });
@@ -26,34 +27,45 @@
     <hr>
 
     <div class="slds-flow-element">
-      <span class="slds-icon_container slds-icon-standard-datadotcom" title="Move flow element">
-
-        <button class="slds-button slds-button_icon slds-button slds-button_icon delete_element" aria-describedby="delete element" title="Delete element">
+      <div class="flow_controls">
+        <button class="slds-button slds-button_icon slds-button slds-button_icon flow-del_element" aria-describedby="delete element" title="Delete element">
           <svg class="slds-button__icon" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
           </svg>
           <span class="slds-assistive-text">Delete element</span>
         </button>
-        <button type="button" class="slds-flow-line-node_top" aria-describedby="drag line from top" title="Drag line from top">
-          <span class="slds-assistive-text">Help</span>
-        </button>
-        <button type="button" class="slds-flow-line-node_right" aria-describedby="drag line from right" title="Drag line from right">
-          <span class="slds-assistive-text">Help</span>
-        </button>
-        <button type="button" class="slds-flow-line-node_bottom" aria-describedby="drag line from bottom" title="Drag line from bottom">
-          <span class="slds-assistive-text">Help</span>
-        </button>
-        <button type="button" class="slds-flow-line-node_left" aria-describedby="drag line from left" title="Drag line from left">
-          <span class="slds-assistive-text">Help</span>
-        </button>
-
+      </div>
+      <span class="slds-icon_container slds-icon-standard-datadotcom" title="Move flow element">
         <svg class="slds-icon slds-icon_large" aria-hidden="true" data-reactid="2814">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop" data-reactid="2815"></use>
         </svg>
         <span class="slds-assistive-text">Move flow element</span>
       </span>
-      <p class="slds-text-body_regular">This is a description for this flow element</p>
+      <p class="slds-text-body_regular flow_element_name">Screen</p>
+      <p class="slds-text-body_regular">This is a description of the node</p>
     </div>
+<!--
+    <div class="slds-flow-element flow_diamond">
+      <span class="slds-icon_container" title="Move flow element">
+        <div class="flow_controls">
+          <button class="slds-button slds-button_icon slds-button slds-button_icon flow-del_element" aria-describedby="delete element" title="Delete element">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+            </svg>
+            <span class="slds-assistive-text">Delete element</span>
+          </button>
+          <button type="button add_element" class="" aria-describedby="" title="">
+            <span class="slds-assistive-text">Add Element</span>
+          </button>
+        </div>
+        <svg class="slds-icon slds-icon_large" aria-hidden="true" data-reactid="2814">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#signpost" data-reactid="2815"></use>
+        </svg>
+        <span class="slds-assistive-text">Move flow element</span>
+      </span>
+      <p class="slds-text-body_regular flow_element_name">Decision</p>
+      <p class="slds-text-body_regular">This is a description of the node</p>
+    </div> -->
 
   </div>
 

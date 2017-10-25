@@ -25,29 +25,6 @@ console.log('%c%s', warningStyles, 'Please do not use the provided JavaScript in
 console.log('Code in app.js is not built for accessibility, performance, or cross-browser compatibility.')
 
 /**
- * Open / Close an element
- * @param {Node} element
- */
-const toggle = (element) => element.classList.toggle('slds-is-open')
-
-/**
- * Open / Close an element's parent
- * @param {Node} element
- */
-const toggleParent = (element) => toggle(element.parentNode)
-
-/**
- * Dropdown menus
- * https://www.lightningdesignsystem.com/components/menus/
- */
-const dropdownButtons = document.querySelectorAll('.slds-dropdown-trigger--click > .slds-button')
-
-Array.from(dropdownButtons)
-  .forEach((button) =>
-    button.addEventListener('click', (event) => toggleParent(event.currentTarget), false)
-  )
-
-/**
  * Tabs
  * https://www.lightningdesignsystem.com/components/tabs/
  */

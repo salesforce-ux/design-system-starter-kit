@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Popovers Version 2</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <!-- Prototype styles -->
+  <link rel="stylesheet" href="/styles/index.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".slds-flow-element, .flow-add_element").on("click" , function(event){
+        event.stopPropagation(); // prevent z-index clicking
+        $(this).toggleClass("active");
+      })
+    });
+  </script>
+</head>
+<body>
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">Popover Variants V2</h1>
+    <hr>
+
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Popover With Header Error</h3>
+    <section class="slds-popover slds-nubbin_left slds-theme--error" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Header Title</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+    <hr>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Popover With Header Error - Sliver</h3>
+    <p>Uses a gradient to create the left nubbin blend effect with sliver</p>
+    <br>
+    <section class="slds-popover slds-nubbin_left popover-error" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Header Title</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+
+    <hr>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Popover With Header Error - Header Styled</h3>
+    <p>Uses Standard SLDS tokens, needs no additional code for nubbins</p>
+    <br>
+    <section class="slds-popover slds-nubbin_left popover-error-alt" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Header Title</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+
+    <hr>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Popover Bordered</h3>
+    <p>Uses Standard SLDS tokens, needs additional css to add border to nubbin</p>
+    <br>
+    <section class="slds-popover slds-nubbin_left popover-error-bordered" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Header Title</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </section>
+
+
+  </div>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/vendor/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+</body>
+</html>

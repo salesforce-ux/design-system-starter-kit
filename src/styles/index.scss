@@ -354,3 +354,43 @@ aside#tool_panel{
   }
 }
 @import 'flow';
+
+.slds-popover{
+  &.popover-error{
+    padding-left: 4px; //Give space to left to accomodate
+    &.slds-nubbin_left{
+      box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 4px 0 0 $color-background-error-dark;
+      &:before, &:after{
+        background: -webkit-linear-gradient(45deg, $color-background-error-dark 67%,#fff 67%);
+      }
+      &:before{
+        box-shadow: -1px 1px 0 0 #DDDBDA; // to add border left to nubbin
+      }
+    }
+  }
+  &.popover-error-alt{
+    .slds-popover__header{
+      border-bottom: 2px solid $color-background-error-dark;
+      h2{
+        color: $color-background-error-dark;
+      }
+    }
+    &.slds-nubbin_left{
+
+    }
+  }
+  &.popover-error-bordered{
+    border-color: $color-background-error-dark;
+    .slds-popover__header{
+      border-bottom: 1px solid $color-background-error-dark;
+      h2{
+        color: $color-background-error-dark;
+      }
+    }
+    &.slds-nubbin_left{
+      &:before{
+        box-shadow: -1px 1px 0 0 $color-background-error-dark; // to add border left to nubbin
+      }
+    }
+  }
+}

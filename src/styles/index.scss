@@ -358,7 +358,9 @@ aside#tool_panel{
 //Sliver
 .slds-popover{
   &.popover-error,
-  &.popover-warning{
+  &.popover-error-thick,
+  &.popover-warning,
+  &.popover-warning-thick{
     padding-left: 4px; //Give space to left to accomodate
     &.slds-nubbin_left{
       &:before{
@@ -366,7 +368,8 @@ aside#tool_panel{
       }
     }
 
-    &.popover-error{
+    &.popover-error,
+    &.popover-error-thick{
       &.slds-nubbin_left{
         box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 4px 0 0 $color-background-error-dark;
         &:before, &:after{
@@ -374,7 +377,8 @@ aside#tool_panel{
         }
       }
     }
-    &.popover-warning{
+    &.popover-warning,
+    &.popover-warning-thick{
       &.slds-nubbin_left{
         box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 4px 0 0 $color-background-warning;
         &:before, &:after{
@@ -382,8 +386,36 @@ aside#tool_panel{
         }
       }
     }
+    //Thick Variation
+    &.popover-error-thick{
+      &.slds-nubbin_left{
+        padding-left: 11px;
+        box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 11px 0 0 $color-background-error-dark;
+        &:before, &:after{
+          background:$color-background-error-dark;
+        }
+      }
+    }
+    &.popover-warning-thick{
+      &.slds-nubbin_left{
+        padding-left: 11px;
+        box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 11px 0 0 $color-background-warning;
+        &:before, &:after{
+          background:$color-background-warning;
+        }
+      }
+    }
   }
-
+  &.popover-error-opposed{
+    border-right: 8px solid $color-background-error-dark;
+    h2{
+      color: $color-background-error-dark;
+    }
+  }
+  &.popover-warning-opposed{
+    border-right: 8px solid $color-background-warning;
+    
+  }
 
   &.popover-error-alt{
     .slds-popover__header{

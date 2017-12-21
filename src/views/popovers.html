@@ -25,9 +25,8 @@
   <div class="slds-p-around--large slds-container--center slds-container--medium">
     <h1 class="slds-text-heading--large">Popover Variants V2</h1>
     <hr>
-
-    <h2 class="slds-text-heading--large">Errors</h2>
-    <br>
+    <h2 class="slds-text-heading--large"><strong>Errors</strong></h2>
+    <hr>
     <h3 class="slds-text-heading--medium slds-m-bottom--x-small">With Header  - Current</h3>
     <p>Red text on a white background gets very hard to read. Additionally if we want to extend this pattern to leverage more rich context, and clickable menu items, read background will not work. Links are hard to identify as well.</p>
     <br>
@@ -48,7 +47,7 @@
       </section>
     </div>
     <hr>
-    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">With Header - Sliver</h3>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Nubbin + Sliver</h3>
     <p>Uses a gradient to create the left nubbin blend effect with sliver</p>
     <br>
     <section class="slds-popover slds-nubbin_left popover-error" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
@@ -67,7 +66,45 @@
     </section>
 
     <hr>
-    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">With Header - Header Styled</h3>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Nubbin + Sliver Thick</h3>
+    <p>Thick inset shadow on same side as nubbin encompases full nubbin color</p>
+    <br>
+    <section class="slds-popover slds-nubbin_left popover-error-thick" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Please resolve errors</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" tabindex="-1">Read More</a></p>
+      </div>
+    </section>
+
+    <hr>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Sliver Opposed</h3>
+    <p>Thick inset shadow on same side as nubbin encompases full nubbin color</p>
+    <br>
+    <section class="slds-popover slds-nubbin_left popover-error-opposed" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Please resolve errors</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" tabindex="-1">Read More</a></p>
+      </div>
+    </section>
+
+    <hr>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Header Styled</h3>
     <p>Uses Standard SLDS tokens, needs no additional code for nubbins</p>
     <br>
     <section class="slds-popover slds-nubbin_left popover-error-alt" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
@@ -86,7 +123,7 @@
     </section>
 
     <hr>
-    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">With Header - Bordered</h3>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Bordered</h3>
     <p>Uses Standard SLDS tokens, needs additional css to add border to nubbin</p>
     <br>
     <section class="slds-popover slds-nubbin_left popover-error-bordered" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
@@ -104,10 +141,8 @@
       </div>
     </section>
     <hr>
-    <br>
-
-    <h2 class="slds-text-heading--large">Warnings</h2>
-    <br>
+    <h2 class="slds-text-heading--large"><strong>Warnings</strong></h2>
+    <hr>
     <h3 class="slds-text-heading--medium slds-m-bottom--x-small">With Header - Current</h3>
     <p>Warnings recieve no visual diffentiation from a normal popover.</p>
     <br>
@@ -127,10 +162,48 @@
     </section>
 
     <hr>
-    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">With Header - Sliver</h3>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Nubbin + Sliver</h3>
     <p>Uses a gradient to create the left nubbin blend effect with sliver</p>
     <br>
     <section class="slds-popover slds-nubbin_left popover-warning" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Please resolve errors</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" tabindex="-1">Read More</a></p>
+      </div>
+    </section>
+
+    <hr>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Nubbin + Slive THick</h3>
+    <p>Uses a gradient to create the left nubbin blend effect with sliver</p>
+    <br>
+    <section class="slds-popover slds-nubbin_left popover-warning-thick" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
+      <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+        </svg>
+        <span class="slds-assistive-text">Close dialog</span>
+      </button>
+      <header class="slds-popover__header">
+        <h2 id="dialog-heading-id-4" class="slds-text-heading_small">Please resolve errors</h2>
+      </header>
+      <div class="slds-popover__body" id="dialog-body-id-4">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="#" tabindex="-1">Read More</a></p>
+      </div>
+    </section>
+
+    <hr>
+    <h3 class="slds-text-heading--medium slds-m-bottom--x-small">Sliver Opposed</h3>
+    <p>Thick inset shadow on same side as nubbin encompases full nubbin color</p>
+    <br>
+    <section class="slds-popover slds-nubbin_left popover-warning-opposed" role="dialog" aria-labelledby="dialog-heading-id-4" aria-describedby="dialog-body-id-4">
       <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close slds-button_icon" title="Close dialog">
         <svg class="slds-button__icon" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />

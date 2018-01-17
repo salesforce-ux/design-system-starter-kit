@@ -359,7 +359,7 @@ aside#tool_panel{
 .slds-popover{
   &.popover-error{
     .slds-popover__header{
-      background: $color-background-error;
+      background: $color-background-error-dark;
       border-radius: 0.25rem 0.25rem 0 0;
       h2{
         color: white;
@@ -370,7 +370,7 @@ aside#tool_panel{
     }
     &.slds-nubbin_top{
       &:before{
-        background: $color-background-error;
+        background: $color-background-error-dark;
       }
     }
   }

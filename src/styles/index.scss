@@ -355,106 +355,42 @@ aside#tool_panel{
 }
 @import 'flow';
 
-//Sliver
+//Error
 .slds-popover{
-  &.popover-error,
-  &.popover-error-thick,
-  &.popover-warning,
-  &.popover-warning-thick{
-    padding-left: 4px; //Give space to left to accomodate
-    &.slds-nubbin_left{
-      &:before{
-        box-shadow: -1px 1px 0 0 #DDDBDA; // to add border left to nubbin
-      }
-    }
-
-    &.popover-error,
-    &.popover-error-thick{
-      &.slds-nubbin_left{
-        box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 4px 0 0 $color-background-error-dark;
-        &:before, &:after{
-          background: -webkit-linear-gradient(45deg, $color-background-error-dark 67%,#fff 67%);
-        }
-      }
-    }
-    &.popover-warning,
-    &.popover-warning-thick{
-      &.slds-nubbin_left{
-        box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 4px 0 0 $color-background-warning;
-        &:before, &:after{
-          background: -webkit-linear-gradient(45deg, $color-background-warning 67%,#fff 67%);
-        }
-      }
-    }
-    //Thick Variation
-    &.popover-error-thick{
-      &.slds-nubbin_left{
-        padding-left: 11px;
-        box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 11px 0 0 $color-background-error-dark;
-        &:before, &:after{
-          background:$color-background-error-dark;
-        }
-      }
-    }
-    &.popover-warning-thick{
-      &.slds-nubbin_left{
-        padding-left: 11px;
-        box-shadow: 0 2px 3px rgba(0,0,0,.16),inset 11px 0 0 $color-background-warning;
-        &:before, &:after{
-          background:$color-background-warning;
-        }
-      }
-    }
-  }
-  &.popover-error-opposed{
-    border-right: 8px solid $color-background-error-dark;
-    h2{
-      color: $color-background-error-dark;
-    }
-  }
-  &.popover-warning-opposed{
-    border-right: 8px solid $color-background-warning;
-    
-  }
-
-  &.popover-error-alt{
+  &.popover-error{
     .slds-popover__header{
-      border-bottom: 2px solid $color-background-error-dark;
+      background: $color-background-error;
+      border-radius: 0.25rem 0.25rem 0 0;
       h2{
-        color: $color-background-error-dark;
+        color: white;
+      }
+    }
+    .slds-button__icon{
+      fill: white;
+    }
+    &.slds-nubbin_top{
+      &:before{
+        background: $color-background-error;
       }
     }
   }
-  &.popover-warning-alt{
+}
+//Warning
+.slds-popover{
+  &.popover-warning{
     .slds-popover__header{
-      border-bottom: 2px solid $color-background-warning;
-    }
-  }
-
-
-  &.popover-error-bordered{
-    border-color: $color-background-error-dark;
-    .slds-popover__header{
-      border-bottom: 1px solid $color-background-error-dark;
+      background: $color-background-warning;
+      border-radius: 0.25rem 0.25rem 0 0;
       h2{
-        color: $color-background-error-dark;
+        color: $input-static-color;
       }
     }
-    &.slds-nubbin_left{
-      &:before{
-        box-shadow: -1px 1px 0 0 $color-background-error-dark; // to add border left to nubbin
-      }
+    .slds-button__icon{
+      fill: $input-static-color;
     }
-  }
-
-  &.popover-warning-bordered{
-    border-color: $color-background-warning;
-    .slds-popover__header{
-      border-bottom: 1px solid $color-background-warning;
-    }
-    &.slds-nubbin_left{
+    &.slds-nubbin_top{
       &:before{
-        box-shadow: -1px 1px 0 0 $color-background-warning; // to add border left to nubbin
+        background: $color-background-warning;
       }
     }
   }

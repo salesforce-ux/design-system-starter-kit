@@ -23,48 +23,158 @@
 </head>
 <body>
   <div class="slds-p-around--large slds-container--center slds-container--medium">
-    <h1 class="slds-text-heading--large">Flow Elements Demo</h1>
+    <h1 class="slds-text-heading--large">Button icons for flow prodcuts</h1>
+    <br>
+    <p class="slds-text-heading_medium"><strong>Problem:</strong> All flow based builder products will need the ability to have large icons (48x48px) that are focusable button elements. Large button icons that can leverage existing Icons and styles found here <a href="https://latest-216.lightningdesignsystem.com/icons/">SLDS Icons</a></p>
+    <br>
+    <p class="slds-text-heading_medium">Currently a component to fulfill this need does not exist (without CSS modifications). Here are some explorations in attempt to use existing compoents to solve this problem.</p>
     <hr>
-
-    <div class="slds-flow-element">
-      <div class="flow_controls">
-        <button class="slds-button slds-button_icon slds-button slds-button_icon flow-del_element" aria-describedby="delete element" title="Delete element">
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
-          </svg>
-          <span class="slds-assistive-text">Delete element</span>
-        </button>
-      </div>
-      <span class="slds-icon_container slds-icon-standard-datadotcom" title="Move flow element">
-        <svg class="slds-icon slds-icon_large" aria-hidden="true" data-reactid="2814">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#desktop" data-reactid="2815"></use>
-        </svg>
-        <span class="slds-assistive-text">Move flow element</span>
-      </span>
-      <p class="slds-text-body_regular flow_element_name">Screen</p>
-      <p class="slds-text-body_regular">This is a description of the node</p>
-    </div>
-<!--
-    <div class="slds-flow-element flow_diamond">
-      <span class="slds-icon_container" title="Move flow element">
-        <div class="flow_controls">
-          <button class="slds-button slds-button_icon slds-button slds-button_icon flow-del_element" aria-describedby="delete element" title="Delete element">
-            <svg class="slds-button__icon" aria-hidden="true">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+    <div>
+      <p class="slds-text-heading_medium">.button-icon with .slds-icon_container applied + custom CSS</p>
+      <br>
+      <strong>Modifications:</strong>
+      <ul class="slds-list_dotted">
+        <li>Size removed on .slds-button_icon allowing nested slds-icon svg determine size</li>
+        <li>Added transitions to hover and focus: scale + drop shadow</li>
+      </ul>
+      <br>
+      <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-8">
+          <button class="slds-button slds-button_icon slds-icon_container slds-icon-standard-task2">
+            <svg class="slds-icon slds-icon_large" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task2"></use>
             </svg>
-            <span class="slds-assistive-text">Delete element</span>
-          </button>
-          <button type="button add_element" class="" aria-describedby="" title="">
-            <span class="slds-assistive-text">Add Element</span>
+            <span class="slds-assistive-text">Description of icon when needed</span>
           </button>
         </div>
-        <svg class="slds-icon slds-icon_large" aria-hidden="true" data-reactid="2814">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#signpost" data-reactid="2815"></use>
+        <div class="slds-col slds-size_1-of-12">
+          <button class="slds-button slds-button_icon slds-icon_container slds-icon-standard-task2">
+            <svg class="slds-icon slds-icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task2"></use>
+            </svg>
+            <span class="slds-assistive-text">Description of icon when needed</span>
+          </button>
+        </div>
+        <div class="slds-col slds-size_1-of-12">
+          <button class="slds-button slds-button_icon slds-icon_container slds-icon-standard-task2">
+            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task2"></use>
+            </svg>
+            <span class="slds-assistive-text">Description of icon when needed</span>
+          </button>
+        </div>
+        <div class="slds-col slds-size_1-of-12">
+          <button class="slds-button slds-button_icon slds-icon_container slds-icon-standard-task2">
+            <svg class="slds-icon slds-icon_x-small" aria-hidden="true">
+              <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task2"></use>
+            </svg>
+            <span class="slds-assistive-text">Description of icon when needed</span>
+          </button>
+        </div>
+    </div>
+    <hr>
+    <div>
+      <p class="slds-text-heading_medium">Support for utility icons in slds-icon_container</p>
+      <br>
+      <strong>Modifications:</strong>
+      <ul class="slds-list_dotted">
+        <li>added a class of slds-icon-utility that adds padding of .5rem</li>
+      </ul>
+      <br>
+      <button class="slds-button slds-button_icon slds-icon_container slds-icon-standard-messaging-session">
+        <svg class="slds-icon slds-icon_large slds-icon-utility" aria-hidden="true">
+          <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#anchor"></use>
         </svg>
-        <span class="slds-assistive-text">Move flow element</span>
+        <span class="slds-assistive-text">Description of icon when needed</span>
+      </button>
+    </div>
+    <!-- <div>
+      <p class="slds-text-heading_medium">.button-icon</p>
+      <p>Standard out of the box</p>
+      <br>
+      <button class="slds-button slds-button_icon old">
+        <svg class="slds-button__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search" />
+        </svg>
+        <span class="slds-assistive-text">Provide description of action</span>
+      </button>
+    </div>
+    <hr>
+    <div>
+      <p class="slds-text-heading_medium">.button-icon with nested slds-icon_container</p>
+      <br>
+      <strong>Problems:</strong>
+      <ul class="slds-list_dotted">
+        <li>Container does not grow due to fixed W & H</li>
+        <li>Cant change background color</li>
+        <li>Cant change size to icon-large (biggest is 32x32)</li>
+        <li>Dont need additional modifiers like more etc...</li>
+      </ul>
+      <br>
+      <button class="slds-button slds-button_icon old">
+        <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+          <svg class="slds-icon slds-icon_large" aria-hidden="true">
+            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+          </svg>
+          <span class="slds-assistive-text">Description of icon when needed</span>
+        </span>
+      </button>
+    </div>
+    <hr>
+    <div>
+      <p class="slds-text-heading_medium">.button-icon with .slds-icon_container applied</p>
+      <strong>Problems:</strong>
+      <ul class="slds-list_dotted">
+        <li>Background color changes on hover to base style of button-icon</li>
+        <li>Cant change size to icon-large (biggest is 32x32)</li>
+        <li>Icon being cropped due to fixed W & H</li>
+      </ul>
+      <br>
+        <button class="slds-button slds-button_icon slds-icon_container slds-icon-standard-task2 old">
+          <svg class="slds-icon slds-icon_large" aria-hidden="true">
+            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#task2"></use>
+          </svg>
+          <span class="slds-assistive-text">Description of icon when needed</span>
+        </button>
+    </div>
+    <hr>
+
+    <h1 class="slds-text-heading--large">Icon Containers</h1>
+    <hr>
+    <div>
+      <p class="slds-text-heading_medium">.slds-icon</p>
+      <p>Standard out of the box</p>
+      <br>
+      <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+        <svg class="slds-icon slds-icon_large" aria-hidden="true">
+          <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+        </svg>
+        <span class="slds-assistive-text">Description of icon when needed</span>
       </span>
-      <p class="slds-text-body_regular flow_element_name">Decision</p>
-      <p class="slds-text-body_regular">This is a description of the node</p>
+    </div>
+    <hr>
+    <div>
+      <p class="slds-text-heading_medium">.slds-icon applied to button element</p>
+      <p>Item can now be focued, but has padding and outline default styles of button element</p>
+      <br>
+      <button tabindex="1" class="slds-icon_container slds-icon-standard-account old" title="Description of icon when needed">
+        <svg class="slds-icon slds-icon_large" aria-hidden="true">
+          <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+        </svg>
+        <span class="slds-assistive-text">Description of icon when needed</span>
+      </button>
+    </div>
+    <hr>
+    <div>
+      <p class="slds-text-heading_medium">.slds-icon applied to button element + Custom CSS</p>
+      <p>Item can now be focued, and has SLDS applied states</p>
+      <br>
+      <button tabindex="1" class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+        <svg class="slds-icon slds-icon_large" aria-hidden="true">
+          <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+        </svg>
+        <span class="slds-assistive-text">Description of icon when needed</span>
+      </button>
     </div> -->
 
   </div>

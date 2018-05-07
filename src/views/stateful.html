@@ -11,72 +11,39 @@
   <!-- Prototype styles -->
   <link rel="stylesheet" href="/styles/index.css" />
   <style>
-  .communitySetupCmcWorkspaceTile {
-    /*DO NOT USE THIS CODE, JUST FOR PRESENTATION*/
-    height: 12.5rem;
-    display: inline-block;
-    width: 290px;
-  }
-  .slds-stateful{
-    min-width: 111px;
-    height: 32px;
-    overflow: hidden;
-    -webkit-transform: translateY(0);
-    -webkit-transition:
-      background-color .15s .15s ease-out, opacity .8s ease-out, transform 1s .15s ease-out;
-  }
-  .slds-stateful.slds-button--success .text{
-    top: -30px;
-  }
-  .slds-stateful .text{
-    display: inline-block;
-    position: relative;
-    top: 0;
-    -webkit-transition: all .45s cubic-bezier(0.630, -0.045, 0.200, 1.455);
-  }
-  button.slds-stateful .text > span{
-    display: block !important;
-  }
 
-  .slds-stateful.done{
-    -webkit-transform: translateY(-10px);
-    opacity: 0;
-  }
   </style>
 </head>
 <body>
-  <div class="slds-p-around--large slds-text-align--center slds-container--center slds-container--small">
-    <h1 class="slds-text-heading--large">Stateful Button</h1>
-    <p>A fun demonstration of handling multiple states within a single button</p>
+  <div class="slds-p-around--large slds-container--center slds-container--medium">
+    <h1 class="slds-text-heading--large">SLDS Button Variants</h1>
     <br>
-    <button class="slds-button slds-button--neutral slds-not-selected slds-stateful" aria-live="assertive">
-      <span class="text">
-        <span>
-          <svg class="slds-button__icon--stateful slds-button__icon--left" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-          </svg>Follow</span>
-        <span>
-          <svg class="slds-button__icon--stateful slds-button__icon--left" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check"></use>
-          </svg>
-          Following
-        </span>
-      </span>
-    </button>
+    <hr>
+    <h1 class="slds-text-heading--medium">Outline Buttons</h1>
+      <button class="slds-button slds-button_neutral" aria-live="assertive">Neutral</button>
+      <button class="slds-button slds-button_outline-brand"aria-live="assertive">Brand Outline</button>
+      <button class="slds-button slds-button_outline-desctuctive"aria-live="assertive">Desctuctive Outline</button>
+      <button class="slds-button slds-button_outline-success"aria-live="assertive">Success Outline</button>
+    <hr>
+    <h1 class="slds-text-heading--medium">Fill Buttons</h1>
+      <button class="slds-button slds-button_brand" aria-live="assertive">Brand</button>
+      <button class="slds-button slds-button_success" aria-live="assertive">Success</button>
+      <button class="slds-button slds-button_destructive" aria-live="assertive">Desctructive</button>
+
   </div>
   <script src="/scripts/app.js"></script>
   <script src="/scripts/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
   <script type="text/javascript">
-    let stateful = document.getElementsByClassName('slds-stateful')[0];
-    let text = stateful.firstElementChild;
-    stateful.addEventListener("click" , function(){
-      this.classList.add("slds-button--success");
-      setTimeout(function(){
-        stateful.classList.add("done");
-        console.log("done")
-      },600)
-    });
+    // let stateful = document.getElementsByClassName(')[0];
+    // let text = stateful.firstElementChild;
+    // stateful.addEventListener("click" , function(){
+    //   this.classList.add("slds-button--success");
+    //   setTimeout(function(){
+    //     stateful.classList.add("done");
+    //     console.log("done")
+    //   },600)
+    // });
   </script>
 </body>
 </html>

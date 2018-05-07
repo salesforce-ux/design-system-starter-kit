@@ -353,7 +353,7 @@ aside#tool_panel{
     box-shadow: $shadow-header;
   }
 }
-@import 'flow';
+// @import 'flow';
 
 //Error
 .slds-popover{
@@ -393,5 +393,68 @@ aside#tool_panel{
         background: $color-background-warning;
       }
     }
+  }
+}
+
+//New button Variants
+[class*="slds-button_outline-"]{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #dddbda;
+    -webkit-transition: border 0.15s linear;
+    transition: border 0.15s linear;
+    border-color: #dddbda;
+    background-color: white;
+    &:hover,
+    &:focus{
+      background-color: #f4f6f9;
+    }
+}
+.slds-button_outline-brand{
+  border-color: #0070d2;
+  color: #0070d2;
+  &:hover,
+  &:focus{
+    color: #0070d2;
+  }
+}
+.slds-button_outline-desctuctive{
+  border-color: $color-background-error;
+  color: $color-background-error-dark;
+  &:hover,
+  &:focus{
+    color: $color-background-error-dark;
+  }
+}
+.slds-button_outline-success{
+  border-color: $color-border-success;
+  color: $color-border-success-dark;
+  &:hover,
+  &:focus{
+    color: $color-border-success-dark;
+  }
+}
+//slds-icons as buttons for flow
+button.slds-icon_container:not(.old){
+  padding: 0;
+  outline: none;
+  border: 0;
+  transition: transform .12s ease, box-shadow .1s ease;
+  &:hover{
+    transform: scale(1.05);
+  }
+  &:focus{
+    transform: scale(1.1);
+    box-shadow: 0 0 0 1px white, 0 0 3px 2px $color-brand-dark;
+  }
+}
+button.slds-button:not(.old){
+  //removing H & W is all that is needed for slds_icon-container support
+  width: auto;
+  height: auto;
+  >.slds-icon-utility{
+    padding: .5rem; //allows usage of Utility Icons
   }
 }

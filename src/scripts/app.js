@@ -40,7 +40,7 @@ const toggleParent = (element) => toggle(element.parentNode)
  * Dropdown menus
  * https://www.lightningdesignsystem.com/components/menus/
  */
-const dropdownButtons = document.querySelectorAll('.slds-dropdown-trigger--click > .slds-button')
+const dropdownButtons = document.querySelectorAll('.slds-dropdown-trigger_click > .slds-button')
 
 Array.from(dropdownButtons)
   .forEach((button) =>

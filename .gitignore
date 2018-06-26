@@ -1,5 +1,6 @@
 # Ignore all hidden dotfiles
 .*
+!/.github
 
 # Whitelist useful dotfiles
 !/.gitignore

@@ -12,8 +12,8 @@
     "lint:css": "stylelint src/styles/**/*.scss"
   },
   "engines": {
-    "node": ">=6.5.0",
-    "npm": ">=3.10.5"
+    "node": "^6.5.0",
+    "npm": "^3.10.5"
   },
   "keywords": [
     "lightning",

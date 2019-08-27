@@ -12,7 +12,6 @@ const path = require('path')
 const fs = require('fs')
 const gulp = require('gulp')
 const del = require('del')
-const runSequence = require('run-sequence')
 const browserSync = require('browser-sync')
 const JSON5 = require('json5')
 const gulpLoadPlugins = require('gulp-load-plugins')
@@ -87,38 +86,33 @@ gulp.task('styles', () =>
     .pipe(browserSync.stream({ match: '**/*.css' }))
 )
 
-// Static Server (development)
-gulp.task('default', ['build'], () => {
-  browserSync({
-    // The starter kit opens itself up in a new browser tab every time the app starts.
-    // Uncomment the next line to prevent this behavior:
-    // open: false,
-    notify: false,
-    server: 'dist'
-  })
-
-  gulp.watch('src/styles/**/*.scss', ['styles'])
-  gulp.watch([
-    'src/views/**/*.html',
-    'src/views/data/*.json'
-  ], ['views'])
-  gulp.watch('src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}', ['assets'])
-  gulp.watch('src/scripts/**/*.js', ['scripts'])
-  gulp.watch([
-    'dist/**/*.html',
-    'dist/scripts/**/*.js',
-
-    // Note: we're not watching icons and fonts changes,
-    // as they're slowing down the task
-    'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg}',
-    'dist/assets/styles/*.css'
-  ]).on('change', browserSync.reload)
-})
-
 gulp.task('clean', () => del(['dist'], { dot: true }))
 
-gulp.task('build', callback => {
-  runSequence(
-    'clean', [ 'assets', 'views', 'styles', 'scripts', 'favicon' ],
-  callback)
-})
+// Static Server (development)
+gulp.task('default',
+  gulp.series('clean', gulp.parallel('assets', 'views', 'styles', 'scripts', 'favicon'),
+  function () {
+    browserSync({
+      // The starter kit opens itself up in a new browser tab every time the app starts.
+      // Uncomment the next line to prevent this behavior:
+      // open: false,
+      notify: false,
+      server: 'dist'
+    })
+    gulp.watch('src/styles/**/*.scss', gulp.series('styles'))
+    gulp.watch([
+      'src/views/**/*.html',
+      'src/views/data/*.json'
+    ], gulp.series('views'))
+    gulp.watch('src/assets/**/*.{woff,woff2,txt,jpg,png,gif,svg}', gulp.series('assets'))
+    gulp.watch('src/scripts/**/*.js', gulp.series('scripts'))
+    gulp.watch([
+      'dist/**/*.html',
+      'dist/scripts/**/*.js',
+
+      // Note: we're not watching icons and fonts changes,
+      // as they're slowing down the task
+      'dist/assets/*.{woff,woff2,txt,jpg,png,gif,svg}',
+      'dist/assets/styles/*.css'
+    ]).on('change', browserSync.reload)
+  }))

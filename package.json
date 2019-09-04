@@ -5,9 +5,9 @@
   "description": "Boilerplate to get started with a local Lightning Design System installation",
   "main": "",
   "scripts": {
-    "test": "gulp build",
+    "test": "gulp",
     "dev": "gulp",
-    "prestart": "gulp build",
+    "prestart": "gulp",
     "lint:js": "eslint . --format codeframe",
     "lint:css": "stylelint src/styles/**/*.scss"
   },
@@ -29,17 +29,16 @@
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "express": "^4.15.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-data": "^1.2.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-nunjucks": "^3.0.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.5.1",
     "http-auth": "^3.1.3",
-    "json5": "^0.5.1",
-    "run-sequence": "^1.2.2"
+    "json5": "^0.5.1"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

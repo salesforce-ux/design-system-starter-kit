@@ -41,3 +41,27 @@ $static-font-path: '/assets/fonts/webfonts';
   left: 0;
 }
 
+.grid-example .slds-grid {
+  height: auto;
+  min-height: 8.75rem;
+  margin-bottom: 1rem;
+}
+
+.grid-example .slds-col, .grid-example .slds-grid > div:not(.slds-col) {
+  display: inline-flex;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background: content-box rgb(84, 105, 141);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-image: initial;
+  border-radius: 0px;
+}
+
+.grid-example .slds-col > span {
+  align-self: center;
+  font-size: 1.575rem;
+  margin: auto;
+  padding: 0.5rem;
+}

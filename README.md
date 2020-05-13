@@ -44,6 +44,13 @@ Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2
 
 **Your work is confidential?** Fill in a username and password in the Heroku settings.
 
+
+## Updating SLDS version
+
+If you've had this project installed for a while, the SLDS version will stay the same as the version that was current when you cloned the project. To update to the latest public release of SLDS, run:
+
+`npm update @salesforce-ux/design-system`
+
 ## What’s inside?
 
 - SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)

@@ -44,18 +44,6 @@ Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2
 
 **Your work is confidential?** Fill in a username and password in the Heroku settings.
 
-
-## Updating SLDS version
-
-If you've had this project installed for a while, the SLDS version will stay the same as the version that was current when you cloned the project. To update to the latest public release of SLDS, run:
-
-`npm update @salesforce-ux/design-system`
-
-## Sync you fork to the latest Starter Kit
-Browse to: {{your GitHub and repository URL}}/compare/master...salesforce-ux:master and create a pull request.
-
-Merge the pull request if all looks good, then on your local machine run`$ git pull origin master`. Or, in GitHub Desktop, click Fetch origin and then Pull origin
-
 ## What’s inside?
 
 - SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)
@@ -80,6 +68,26 @@ For JavaScript, at the moment only a few very recent browsers are supported (Chr
 Not yet, but we’d love to know about your creations! Feel free to get in touch in the [issues of the project](https://github.com/salesforce-ux/design-system-starter-kit/issues).
 In the mean time, you can [check out the example prototype](https://starter-kit-demo.herokuapp.com/example.html).
 
+### How do I update the Starter Kit to the latest version of the Salesforce Lightning Design System?
+
+If you've had this project installed for a while, the SLDS version will stay the same as the version that was current when you cloned the project. To update to the latest public release of SLDS, in Terminal, run:
+
+`npm update @salesforce-ux/design-system`
+
+### How would I update my fork if Salesforce updates the Starter Kit?
+
+To sync your fork, browse to: `{{your GitHub and repository URL}}/compare/master...salesforce-ux:master`
+
+On that page, click `Create pull request` and proceed to merge the pull request if all looks good.
+
+Then, in Terminal, from your fork's project folder, run:
+
+```
+git checkout master
+git pull origin master
+```
+
+Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`
 
 ## See Also
 

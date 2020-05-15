@@ -51,6 +51,11 @@ If you've had this project installed for a while, the SLDS version will stay the
 
 `npm update @salesforce-ux/design-system`
 
+## Sync you fork to the latest Starter Kit
+Browse to: {{your GitHub and repository URL}}/compare/master...salesforce-ux:master and create a pull request.
+
+Merge the pull request if all looks good, then on your local machine run`$ git pull origin master`. Or, in GitHub Desktop, click Fetch origin and then Pull origin
+
 ## What’s inside?
 
 - SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)

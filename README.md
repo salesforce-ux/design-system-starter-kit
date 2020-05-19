@@ -1,4 +1,4 @@
-# Lightning Design System Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/design-system-starter-kit.svg?style=shield&circle-token=6c0b617673fd9c9e4eb4fb9defe953a92fc1797c)](https://circleci.com/gh/salesforce-ux/design-system-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/salesforce-ux/design-system-starter-kit.svg)](https://greenkeeper.io/)
+# Lightning Design System Starter Kit [![Circle CI](https://circleci.com/gh/salesforce-ux/design-system-starter-kit.svg?style=shield&circle-token=6c0b617673fd9c9e4eb4fb9defe953a92fc1797c)](https://circleci.com/gh/salesforce-ux/design-system-starter-kit)
 
 ![Starter Kit by Salesforce UX](https://rawgit.com/salesforce-ux/design-system-starter-kit/master/starter-kit.svg)
 
@@ -44,13 +44,6 @@ Deploy your own prototype for free to [Heroku](https://www.heroku.com) in only 2
 
 **Your work is confidential?** Fill in a username and password in the Heroku settings.
 
-
-## Updating SLDS version
-
-If you've had this project installed for a while, the SLDS version will stay the same as the version that was current when you cloned the project. To update to the latest public release of SLDS, run:
-
-`npm update @salesforce-ux/design-system`
-
 ## What’s inside?
 
 - SLDS Components and CSS, imported using [Sass](http://www.sass-lang.com/)
@@ -75,6 +68,26 @@ For JavaScript, at the moment only a few very recent browsers are supported (Chr
 Not yet, but we’d love to know about your creations! Feel free to get in touch in the [issues of the project](https://github.com/salesforce-ux/design-system-starter-kit/issues).
 In the mean time, you can [check out the example prototype](https://starter-kit-demo.herokuapp.com/example.html).
 
+### How do I update the Starter Kit to the latest version of the Salesforce Lightning Design System?
+
+If you've had this project installed for a while, the SLDS version will stay the same as the version that was current when you cloned the project. To update to the latest public release of SLDS, in Terminal, run:
+
+`npm update @salesforce-ux/design-system`
+
+### How would I update my fork if Salesforce updates the Starter Kit?
+
+To sync your fork, browse to: `{{your GitHub and repository URL}}/compare/master...salesforce-ux:master`
+
+On that page, click `Create pull request` and proceed to merge the pull request if all looks good.
+
+Then, in Terminal, from your fork's project folder, run:
+
+```
+git checkout master
+git pull origin master
+```
+
+Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`
 
 ## See Also
 

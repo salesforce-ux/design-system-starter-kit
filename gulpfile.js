@@ -95,7 +95,7 @@ gulp.task('default',
     browserSync({
       // The starter kit opens itself up in a new browser tab every time the app starts.
       // Uncomment the next line to prevent this behavior:
-      // open: false,
+      open: !process.env.NODE_ENV === 'production',
       notify: false,
       server: 'dist'
     })
@@ -116,3 +116,5 @@ gulp.task('default',
       'dist/assets/styles/*.css'
     ]).on('change', browserSync.reload)
   }))
+
+gulp.task('build', gulp.series('clean', 'assets', 'views', 'styles', 'scripts', 'favicon'))

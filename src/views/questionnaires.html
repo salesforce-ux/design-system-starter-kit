@@ -1,0 +1,56 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+
+<h2 class="slds-text-align--center slds-text-heading--large slds-m-around--large">
+  {{pageTitle}}
+</h2>
+
+{% for questionnaire in questionnaires %}
+
+<article class="slds-card {{questionnaire.cardtheme}} slds-m-around--medium">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container" title="description of icon when needed">
+          <svg class="slds-icon slds-icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom18" />
+          </svg>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2>
+          <a href="/questionnaire.html" class="slds-card__header-link slds-truncate" title="[object Object]">
+            <span class="slds-text-heading_small">{{questionnaire.name}}</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+    <div class="slds-no-flex">
+      <button class="slds-button slds-button_neutral" onclick="window.location.href='/questionnaire.html';">Open</button>
+    </div>
+  </div>
+  <div class="slds-card__body slds-card__body_inner">
+    <p>{{questionnaire.description__c}}</p>
+    <p>{{questionnaire.questions__c}} to answer</p>
+  </div>
+  <footer class="slds-card__footer">{{questionnaire.status__c}}</footer>
+</article>
+{% endfor %}
+
+
+{% endblock %}

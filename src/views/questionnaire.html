@@ -1,0 +1,102 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+
+<h2 class="slds-text-align--center slds-text-heading--large slds-m-around--large">
+  {{Title}}
+</h2>
+
+{% for question in questions %}
+<div class="slds-box slds-theme_shade slds-m-around_large">
+  <div class="slds-form slds-form_stacked">
+      <fieldset class="slds-form-element">
+          <legend class="slds-form-element__legend slds-form-element__label">{{question.question__c}}</legend>
+          <div class="slds-form-element__control">
+              <div class="slds-form-element__control">
+                <span class="slds-radio">
+                  <input type="radio" id="radio-5" name="options" value="on" />
+                  <label class="slds-radio__label" for="radio-5">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label">Strongly Disagree</span>
+                  </label>
+                </span>
+                <span class="slds-radio">
+                  <input type="radio" id="radio-6" name="options" value="on" />
+                  <label class="slds-radio__label" for="radio-6">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label">Disagree</span>
+                  </label>
+                </span>
+                <span class="slds-radio">
+                    <input type="radio" id="radio-6" name="options" value="on" />
+                    <label class="slds-radio__label" for="radio-6">
+                      <span class="slds-radio_faux"></span>
+                      <span class="slds-form-element__label">No Opinion</span>
+                    </label>
+                </span>
+                <span class="slds-radio">
+                  <input type="radio" id="radio-6" name="options" value="on" />
+                  <label class="slds-radio__label" for="radio-6">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label">Agree</span>
+                  </label>
+                </span>
+                <span class="slds-radio">
+                  <input type="radio" id="radio-6" name="options" value="on" />
+                  <label class="slds-radio__label" for="radio-6">
+                    <span class="slds-radio_faux"></span>
+                    <span class="slds-form-element__label">Strongly Agree</span>
+                  </label>
+                </span>
+              </div>                      
+          </div>
+        </fieldset>
+        <div class="slds-form-element">
+            <label class="slds-form-element__label slds-assistive-text" for="input-id-01">Please add any further comments</label>
+            <div class="slds-form-element__control">
+              <input type="text" id="input-id-01" class="slds-input" placeholder="Please add any further comments" />
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+{% endfor %}                                
+
+
+<div class="slds-box slds-m-around_x-small">
+  <div class="slds-grid slds-wrap">
+    <div class="slds-size_5-of-6">
+      <span class="slds-checkbox">
+          <input type="checkbox" name="default" id="checkbox-1" value="on" />
+          <label class="slds-checkbox__label" for="checkbox-1">
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-form-element__label slds-m-left_large">I accept the terms of use and participation in this questionnaire</span>
+          </label>
+        </span>      
+    </div>
+    <div class="slds-size_1-of-6">
+      <div class="slds-text-align_right">
+          <button class="slds-button slds-button_brand">
+              <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer" />
+              </svg>Mark Complete</button>          
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

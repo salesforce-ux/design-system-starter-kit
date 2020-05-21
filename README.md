@@ -68,7 +68,7 @@ For JavaScript, at the moment only a few very recent browsers are supported (Chr
 Not yet, but we’d love to know about your creations! Feel free to get in touch in the [issues of the project](https://github.com/salesforce-ux/design-system-starter-kit/issues).
 In the mean time, you can [check out the example prototype](https://starter-kit-demo.herokuapp.com/example.html).
 
-### How do I update the Starter Kit to the latest version of the Salesforce Lightning Design System?
+### How do I update to use the latest version of the Salesforce Lightning Design System?
 
 If you've had this project installed for a while, the SLDS version will stay the same as the version that was current when you cloned the project. To update to the latest public release of SLDS, in Terminal, run:
 

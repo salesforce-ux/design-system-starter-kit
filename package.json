@@ -7,7 +7,7 @@
   "scripts": {
     "test": "gulp",
     "dev": "gulp",
-    "prestart": "gulp build && serve dist",
+    "prestart": "gulp build && node server",
     "lint:js": "eslint . --format codeframe",
     "lint:css": "stylelint src/styles/**/*.scss"
   },

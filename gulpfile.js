@@ -95,6 +95,7 @@ gulp.task('default',
     browserSync({
       // The starter kit opens itself up in a new browser tab every time the app starts.
       // Uncomment the next line to prevent this behavior:
+      // open: false,
       notify: false,
       server: 'dist'
     })

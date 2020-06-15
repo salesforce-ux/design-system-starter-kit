@@ -21,13 +21,25 @@ Setting a whole demo org for a quick prototype can take time and effort,
 whereas cloning the starter kit and putting a few components together only takes a few minutes.
 Deploying your prototype to Heroku for free – in only 2 clicks – is also lightning fast!
 
+## Set-up (private) 🔒
+If you plan to have internal-facing work in your starter kit app that you don't want public, using a private repository is recommended. One method to achieve that is to import this Starter Kit repository into a new private one ([details](https://help.github.com/en/github/importing-your-projects-to-github/importing-a-repository-with-github-importer)):
+
+1. Open https://github.com/new/import
+1. In the **Your old repository's clone URL** field, enter: `https://github.com/salesforce-ux/design-system-starter-kit`
+1. In the **Your new repository details** field, enter a unique name for your new starter kit repository.
+1. Under **Privacy**, be sure to select the Private option :)
+1. Click **Begin Import**
+1. Once your new repository is created, move onto [Quick Start](#quick-start)
+
+## Set-up (public)
+1. Fork this repository or [download it](https://github.com/salesforce-ux/design-system-starter-kit/archive/master.zip) onto your computer
+
 ## Quick Start
 
 Pre-requisites: [Node.js](https://nodejs.org/en/) 4.2 or up.
 
-1. Fork the repository
-1. Clone it or [download it](https://github.com/salesforce-ux/design-system-starter-kit/archive/master.zip) onto your computer
-1. In a terminal, `cd` into the `design-system-starter-kit` directory
+1. Clone your new repository onto your computer if you've imported or forked.
+1. In a terminal, `cd` into the directory where you cloned or downloaded your Starter Kit repository.
 1. Run `npm install`
 1. Run `npm run dev` (or `gulp`)
 1. Open <http://localhost:3000>

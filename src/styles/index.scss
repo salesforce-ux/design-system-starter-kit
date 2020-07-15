@@ -18,6 +18,10 @@ $static-font-path: '/assets/fonts/webfonts';
 // We can also add styles directly in this file, like so:
 //
 
+.landing {
+  background-color: #fff;
+}
+
 // Push down the global navigation below the header using a placeholder element
 .app-header-placeholder {
   // A note on Design Tokens in Sass:

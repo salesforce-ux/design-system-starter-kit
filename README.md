@@ -38,7 +38,7 @@ If you plan to have internal-facing work in your starter kit app that you don't 
 
 Pre-requisites: [Node.js](https://nodejs.org/en/) 12 or higher.
 
-1. Clone your new repository onto your computer if you've imported or forked.
+1. Clone your new repository into your computer if you've imported or forked.
 1. In a terminal, `cd` into the directory where you cloned or downloaded your Starter Kit repository.
 1. Run `npm install`
 1. Run `npm run dev` (or `gulp`)
@@ -99,7 +99,7 @@ git checkout master
 git pull origin master
 ```
 
-Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`
+Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`.
 
 ## See Also
 

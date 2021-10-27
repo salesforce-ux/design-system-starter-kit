@@ -99,7 +99,7 @@ git checkout master
 git pull origin master
 ```
 
-Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`
+Or, in GitHub Desktop, click `Fetch origin` and then `Pull origin`.
 
 ## See Also
 

@@ -1,0 +1,20 @@
+name: Execute CircleCI Workflow
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  execute:
+    if: ${{ github.event.label.name == 'run ci' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Capture triggering branch name
+        run: echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+      - name: Trigger CircleCI build-beta workflow.
+        uses: promiseofcake/circleci-trigger-action@v1
+        with:
+          user-token: ${{ secrets.CIRCLECI_TOKEN }}
+          project-slug: salesforce-ux/design-system-starter-kit
+          branch: ${{ env.BRANCH_NAME }}
+          payload: '{"run_output_workflow": true}'

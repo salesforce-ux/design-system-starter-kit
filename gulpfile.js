@@ -16,7 +16,6 @@ const browserSync = require('browser-sync')
 const JSON5 = require('json5')
 
 const $ = require('gulp-load-plugins')({
-  // var sass = require('gulp-sass')(require('sass'));
   postRequireTransforms: {
     sass: (sass) => {
       return sass(require('sass'))

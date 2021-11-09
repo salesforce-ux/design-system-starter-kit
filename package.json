@@ -5,7 +5,8 @@
   "description": "Boilerplate to get started with a local Lightning Design System installation",
   "main": "",
   "scripts": {
-    "test": "gulp",
+    "test": "echo 'you just tested!'",
+    "scheduled": "echo 'you just ran scheduled script!'",
     "dev": "gulp",
     "prestart": "gulp build && node server",
     "lint:js": "eslint . --format codeframe",

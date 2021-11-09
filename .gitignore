@@ -1,6 +1,7 @@
 # Ignore all hidden dotfiles
 .*
 !/.github
+!/.circleci
 
 # Whitelist useful dotfiles
 !/.gitignore

@@ -17,4 +17,4 @@ jobs:
           user-token: ${{ secrets.CIRCLECI_TOKEN }}
           project-slug: salesforce-ux/design-system-starter-kit
           branch: ${{ env.BRANCH_NAME }}
-          payload: '{"run_output_workflow": true}'
+          payload: '{"run_labeled_workflow": true}'

@@ -9,6 +9,10 @@ orbs:
   node: circleci/node@4.3
   browser-tools: circleci/browser-tools@1.0.1
 
+parameters:
+  run_labeled_workflow:
+    type: boolean
+    default: false
 
 executors:
   slds-executor:
@@ -43,8 +47,17 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run scheduled tests
+          name: Run scheduled job
           command: npm run scheduled
+
+  labeled:
+    docker:
+      - image: cimg/node:16.10
+    steps:
+      - checkout
+      - run:
+          name: Run labeled job
+          command: npm run labeled
 
 workflows:
   version: 2
@@ -69,3 +82,8 @@ workflows:
                 - spike/add-ci
     jobs:
       - scheduled
+
+  CI_labeled:
+    when: << pipeline.parameters.run_labeled_workflow >>
+    jobs:
+      - labeled

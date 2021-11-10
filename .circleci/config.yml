@@ -13,6 +13,9 @@ parameters:
   run_labeled_workflow:
     type: boolean
     default: false
+  run_commented_workflow:
+    type: boolean
+    default: false
 
 executors:
   slds-executor:
@@ -59,6 +62,15 @@ jobs:
           name: Run labeled job
           command: npm run labeled
 
+  commented:
+    docker:
+      - image: cimg/node:16.10
+    steps:
+      - checkout
+      - run:
+          name: Run commented job
+          command: npm run commented
+
 workflows:
   version: 2
 
@@ -87,3 +99,8 @@ workflows:
     when: << pipeline.parameters.run_labeled_workflow >>
     jobs:
       - labeled
+
+  CI_commented:
+    when: << pipeline.parameters.run_commented_workflow >>
+    jobs:
+      - commented

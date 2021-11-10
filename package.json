@@ -8,6 +8,7 @@
     "test": "echo 'you just tested!'",
     "scheduled": "echo 'you just ran scheduled script!'",
     "labeled": "echo 'you just ran labeled script!'",
+    "commented": "echo 'you just ran commented script!'",
     "dev": "gulp",
     "prestart": "gulp build && node server",
     "lint:js": "eslint . --format codeframe",

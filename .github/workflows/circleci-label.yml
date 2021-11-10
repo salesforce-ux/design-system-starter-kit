@@ -1,4 +1,4 @@
-name: Execute CircleCI Workflow
+name: Trigger CircleCI from Label
 
 on:
   pull_request:

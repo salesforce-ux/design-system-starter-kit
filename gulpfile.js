@@ -14,9 +14,14 @@ const gulp = require('gulp')
 const del = require('del')
 const browserSync = require('browser-sync')
 const JSON5 = require('json5')
-const gulpLoadPlugins = require('gulp-load-plugins')
 
-const $ = gulpLoadPlugins()
+const $ = require('gulp-load-plugins')({
+  postRequireTransforms: {
+    sass: (sass) => {
+      return sass(require('sass'))
+    }
+  }
+})
 
 gulp.task('assets', () =>
   gulp

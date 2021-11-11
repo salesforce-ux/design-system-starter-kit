@@ -6,7 +6,7 @@ on:
 
 jobs:
   execute:
-    if: ${{ github.event.label.name == 'run ci' }}
+    if: ${{ github.event.label.name == 'run:ci' || github.event.label.name == 'run:ci-full'}}
     runs-on: ubuntu-latest
     steps:
       - name: Capture triggering branch name
@@ -23,4 +23,4 @@ jobs:
           project-slug: salesforce-ux/design-system-starter-kit
           # branch: ${{ env.BRANCH_NAME }}
           branch: ${{ github.head_ref }}
-          payload: '{"run_labeled_workflow": true}'
+          payload: '{"run_labeled_workflow": true, "triggering_label": "${{ github.event.label.name }}"}'

@@ -16,6 +16,9 @@ parameters:
   run_commented_workflow:
     type: boolean
     default: false
+  triggering_label:
+    type: string
+    default: ""
 
 executors:
   slds-executor:

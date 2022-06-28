@@ -14,9 +14,7 @@
 <!--
   Page content (gets injected into the template)
 -->
-{% block content %}
-{% include "_page-header.html" %}
-
+{% block content %} {% include "_page-header.html" %}
 
 <!--
   Using the grid to make a 2-column layout
@@ -29,7 +27,13 @@
   <div class="slds-col slds-size_2-of-3">
     <div class="slds-p-around_medium slds-card">
       <h2 class="slds-text-heading_medium">Example of injected data</h2>
-      <p class="slds-text-body_regular slds-m-vertical_medium">Data shown in this table comes from <a href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/src/views/data/example.json"><code>views/data/example.json</code></a>.</p>
+      <p class="slds-text-body_regular slds-m-vertical_medium">
+        Data shown in this table comes from
+        <a
+          href="https://github.com/salesforce-ux/design-system-starter-kit/blob/master/src/views/data/example.json"
+          ><code>views/data/example.json</code></a
+        >.
+      </p>
 
       <!--
         Data table component
@@ -38,7 +42,9 @@
         Modifier:
         - fixed layout: slds-table_fixed-layout (to make text truncation work within cells)
       -->
-      <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout">
+      <table
+        class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout"
+      >
         <thead>
           <tr class="slds-line-height_reset">
             <!--
@@ -50,7 +56,9 @@
               <div class="slds-truncate" title="Account Name">Account Name</div>
             </th>
             <th scope="col">
-              <div class="slds-truncate" title="Billing State/Province">Billing State/Province</div>
+              <div class="slds-truncate" title="Billing State/Province">
+                Billing State/Province
+              </div>
             </th>
             <th scope="col">
               <div class="slds-truncate" title="Phone">Phone</div>
@@ -68,16 +76,24 @@
           {% for account in accounts %}
           <tr>
             <th scope="row" data-label="Account Name">
-              <div class="slds-truncate" title="{{ account.name }}"><a href="javascript:void(0);">{{ account.name }}</a></div>
+              <div class="slds-truncate" title="{{ account.name }}">
+                <a href="javascript:void(0);">{{ account.name }}</a>
+              </div>
             </th>
             <td data-label="Billing State/Province">
-              <div class="slds-truncate" title="{{ account.state }}">{{ account.state }}</div>
+              <div class="slds-truncate" title="{{ account.state }}">
+                {{ account.state }}
+              </div>
             </td>
             <td data-label="Phone">
-              <div class="slds-truncate" title="{{ account.phone }}">{{ account.phone }}</div>
+              <div class="slds-truncate" title="{{ account.phone }}">
+                {{ account.phone }}
+              </div>
             </td>
             <td data-label="Type">
-              <div class="slds-truncate" title="{{ account.type }}">{{ account.type }}</div>
+              <div class="slds-truncate" title="{{ account.type }}">
+                {{ account.type }}
+              </div>
             </td>
           </tr>
           {% endfor %}
@@ -92,11 +108,17 @@
   <div class="slds-p-left_small slds-col slds-size_1-of-3">
     <div class="slds-card slds-p-around_medium slds-m-top_none">
       <h2 class="slds-text-heading_medium">Examples of interactions</h2>
-      <p class="slds-text-body_regular slds-m-vertical_medium">A few components are interactive, thanks to the
-        JavaScript bundled in the starter kit.</p>
+      <p class="slds-text-body_regular slds-m-vertical_medium">
+        A few components are interactive, thanks to the JavaScript bundled in
+        the starter kit.
+      </p>
       <div class="slds-section slds-is-open">
         <h3 class="slds-section__title slds-theme_shade slds-m-bottom_medium">
-          <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Tabs</span>
+          <span
+            class="slds-truncate slds-p-horizontal_small"
+            title="Section Title"
+            >Tabs</span
+          >
         </h3>
         <div aria-hidden="false" class="slds-section__content">
           <!--
@@ -105,31 +127,90 @@
           -->
           <div class="slds-tabs_default">
             <ul class="slds-tabs_default__nav" role="tablist">
-              <li class="slds-tabs_default__item slds-active" title="Item One" role="presentation"><a class="slds-tabs_default__link"
-                  href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1"
-                  id="tab-default-1__item">Item
-                  One</a></li>
-              <li class="slds-tabs_default__item slds-text" title="Item Two" role="presentation"><a class="slds-tabs_default__link"
-                  href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2"
-                  id="tab-default-2__item">Item Two</a></li>
-              <li class="slds-tabs_default__item slds-text" title="Item Three" role="presentation"><a class="slds-tabs_default__link"
-                  href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3"
-                  id="tab-default-3__item">Item Three</a></li>
+              <li
+                class="slds-tabs_default__item slds-active"
+                title="Item One"
+                role="presentation"
+              >
+                <a
+                  class="slds-tabs_default__link"
+                  href="javascript:void(0);"
+                  role="tab"
+                  tabindex="0"
+                  aria-selected="true"
+                  aria-controls="tab-default-1"
+                  id="tab-default-1__item"
+                  >Item One</a
+                >
+              </li>
+              <li
+                class="slds-tabs_default__item slds-text"
+                title="Item Two"
+                role="presentation"
+              >
+                <a
+                  class="slds-tabs_default__link"
+                  href="javascript:void(0);"
+                  role="tab"
+                  tabindex="-1"
+                  aria-selected="false"
+                  aria-controls="tab-default-2"
+                  id="tab-default-2__item"
+                  >Item Two</a
+                >
+              </li>
+              <li
+                class="slds-tabs_default__item slds-text"
+                title="Item Three"
+                role="presentation"
+              >
+                <a
+                  class="slds-tabs_default__link"
+                  href="javascript:void(0);"
+                  role="tab"
+                  tabindex="-1"
+                  aria-selected="false"
+                  aria-controls="tab-default-3"
+                  id="tab-default-3__item"
+                  >Item Three</a
+                >
+              </li>
             </ul>
-            <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item
-              One Content</div>
-            <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item
-              Two Content</div>
-            <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item
-              Three Content</div>
+            <div
+              id="tab-default-1"
+              class="slds-tabs_default__content slds-show"
+              role="tabpanel"
+              aria-labelledby="tab-default-1__item"
+            >
+              Item One Content
+            </div>
+            <div
+              id="tab-default-2"
+              class="slds-tabs_default__content slds-hide"
+              role="tabpanel"
+              aria-labelledby="tab-default-2__item"
+            >
+              Item Two Content
+            </div>
+            <div
+              id="tab-default-3"
+              class="slds-tabs_default__content slds-hide"
+              role="tabpanel"
+              aria-labelledby="tab-default-3__item"
+            >
+              Item Three Content
+            </div>
           </div>
         </div>
       </div>
 
-
       <div class="slds-section slds-is-open">
         <h3 class="slds-section__title slds-theme_shade slds-m-bottom_medium">
-          <span class="slds-truncate slds-p-horizontal_small" title="Section Title">Dropdown Menu</span>
+          <span
+            class="slds-truncate slds-p-horizontal_small"
+            title="Section Title"
+            >Dropdown Menu</span
+          >
         </h3>
         <div aria-hidden="false" class="slds-section__content">
           Click me:
@@ -137,10 +218,18 @@
             Dropdown Menu Component
             https://www.lightningdesignsystem.com/components/menus/
           -->
-          <div class="slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="true">
-            <button class="slds-button slds-button_icon-border-filled" aria-haspopup="true">
-              <svg aria-hidden="true" class="slds-button__icon">
-                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+          <div
+            class="slds-dropdown-trigger slds-dropdown-trigger_click"
+            aria-expanded="true"
+          >
+            <button
+              class="slds-button slds-button_icon-border-filled"
+              aria-haspopup="true"
+            >
+              <svg class="slds-button__icon">
+                <use
+                  xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"
+                ></use>
               </svg>
               <span class="slds-assistive-text">Show More</span>
             </button>
@@ -175,6 +264,10 @@
   </div>
 </div>
 
-<footer class="app-footer">Built using the <a href="https://github.com/salesforce-ux/design-system-starter-kit">{{
-    shared.builtWith }}</a>.</footer>
+<footer class="app-footer">
+  Built using the
+  <a href="https://github.com/salesforce-ux/design-system-starter-kit"
+    >{{ shared.builtWith }}</a
+  >.
+</footer>
 {% endblock %}

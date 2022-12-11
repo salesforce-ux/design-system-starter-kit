@@ -28,7 +28,7 @@
     "@salesforce-ux/design-system": "^2.*",
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-data": "^1.2.1",

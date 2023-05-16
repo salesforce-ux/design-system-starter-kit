@@ -9,7 +9,7 @@ Rapid prototyping environment using the [Salesforce Lightning Design System](htt
 From the prototyper to the large application developer… the Design System Starter Kit
 is a helpful tool to get started and run prototypes of all sizes in the browser.
 
-### Designers
+### Designers nao entendi nadaaaaaaa
 
 The starter kit is built using web standards, more specifically HTML and CSS.
 Copy and pasting markup from <https://www.lightningdesignsystem.com/> is quick and easy.
